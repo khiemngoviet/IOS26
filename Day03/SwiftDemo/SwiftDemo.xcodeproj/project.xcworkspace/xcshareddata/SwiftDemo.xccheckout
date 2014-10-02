@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C3AEB1F4-B799-40D7-9E83-1A8E778D32BA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SwiftDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6158AD7A4EE572E73753B1EB919AF637872103B4</key>
+		<string>https://github.com/khiemngoviet/IOS_Training.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Day03/SwiftDemo/SwiftDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6158AD7A4EE572E73753B1EB919AF637872103B4</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/khiemngoviet/IOS_Training.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6158AD7A4EE572E73753B1EB919AF637872103B4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6158AD7A4EE572E73753B1EB919AF637872103B4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IOS_Training</string>
+		</dict>
+	</array>
+</dict>
+</plist>
