@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E28FCF8E19D9904F0064B26E /* CoolLib.h in Headers */ = {isa = PBXBuildFile; fileRef = E28FCF8D19D9904F0064B26E /* CoolLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E28FCF9819D9904F0064B26E /* CoolLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28FCF9719D9904F0064B26E /* CoolLibTests.swift */; };
+		E28FCFAE19D9907D0064B26E /* Orange.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28FCFAD19D9907D0064B26E /* Orange.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E28FCF8819D9904F0064B26E /* CoolLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoolLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28FCF8C19D9904F0064B26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28FCF8D19D9904F0064B26E /* CoolLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolLib.h; sourceTree = "<group>"; };
+		E28FCF9319D9904F0064B26E /* CoolLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28FCF9619D9904F0064B26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28FCF9719D9904F0064B26E /* CoolLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolLibTests.swift; sourceTree = "<group>"; };
+		E28FCFAD19D9907D0064B26E /* Orange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orange.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E28FCF8419D9904F0064B26E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28FCF9019D9904F0064B26E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E28FCF7E19D9904F0064B26E = {
+			isa = PBXGroup;
+			children = (
+				E28FCF8A19D9904F0064B26E /* CoolLib */,
+				E28FCF9419D9904F0064B26E /* CoolLibTests */,
+				E28FCF8919D9904F0064B26E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E28FCF8919D9904F0064B26E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E28FCF8819D9904F0064B26E /* CoolLib.framework */,
+				E28FCF9319D9904F0064B26E /* CoolLibTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E28FCF8A19D9904F0064B26E /* CoolLib */ = {
+			isa = PBXGroup;
+			children = (
+				E28FCF8D19D9904F0064B26E /* CoolLib.h */,
+				E28FCF8B19D9904F0064B26E /* Supporting Files */,
+				E28FCFAD19D9907D0064B26E /* Orange.swift */,
+			);
+			path = CoolLib;
+			sourceTree = "<group>";
+		};
+		E28FCF8B19D9904F0064B26E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E28FCF8C19D9904F0064B26E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E28FCF9419D9904F0064B26E /* CoolLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				E28FCF9719D9904F0064B26E /* CoolLibTests.swift */,
+				E28FCF9519D9904F0064B26E /* Supporting Files */,
+			);
+			path = CoolLibTests;
+			sourceTree = "<group>";
+		};
+		E28FCF9519D9904F0064B26E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E28FCF9619D9904F0064B26E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E28FCF8519D9904F0064B26E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28FCF8E19D9904F0064B26E /* CoolLib.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E28FCF8719D9904F0064B26E /* CoolLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28FCF9B19D9904F0064B26E /* Build configuration list for PBXNativeTarget "CoolLib" */;
+			buildPhases = (
+				E28FCF8319D9904F0064B26E /* Sources */,
+				E28FCF8419D9904F0064B26E /* Frameworks */,
+				E28FCF8519D9904F0064B26E /* Headers */,
+				E28FCF8619D9904F0064B26E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoolLib;
+			productName = CoolLib;
+			productReference = E28FCF8819D9904F0064B26E /* CoolLib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E28FCF9219D9904F0064B26E /* CoolLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28FCF9E19D9904F0064B26E /* Build configuration list for PBXNativeTarget "CoolLibTests" */;
+			buildPhases = (
+				E28FCF8F19D9904F0064B26E /* Sources */,
+				E28FCF9019D9904F0064B26E /* Frameworks */,
+				E28FCF9119D9904F0064B26E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoolLibTests;
+			productName = CoolLibTests;
+			productReference = E28FCF9319D9904F0064B26E /* CoolLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E28FCF7F19D9904F0064B26E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Techmaster Vietnam";
+				TargetAttributes = {
+					E28FCF8719D9904F0064B26E = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					E28FCF9219D9904F0064B26E = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = E28FCF8219D9904F0064B26E /* Build configuration list for PBXProject "CoolLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E28FCF7E19D9904F0064B26E;
+			productRefGroup = E28FCF8919D9904F0064B26E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E28FCF8719D9904F0064B26E /* CoolLib */,
+				E28FCF9219D9904F0064B26E /* CoolLibTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E28FCF8619D9904F0064B26E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28FCF9119D9904F0064B26E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E28FCF8319D9904F0064B26E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28FCFAE19D9907D0064B26E /* Orange.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28FCF8F19D9904F0064B26E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28FCF9819D9904F0064B26E /* CoolLibTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E28FCF9919D9904F0064B26E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E28FCF9A19D9904F0064B26E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E28FCF9C19D9904F0064B26E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoolLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E28FCF9D19D9904F0064B26E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoolLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E28FCF9F19D9904F0064B26E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CoolLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E28FCFA019D9904F0064B26E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CoolLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E28FCF8219D9904F0064B26E /* Build configuration list for PBXProject "CoolLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28FCF9919D9904F0064B26E /* Debug */,
+				E28FCF9A19D9904F0064B26E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E28FCF9B19D9904F0064B26E /* Build configuration list for PBXNativeTarget "CoolLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28FCF9C19D9904F0064B26E /* Debug */,
+				E28FCF9D19D9904F0064B26E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E28FCF9E19D9904F0064B26E /* Build configuration list for PBXNativeTarget "CoolLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28FCF9F19D9904F0064B26E /* Debug */,
+				E28FCFA019D9904F0064B26E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E28FCF7F19D9904F0064B26E /* Project object */;
+}
