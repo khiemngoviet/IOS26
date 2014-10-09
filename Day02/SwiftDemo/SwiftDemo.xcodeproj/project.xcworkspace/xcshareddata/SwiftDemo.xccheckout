@@ -12,20 +12,24 @@
 	<dict>
 		<key>6158AD7A4EE572E73753B1EB919AF637872103B4</key>
 		<string>https://github.com/khiemngoviet/IOS_Training.git</string>
+		<key>A52A0FC024C051D129B66C00DE6F4344A16F5DBD</key>
+		<string>https://github.com/khiemngoviet/IOS26.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Day02/SwiftDemo/SwiftDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6158AD7A4EE572E73753B1EB919AF637872103B4</key>
+		<string>../../../../../IOS_Training</string>
+		<key>A52A0FC024C051D129B66C00DE6F4344A16F5DBD</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/khiemngoviet/IOS_Training.git</string>
+	<string>https://github.com/khiemngoviet/IOS26.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6158AD7A4EE572E73753B1EB919AF637872103B4</string>
+	<string>A52A0FC024C051D129B66C00DE6F4344A16F5DBD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>6158AD7A4EE572E73753B1EB919AF637872103B4</string>
 			<key>IDESourceControlWCCName</key>
 			<string>IOS_Training</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A52A0FC024C051D129B66C00DE6F4344A16F5DBD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IOS26</string>
 		</dict>
 	</array>
 </dict>

@@ -17,19 +17,18 @@ class BootLogic: NSObject {
     class func boot(window:UIWindow){
         let mainScreen = MainScreen(style: UITableViewStyle.Grouped)
         
-        var basic = [SECTION: "Basic",MENU:[
-            [TITLE: "Swift Demo",CLASS: "DeclareVarConstant"],
-            [TITLE: "Condition Clause",CLASS: "ConditionClause"],
-            [TITLE: "Demo class",CLASS: "DemoClass"]
+        var basic = [SECTION: "Day 04",MENU:[
+            [TITLE: "Practice 01",CLASS: "Practice01"],
+             [TITLE: "Practice 02",CLASS: "Practice02"]
             ]
         ]
         
         
-        mainScreen.menu = [basic]
-        mainScreen.title = "IOS Swift"
-        mainScreen.about = "Đây là ứng dụng minh hoạ tính năng ngôn ngữ iOS Swift"
+        mainScreen?.menu = [basic]
+        mainScreen?.title = "IOS Swift"
+        mainScreen?.about = "Đây là ứng dụng minh hoạ tính năng ngôn ngữ iOS Swift"
         
-        let nav = UINavigationController(rootViewController: mainScreen)
+        let nav = UINavigationController(rootViewController: mainScreen!)
         
         window.rootViewController = nav        
       

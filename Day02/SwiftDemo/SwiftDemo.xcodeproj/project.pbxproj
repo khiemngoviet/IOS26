@@ -14,11 +14,17 @@
 		3E5F7DC619D437A900DA5B72 /* BootLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F7DC419D437A900DA5B72 /* BootLogic.swift */; };
 		3E5F7DC719D437A900DA5B72 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F7DC519D437A900DA5B72 /* MainScreen.swift */; };
 		3E5F7DCC19D43A2800DA5B72 /* DeclareVarConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F7DCB19D43A2800DA5B72 /* DeclareVarConstant.swift */; };
-		3EFE26D419D447EF00DE4706 /* ConditionClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFE26D319D447EF00DE4706 /* ConditionClause.swift */; };
 		3EFE26D719D4502100DE4706 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFE26D619D4502100DE4706 /* Shape.swift */; };
-		3EFE26D919D4505800DE4706 /* DemoClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFE26D819D4505800DE4706 /* DemoClass.swift */; };
 		3EFE26DB19D456F600DE4706 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFE26DA19D456F600DE4706 /* Square.swift */; };
 		3EFE26DD19D45C5000DE4706 /* Pentagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFE26DC19D45C5000DE4706 /* Pentagon.swift */; };
+		6EDE3EA919E64EC40058E4AB /* Practice01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDE3EA819E64EC40058E4AB /* Practice01.swift */; };
+		6EE7A45619E6619A00433651 /* Practice02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7A45519E6619A00433651 /* Practice02.swift */; };
+		6EE7A45819E6685900433651 /* Practice03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7A45719E6685900433651 /* Practice03.swift */; };
+		6EE7A45D19E6695900433651 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7A45C19E6695900433651 /* Animal.swift */; };
+		6EE7A46119E66A8000433651 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7A46019E66A8000433651 /* Dog.swift */; };
+		6EE7A46319E66AA800433651 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7A46219E66AA800433651 /* Cat.swift */; };
+		6EE7A46519E66ADD00433651 /* Horse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7A46419E66ADD00433651 /* Horse.swift */; };
+		6EE7A46719E66B0400433651 /* Pig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7A46619E66B0400433651 /* Pig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +49,17 @@
 		3E5F7DC419D437A900DA5B72 /* BootLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootLogic.swift; sourceTree = "<group>"; };
 		3E5F7DC519D437A900DA5B72 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		3E5F7DCB19D43A2800DA5B72 /* DeclareVarConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclareVarConstant.swift; sourceTree = "<group>"; };
-		3EFE26D319D447EF00DE4706 /* ConditionClause.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionClause.swift; sourceTree = "<group>"; };
 		3EFE26D619D4502100DE4706 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
-		3EFE26D819D4505800DE4706 /* DemoClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoClass.swift; sourceTree = "<group>"; };
 		3EFE26DA19D456F600DE4706 /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		3EFE26DC19D45C5000DE4706 /* Pentagon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pentagon.swift; sourceTree = "<group>"; };
+		6EDE3EA819E64EC40058E4AB /* Practice01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Practice01.swift; path = Day04/Practice01.swift; sourceTree = "<group>"; };
+		6EE7A45519E6619A00433651 /* Practice02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Practice02.swift; path = Day04/Practice02.swift; sourceTree = "<group>"; };
+		6EE7A45719E6685900433651 /* Practice03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Practice03.swift; path = Day04/Practice03.swift; sourceTree = "<group>"; };
+		6EE7A45C19E6695900433651 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animal.swift; path = Day04/Animal.swift; sourceTree = "<group>"; };
+		6EE7A46019E66A8000433651 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dog.swift; path = Day04/Dog.swift; sourceTree = "<group>"; };
+		6EE7A46219E66AA800433651 /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cat.swift; path = Day04/Cat.swift; sourceTree = "<group>"; };
+		6EE7A46419E66ADD00433651 /* Horse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Horse.swift; path = Day04/Horse.swift; sourceTree = "<group>"; };
+		6EE7A46619E66B0400433651 /* Pig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pig.swift; path = Day04/Pig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,10 +148,9 @@
 		3E5F7DC819D438F900DA5B72 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				6EDE3EA519E64E490058E4AB /* Day04 */,
 				3EFE26D519D4500D00DE4706 /* DemoShape */,
 				3E5F7DCB19D43A2800DA5B72 /* DeclareVarConstant.swift */,
-				3EFE26D319D447EF00DE4706 /* ConditionClause.swift */,
-				3EFE26D819D4505800DE4706 /* DemoClass.swift */,
 			);
 			name = Basic;
 			sourceTree = "<group>";
@@ -152,6 +163,29 @@
 				3EFE26DC19D45C5000DE4706 /* Pentagon.swift */,
 			);
 			name = DemoShape;
+			sourceTree = "<group>";
+		};
+		6EDE3EA519E64E490058E4AB /* Day04 */ = {
+			isa = PBXGroup;
+			children = (
+				6EE7A45919E668C200433651 /* AnimalForest */,
+				6EDE3EA819E64EC40058E4AB /* Practice01.swift */,
+				6EE7A45519E6619A00433651 /* Practice02.swift */,
+				6EE7A45719E6685900433651 /* Practice03.swift */,
+			);
+			name = Day04;
+			sourceTree = "<group>";
+		};
+		6EE7A45919E668C200433651 /* AnimalForest */ = {
+			isa = PBXGroup;
+			children = (
+				6EE7A45C19E6695900433651 /* Animal.swift */,
+				6EE7A46019E66A8000433651 /* Dog.swift */,
+				6EE7A46219E66AA800433651 /* Cat.swift */,
+				6EE7A46419E66ADD00433651 /* Horse.swift */,
+				6EE7A46619E66B0400433651 /* Pig.swift */,
+			);
+			name = AnimalForest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,15 +286,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EFE26D419D447EF00DE4706 /* ConditionClause.swift in Sources */,
+				6EE7A45819E6685900433651 /* Practice03.swift in Sources */,
 				3E5F7DC719D437A900DA5B72 /* MainScreen.swift in Sources */,
 				3E5F7D3E19D4372B00DA5B72 /* AppDelegate.swift in Sources */,
 				3EFE26DD19D45C5000DE4706 /* Pentagon.swift in Sources */,
+				6EE7A46719E66B0400433651 /* Pig.swift in Sources */,
+				6EDE3EA919E64EC40058E4AB /* Practice01.swift in Sources */,
+				6EE7A45D19E6695900433651 /* Animal.swift in Sources */,
+				6EE7A46519E66ADD00433651 /* Horse.swift in Sources */,
 				3EFE26D719D4502100DE4706 /* Shape.swift in Sources */,
 				3E5F7DCC19D43A2800DA5B72 /* DeclareVarConstant.swift in Sources */,
-				3EFE26D919D4505800DE4706 /* DemoClass.swift in Sources */,
+				6EE7A46319E66AA800433651 /* Cat.swift in Sources */,
 				3EFE26DB19D456F600DE4706 /* Square.swift in Sources */,
 				3E5F7DC619D437A900DA5B72 /* BootLogic.swift in Sources */,
+				6EE7A45619E6619A00433651 /* Practice02.swift in Sources */,
+				6EE7A46119E66A8000433651 /* Dog.swift in Sources */,
 				3E5F7D3F19D4372B00DA5B72 /* ConsoleScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

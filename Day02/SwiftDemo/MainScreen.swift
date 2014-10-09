@@ -61,7 +61,7 @@ class MainScreen: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")!
         var menuSection = self.menu[indexPath.section] as NSDictionary
         var menuItems = menuSection[MENU] as NSArray
         var item = menuItems[indexPath.row] as NSDictionary
