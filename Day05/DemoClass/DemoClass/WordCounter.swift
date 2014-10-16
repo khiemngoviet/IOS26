@@ -128,6 +128,7 @@ class WordCounter: ConsoleScreen {
 //        }
         
         WordCountNSort.sort { $0 < $1 }
+       
         
         for item in WordCountNSort {
             self.writeln("\(item.word) : \(item.count)")
