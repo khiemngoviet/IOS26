@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     var chessWidth: CGFloat!
     var timer:NSTimer?
-    var index = 2
+    var index = 1
     var x:CGFloat = 10.0
     var y: CGFloat = 50.0
     var queenImageView:UIImageView!
@@ -45,17 +45,17 @@ class ViewController: UIViewController {
         self.view.addSubview(self.queenImageView)
     }
     
-    func update(){
-        if index <= 8 {
+    func updateFrame(){
+        if index < 8 {
             y  += chessWidth
             var frame = self.queenImageView.frame
-            frame.origin.x = chessWidth * CGFloat(index - 1) + 10.0
+            frame.origin.x = chessWidth * CGFloat(index) + 10.0
             frame.origin.y = CGFloat(y)
             self.queenImageView.frame = frame
             index++
         }
         else{
-            index = 2
+            index = 1
             y = 50.0
             timer?.invalidate()
         }
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     
     @IBAction func onStart(sender: UIButton) {
         self.queenImageView.frame = CGRect(x: x, y: y, width: chessWidth, height: chessWidth)
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.6, target: self, selector: "update", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "updateFrame", userInfo: nil, repeats: true)
     }
     
     
