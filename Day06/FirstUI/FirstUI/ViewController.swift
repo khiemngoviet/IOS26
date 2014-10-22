@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         self.queenImageView.image = UIImage(named: "Queen.png")
         self.queenImageView.contentMode = UIViewContentMode.ScaleAspectFit
         self.view.addSubview(self.queenImageView)
+        
     }
     
     func updateFrame(){
