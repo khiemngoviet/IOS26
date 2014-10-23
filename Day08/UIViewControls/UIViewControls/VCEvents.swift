@@ -12,37 +12,33 @@ class VCEvents: UIViewController {
     override func loadView() {
         super.loadView() //Không được bỏ đi vì như thế self.view sẽ không được tạo ra
         self.view.backgroundColor = UIColor.whiteColor()
-        //println("loadView")
+        println("loadView")
     }
     override func viewDidLoad() {
         //super.viewDidLoad()  //Có thể bỏ được
-        //println("viewDidLoad")
-        
-        let  info:NSDictionary = NSBundle.mainBundle().infoDictionary!
-        let name: AnyObject? = info.objectForKey("CFBundleName")
-        println("\(name!)")
+        println("viewDidLoad")
     }
     override func viewWillAppear(animated: Bool) {
-        // println("viewWillAppear")
+        println("viewWillAppear")
     }
     
     override func viewDidAppear(animated: Bool) {
-        //println("viewDidAppear")
+        println("viewDidAppear")
     }
     
     override func viewWillDisappear(animated: Bool) {
-        //println("viewWillDisappear")
+        println("viewWillDisappear")
     }
     override func viewDidDisappear(animated: Bool) {
-        //println("viewDidDisappear")
+        println("viewDidDisappear")
     }
     
     override func viewWillLayoutSubviews() {
-        //println("viewWillLayoutSubviews")
+        println("viewWillLayoutSubviews")
     }
     
     override func viewDidLayoutSubviews() {
-        //println("viewDidLayoutSubviews")
+        println("viewDidLayoutSubviews")
     }
-    
+   
 }

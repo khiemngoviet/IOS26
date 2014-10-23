@@ -28,8 +28,7 @@ class ViewBasic: UIViewController {
         
         redView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
         redView!.backgroundColor = UIColor.redColor()
-        //redView!.center = CGPoint(x: bound.size.width * 0.5, y: bound.size.height * 0.5)
-        redView?.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        redView!.center = CGPoint(x: 10, y: bound.size.height * 0.5)
         println("cx = \(redView!.center.x), cy = \(redView!.center.y)")
         redView!.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
@@ -51,6 +50,10 @@ class ViewBasic: UIViewController {
     func onSliderChange(slider: UISlider) {
         redView!.transform = CGAffineTransformMakeRotation(CGFloat(2.0 * M_PI * Double(slider.value)))
         println("cx = \(redView!.center.x), cy = \(redView!.center.y)")
+        let frame = redView!.frame
+        println("x = \(frame.origin.x), y = \(frame.origin.y), width = \(frame.size.width), height = \(frame.size.height)")
+
+        
     }
 
 }
