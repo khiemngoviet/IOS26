@@ -9,14 +9,14 @@
 import UIKit
 
 class AffineTransformVC: UIViewController {
-
-     var cat: UIImageView!
-     var rorateSlider:UISlider!
-     var scaleSlider:UISlider!
+    
+    var cat: UIImageView!
+    var rorateSlider:UISlider!
+    var scaleSlider:UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.whiteColor()
         self.cat = UIImageView(image: UIImage(named: "cat_grumpy.png"))
         self.cat.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.size.width - 40, height: self.view.bounds.size.height - 200)
         self.cat.contentMode = UIViewContentMode.ScaleAspectFit
@@ -48,11 +48,11 @@ class AffineTransformVC: UIViewController {
     func onScaleValueChanged(sender :UISlider){
         self.rotateAndScale()
     }
-
+    
     func rotateAndScale(){
         let scaleRatio = CGFloat( self.scaleSlider.value * 4)
         self.cat.transform = CGAffineTransformConcat(CGAffineTransformMakeRotation(CGFloat(M_PI) * CGFloat(self.rorateSlider.value)),
-               CGAffineTransformMakeScale(scaleRatio, scaleRatio))
+            CGAffineTransformMakeScale(scaleRatio, scaleRatio))
     }
-
+    
 }
