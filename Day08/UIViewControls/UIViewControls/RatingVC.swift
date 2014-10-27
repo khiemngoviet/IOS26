@@ -17,9 +17,10 @@ class RatingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
-        ratingView = RatingView(frame: CGRect(x: 99, y: 165, width: 50, height: 32))
-        ratingView.contentMode = UIViewContentMode.Center
+        ratingView = RatingView(frame: CGRect(x: 99, y: 165, width: 132, height: 32))
+        ratingView.contentMode = UIViewContentMode.Left
         ratingView.image = UIImage(named: "5star.png")
+        ratingView.clipsToBounds = true
         self.view.addSubview(ratingView)
         
         slider = UISlider()
