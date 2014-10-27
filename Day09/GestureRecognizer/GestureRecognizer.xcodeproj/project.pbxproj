@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E77070619FE745E003B105E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E77070419FE745E003B105E /* ViewController.swift */; };
+		3E77070719FE745E003B105E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E77070519FE745E003B105E /* ViewController.xib */; };
+		3E77070919FE776E003B105E /* free-ant-icon-download.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E77070819FE776E003B105E /* free-ant-icon-download.png */; };
+		3E77070B19FE7A75003B105E /* fireworks-red-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E77070A19FE7A75003B105E /* fireworks-red-icon.png */; };
+		3E77070F19FE8C04003B105E /* cay1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E77070C19FE8C04003B105E /* cay1.png */; };
+		3E77071019FE8C04003B105E /* cay2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E77070D19FE8C04003B105E /* cay2.png */; };
+		3E77071119FE8C04003B105E /* floorplan.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E77070E19FE8C04003B105E /* floorplan.png */; };
+		3E77071319FE8C29003B105E /* FurnitureDecor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E77071219FE8C29003B105E /* FurnitureDecor.swift */; };
+		E264CDDF19DE9CA90052F50A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E264CDDE19DE9CA90052F50A /* Images.xcassets */; };
+		E264CDEE19DE9CA90052F50A /* GestureRecognizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264CDED19DE9CA90052F50A /* GestureRecognizerTests.swift */; };
+		E264CE0B19DE9DD10052F50A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264CE0719DE9DD10052F50A /* AppDelegate.swift */; };
+		E264CE0C19DE9DD10052F50A /* BootLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264CE0819DE9DD10052F50A /* BootLogic.swift */; };
+		E264CE0D19DE9DD10052F50A /* ConsoleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264CE0919DE9DD10052F50A /* ConsoleScreen.swift */; };
+		E264CE0E19DE9DD10052F50A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264CE0A19DE9DD10052F50A /* MainScreen.swift */; };
+		E264CE1119DE9F2C0052F50A /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = E264CE1019DE9F2C0052F50A /* grass.png */; };
+		E264CE1319DE9F380052F50A /* ant.png in Resources */ = {isa = PBXBuildFile; fileRef = E264CE1219DE9F380052F50A /* ant.png */; };
+		E264CE1619DEA02B0052F50A /* DemoTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264CE1519DEA02B0052F50A /* DemoTap.swift */; };
+		E264CE1819DEA3EA0052F50A /* DemoPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264CE1719DEA3EA0052F50A /* DemoPan.swift */; };
+		E264CE1A19DEA44E0052F50A /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = E264CE1919DEA44E0052F50A /* target.png */; };
+		E264CE1C19DEA7360052F50A /* DemoRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264CE1B19DEA7360052F50A /* DemoRotate.swift */; };
+		E264CE1E19DEA7BB0052F50A /* dial.png in Resources */ = {isa = PBXBuildFile; fileRef = E264CE1D19DEA7BB0052F50A /* dial.png */; };
+		E264CE2019DEAC3F0052F50A /* DemoSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264CE1F19DEAC3F0052F50A /* DemoSwipe.swift */; };
+		E264CE2219DEAD140052F50A /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = E264CE2119DEAD140052F50A /* exit.png */; };
+		E264CE2419DEB0A20052F50A /* DemoPinch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264CE2319DEB0A20052F50A /* DemoPinch.swift */; };
+		E264CE2819DEB15B0052F50A /* playboy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E264CE2719DEB15B0052F50A /* playboy.jpg */; };
+		E264CE2A19DEB6120052F50A /* DemoPinchRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264CE2919DEB6120052F50A /* DemoPinchRotate.swift */; };
+		E264CE2C19DECAA30052F50A /* ThrowBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E264CE2B19DECAA30052F50A /* ThrowBall.swift */; };
+		E264CE2E19DECB2D0052F50A /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = E264CE2D19DECB2D0052F50A /* football.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E264CDE819DE9CA90052F50A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E264CDCA19DE9CA90052F50A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E264CDD119DE9CA90052F50A;
+			remoteInfo = GestureRecognizer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E77070419FE745E003B105E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E77070519FE745E003B105E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		3E77070819FE776E003B105E /* free-ant-icon-download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-ant-icon-download.png"; sourceTree = "<group>"; };
+		3E77070A19FE7A75003B105E /* fireworks-red-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fireworks-red-icon.png"; sourceTree = "<group>"; };
+		3E77070C19FE8C04003B105E /* cay1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cay1.png; sourceTree = "<group>"; };
+		3E77070D19FE8C04003B105E /* cay2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cay2.png; sourceTree = "<group>"; };
+		3E77070E19FE8C04003B105E /* floorplan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floorplan.png; sourceTree = "<group>"; };
+		3E77071219FE8C29003B105E /* FurnitureDecor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureDecor.swift; sourceTree = "<group>"; };
+		E264CDD219DE9CA90052F50A /* GestureRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E264CDD619DE9CA90052F50A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E264CDDE19DE9CA90052F50A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E264CDE719DE9CA90052F50A /* GestureRecognizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureRecognizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E264CDEC19DE9CA90052F50A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E264CDED19DE9CA90052F50A /* GestureRecognizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizerTests.swift; sourceTree = "<group>"; };
+		E264CDF819DE9CD70052F50A /* GestureRecognizer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GestureRecognizer-Bridging-Header.h"; sourceTree = "<group>"; };
+		E264CE0719DE9DD10052F50A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E264CE0819DE9DD10052F50A /* BootLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootLogic.swift; sourceTree = "<group>"; };
+		E264CE0919DE9DD10052F50A /* ConsoleScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleScreen.swift; sourceTree = "<group>"; };
+		E264CE0A19DE9DD10052F50A /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		E264CE1019DE9F2C0052F50A /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass.png; sourceTree = "<group>"; };
+		E264CE1219DE9F380052F50A /* ant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ant.png; sourceTree = "<group>"; };
+		E264CE1519DEA02B0052F50A /* DemoTap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTap.swift; sourceTree = "<group>"; };
+		E264CE1719DEA3EA0052F50A /* DemoPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPan.swift; sourceTree = "<group>"; };
+		E264CE1919DEA44E0052F50A /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target.png; sourceTree = "<group>"; };
+		E264CE1B19DEA7360052F50A /* DemoRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoRotate.swift; sourceTree = "<group>"; };
+		E264CE1D19DEA7BB0052F50A /* dial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dial.png; sourceTree = "<group>"; };
+		E264CE1F19DEAC3F0052F50A /* DemoSwipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoSwipe.swift; sourceTree = "<group>"; };
+		E264CE2119DEAD140052F50A /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
+		E264CE2319DEB0A20052F50A /* DemoPinch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPinch.swift; sourceTree = "<group>"; };
+		E264CE2719DEB15B0052F50A /* playboy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = playboy.jpg; sourceTree = "<group>"; };
+		E264CE2919DEB6120052F50A /* DemoPinchRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPinchRotate.swift; sourceTree = "<group>"; };
+		E264CE2B19DECAA30052F50A /* ThrowBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrowBall.swift; sourceTree = "<group>"; };
+		E264CE2D19DECB2D0052F50A /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E264CDCF19DE9CA90052F50A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E264CDE419DE9CA90052F50A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E264CDC919DE9CA90052F50A = {
+			isa = PBXGroup;
+			children = (
+				E264CDD419DE9CA90052F50A /* GestureRecognizer */,
+				E264CDEA19DE9CA90052F50A /* GestureRecognizerTests */,
+				E264CDD319DE9CA90052F50A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E264CDD319DE9CA90052F50A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E264CDD219DE9CA90052F50A /* GestureRecognizer.app */,
+				E264CDE719DE9CA90052F50A /* GestureRecognizerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E264CDD419DE9CA90052F50A /* GestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				E264CDF719DE9CBD0052F50A /* Core */,
+				E264CE1419DEA0070052F50A /* Basic */,
+				E264CDDE19DE9CA90052F50A /* Images.xcassets */,
+				E264CE0F19DE9F230052F50A /* Images */,
+				E264CDD519DE9CA90052F50A /* Supporting Files */,
+			);
+			path = GestureRecognizer;
+			sourceTree = "<group>";
+		};
+		E264CDD519DE9CA90052F50A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E264CDD619DE9CA90052F50A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E264CDEA19DE9CA90052F50A /* GestureRecognizerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E264CDED19DE9CA90052F50A /* GestureRecognizerTests.swift */,
+				E264CDEB19DE9CA90052F50A /* Supporting Files */,
+			);
+			path = GestureRecognizerTests;
+			sourceTree = "<group>";
+		};
+		E264CDEB19DE9CA90052F50A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E264CDEC19DE9CA90052F50A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E264CDF719DE9CBD0052F50A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E264CE0719DE9DD10052F50A /* AppDelegate.swift */,
+				E264CE0819DE9DD10052F50A /* BootLogic.swift */,
+				E264CE0919DE9DD10052F50A /* ConsoleScreen.swift */,
+				E264CE0A19DE9DD10052F50A /* MainScreen.swift */,
+				E264CDF819DE9CD70052F50A /* GestureRecognizer-Bridging-Header.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		E264CE0F19DE9F230052F50A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3E77070C19FE8C04003B105E /* cay1.png */,
+				3E77070D19FE8C04003B105E /* cay2.png */,
+				3E77070E19FE8C04003B105E /* floorplan.png */,
+				3E77070A19FE7A75003B105E /* fireworks-red-icon.png */,
+				3E77070819FE776E003B105E /* free-ant-icon-download.png */,
+				E264CE2D19DECB2D0052F50A /* football.png */,
+				E264CE2719DEB15B0052F50A /* playboy.jpg */,
+				E264CE2119DEAD140052F50A /* exit.png */,
+				E264CE1D19DEA7BB0052F50A /* dial.png */,
+				E264CE1919DEA44E0052F50A /* target.png */,
+				E264CE1219DE9F380052F50A /* ant.png */,
+				E264CE1019DE9F2C0052F50A /* grass.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E264CE1419DEA0070052F50A /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				E264CE1519DEA02B0052F50A /* DemoTap.swift */,
+				E264CE1719DEA3EA0052F50A /* DemoPan.swift */,
+				E264CE1B19DEA7360052F50A /* DemoRotate.swift */,
+				E264CE1F19DEAC3F0052F50A /* DemoSwipe.swift */,
+				E264CE2319DEB0A20052F50A /* DemoPinch.swift */,
+				E264CE2919DEB6120052F50A /* DemoPinchRotate.swift */,
+				E264CE2B19DECAA30052F50A /* ThrowBall.swift */,
+				3E77070419FE745E003B105E /* ViewController.swift */,
+				3E77070519FE745E003B105E /* ViewController.xib */,
+				3E77071219FE8C29003B105E /* FurnitureDecor.swift */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E264CDD119DE9CA90052F50A /* GestureRecognizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E264CDF119DE9CA90052F50A /* Build configuration list for PBXNativeTarget "GestureRecognizer" */;
+			buildPhases = (
+				E264CDCE19DE9CA90052F50A /* Sources */,
+				E264CDCF19DE9CA90052F50A /* Frameworks */,
+				E264CDD019DE9CA90052F50A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GestureRecognizer;
+			productName = GestureRecognizer;
+			productReference = E264CDD219DE9CA90052F50A /* GestureRecognizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E264CDE619DE9CA90052F50A /* GestureRecognizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E264CDF419DE9CA90052F50A /* Build configuration list for PBXNativeTarget "GestureRecognizerTests" */;
+			buildPhases = (
+				E264CDE319DE9CA90052F50A /* Sources */,
+				E264CDE419DE9CA90052F50A /* Frameworks */,
+				E264CDE519DE9CA90052F50A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E264CDE919DE9CA90052F50A /* PBXTargetDependency */,
+			);
+			name = GestureRecognizerTests;
+			productName = GestureRecognizerTests;
+			productReference = E264CDE719DE9CA90052F50A /* GestureRecognizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E264CDCA19DE9CA90052F50A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Techmaster Vietnam";
+				TargetAttributes = {
+					E264CDD119DE9CA90052F50A = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					E264CDE619DE9CA90052F50A = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = E264CDD119DE9CA90052F50A;
+					};
+				};
+			};
+			buildConfigurationList = E264CDCD19DE9CA90052F50A /* Build configuration list for PBXProject "GestureRecognizer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E264CDC919DE9CA90052F50A;
+			productRefGroup = E264CDD319DE9CA90052F50A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E264CDD119DE9CA90052F50A /* GestureRecognizer */,
+				E264CDE619DE9CA90052F50A /* GestureRecognizerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E264CDD019DE9CA90052F50A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E77070B19FE7A75003B105E /* fireworks-red-icon.png in Resources */,
+				3E77070919FE776E003B105E /* free-ant-icon-download.png in Resources */,
+				E264CE1A19DEA44E0052F50A /* target.png in Resources */,
+				3E77070719FE745E003B105E /* ViewController.xib in Resources */,
+				E264CE1E19DEA7BB0052F50A /* dial.png in Resources */,
+				3E77070F19FE8C04003B105E /* cay1.png in Resources */,
+				E264CE2E19DECB2D0052F50A /* football.png in Resources */,
+				E264CE1119DE9F2C0052F50A /* grass.png in Resources */,
+				E264CE1319DE9F380052F50A /* ant.png in Resources */,
+				E264CDDF19DE9CA90052F50A /* Images.xcassets in Resources */,
+				3E77071019FE8C04003B105E /* cay2.png in Resources */,
+				E264CE2219DEAD140052F50A /* exit.png in Resources */,
+				E264CE2819DEB15B0052F50A /* playboy.jpg in Resources */,
+				3E77071119FE8C04003B105E /* floorplan.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E264CDE519DE9CA90052F50A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E264CDCE19DE9CA90052F50A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E264CE2419DEB0A20052F50A /* DemoPinch.swift in Sources */,
+				E264CE0E19DE9DD10052F50A /* MainScreen.swift in Sources */,
+				E264CE1C19DEA7360052F50A /* DemoRotate.swift in Sources */,
+				E264CE0D19DE9DD10052F50A /* ConsoleScreen.swift in Sources */,
+				E264CE2A19DEB6120052F50A /* DemoPinchRotate.swift in Sources */,
+				E264CE2C19DECAA30052F50A /* ThrowBall.swift in Sources */,
+				3E77070619FE745E003B105E /* ViewController.swift in Sources */,
+				E264CE0C19DE9DD10052F50A /* BootLogic.swift in Sources */,
+				E264CE1619DEA02B0052F50A /* DemoTap.swift in Sources */,
+				E264CE1819DEA3EA0052F50A /* DemoPan.swift in Sources */,
+				E264CE0B19DE9DD10052F50A /* AppDelegate.swift in Sources */,
+				3E77071319FE8C29003B105E /* FurnitureDecor.swift in Sources */,
+				E264CE2019DEAC3F0052F50A /* DemoSwipe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E264CDE319DE9CA90052F50A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E264CDEE19DE9CA90052F50A /* GestureRecognizerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E264CDE919DE9CA90052F50A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E264CDD119DE9CA90052F50A /* GestureRecognizer */;
+			targetProxy = E264CDE819DE9CA90052F50A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E264CDEF19DE9CA90052F50A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E264CDF019DE9CA90052F50A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E264CDF219DE9CA90052F50A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = GestureRecognizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GestureRecognizer/GestureRecognizer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E264CDF319DE9CA90052F50A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = GestureRecognizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GestureRecognizer/GestureRecognizer-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		E264CDF519DE9CA90052F50A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GestureRecognizerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GestureRecognizer.app/GestureRecognizer";
+			};
+			name = Debug;
+		};
+		E264CDF619DE9CA90052F50A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GestureRecognizerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GestureRecognizer.app/GestureRecognizer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E264CDCD19DE9CA90052F50A /* Build configuration list for PBXProject "GestureRecognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E264CDEF19DE9CA90052F50A /* Debug */,
+				E264CDF019DE9CA90052F50A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E264CDF119DE9CA90052F50A /* Build configuration list for PBXNativeTarget "GestureRecognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E264CDF219DE9CA90052F50A /* Debug */,
+				E264CDF319DE9CA90052F50A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E264CDF419DE9CA90052F50A /* Build configuration list for PBXNativeTarget "GestureRecognizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E264CDF519DE9CA90052F50A /* Debug */,
+				E264CDF619DE9CA90052F50A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E264CDCA19DE9CA90052F50A /* Project object */;
+}
