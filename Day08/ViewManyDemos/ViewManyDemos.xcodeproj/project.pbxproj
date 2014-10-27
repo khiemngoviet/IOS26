@@ -20,7 +20,6 @@
 		E275736518B215A10020CB25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E275734418B215A10020CB25 /* Foundation.framework */; };
 		E275736618B215A10020CB25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E275734818B215A10020CB25 /* UIKit.framework */; };
 		E275736E18B215A10020CB25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E275736C18B215A10020CB25 /* InfoPlist.strings */; };
-		E275737018B215A10020CB25 /* ViewManyDemosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E275736F18B215A10020CB25 /* ViewManyDemosTests.m */; };
 		E275737B18B217650020CB25 /* AddRemoveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E275737A18B217650020CB25 /* AddRemoveVC.m */; };
 		E275737E18B21C4E0020CB25 /* coolGirl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E275737D18B21C4E0020CB25 /* coolGirl.jpg */; };
 		E275738118B21CF20020CB25 /* AlphaPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E275738018B21CF20020CB25 /* AlphaPropertyVC.m */; };
@@ -69,7 +68,6 @@
 		E275736318B215A10020CB25 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E275736B18B215A10020CB25 /* ViewManyDemosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ViewManyDemosTests-Info.plist"; sourceTree = "<group>"; };
 		E275736D18B215A10020CB25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E275736F18B215A10020CB25 /* ViewManyDemosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewManyDemosTests.m; sourceTree = "<group>"; };
 		E275737918B217650020CB25 /* AddRemoveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRemoveVC.h; sourceTree = "<group>"; };
 		E275737A18B217650020CB25 /* AddRemoveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRemoveVC.m; sourceTree = "<group>"; };
 		E275737D18B21C4E0020CB25 /* coolGirl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coolGirl.jpg; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 		E275736918B215A10020CB25 /* ViewManyDemosTests */ = {
 			isa = PBXGroup;
 			children = (
-				E275736F18B215A10020CB25 /* ViewManyDemosTests.m */,
 				E275736A18B215A10020CB25 /* Supporting Files */,
 			);
 			path = ViewManyDemosTests;
@@ -281,11 +278,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = TechMaster;
-				TargetAttributes = {
-					E275736118B215A10020CB25 = {
-						TestTargetID = E275734018B215A10020CB25;
-					};
-				};
 			};
 			buildConfigurationList = E275733C18B215A10020CB25 /* Build configuration list for PBXProject "ViewManyDemos" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -359,7 +351,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E275737018B215A10020CB25 /* ViewManyDemosTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +493,6 @@
 		E275737718B215A10020CB25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ViewManyDemos.app/ViewManyDemos";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -516,7 +506,6 @@
 				);
 				INFOPLIST_FILE = "ViewManyDemosTests/ViewManyDemosTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -524,7 +513,6 @@
 		E275737818B215A10020CB25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ViewManyDemos.app/ViewManyDemos";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -534,7 +522,6 @@
 				GCC_PREFIX_HEADER = "ViewManyDemos/ViewManyDemos-Prefix.pch";
 				INFOPLIST_FILE = "ViewManyDemosTests/ViewManyDemosTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

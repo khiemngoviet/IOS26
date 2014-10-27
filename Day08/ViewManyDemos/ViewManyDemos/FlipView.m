@@ -19,14 +19,14 @@
 
 @implementation FlipView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        NSLog(@"Do something");
-    }
-    return self;
-}
+//- (id)initWithFrame:(CGRect)frame
+//{
+//    self = [super initWithFrame:frame];
+//    if (self) {
+//        NSLog(@"Do something");
+//    }
+//    return self;
+//}
 
 - (void) awakeFromNib {
     NSLog(@"awake From Nib");

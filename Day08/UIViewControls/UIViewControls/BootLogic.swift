@@ -21,23 +21,29 @@ class BootLogic: NSObject {
             [TITLE: "View Basic",CLASS: "ViewBasic"],
             [TITLE: "View Basic2",CLASS: "ViewBasic2"],
             [TITLE: "Demo Image",CLASS: "DemoImage"],
-            [TITLE: "Events of ViewControllers",CLASS: "VCEvents"],            
+            [TITLE: "Events of ViewControllers",CLASS: "VCEvents"],
             [TITLE: "Demo UIView",CLASS: "DemoUIView"],
             [TITLE: "Demo Control",CLASS: "DemoControl"],
             [TITLE: "Bon Fire",CLASS: "BonFire"],
             [TITLE: "Flying Bird",CLASS: "FlyBird"],
-            [TITLE: "Transformation",CLASS: "Transformation"]
+            [TITLE: "Add Remove",CLASS: "AddRemoveVC"],
+            [TITLE: "Tag Property",CLASS: "TagPropertyVC"],
+            [TITLE: "Alpha Property",CLASS: "AlphaPropertyVC"],
+            [TITLE: "AffineTransform",CLASS: "AffineTransformVC"],
+            [TITLE: "Block Animation",CLASS: "BlockAnimationVC"],
+            [TITLE: "View Transition",CLASS: "ViewTransitionVC"],
+            [TITLE: "Rating",CLASS: "RatingVC"]
             ]
         ]
-       
         
-        mainScreen!.menu = [basic]
-        mainScreen!.title = "UIView - Controls"
-        mainScreen!.about = "Đây là ứng dụng minh hoạ UIView - Controls"
         
-        let nav = UINavigationController(rootViewController: mainScreen!)
+        mainScreen.menu = [basic]
+        mainScreen.title = "UIView - Controls"
+        mainScreen.about = "Đây là ứng dụng minh hoạ UIView - Controls"
         
-        window.rootViewController = nav        
-      
+        let nav = UINavigationController(rootViewController: mainScreen)
+        
+        window.rootViewController = nav
+        
     }
 }

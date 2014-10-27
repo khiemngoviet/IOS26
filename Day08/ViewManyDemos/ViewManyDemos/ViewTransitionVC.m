@@ -17,8 +17,8 @@
 
 - (void)viewDidLoad
 {
-    self.flipView.frontImage = [UIImage imageNamed:@"girlA.jpg"];
-    self.flipView.backImage = [UIImage imageNamed:@"girlB.jpg"];
+//    self.flipView.frontImage = [UIImage imageNamed:@"girlA.jpg"];
+//    self.flipView.backImage = [UIImage imageNamed:@"girlB.jpg"];
    
 }
 
