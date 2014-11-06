@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		669C485219BD5C8200AE6403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669C485119BD5C8200AE6403 /* AppDelegate.swift */; };
+		669C485C19BD5C8200AE6403 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669C485B19BD5C8200AE6403 /* Images.xcassets */; };
+		669C487619BD635C00AE6403 /* BootLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669C487519BD635C00AE6403 /* BootLogic.swift */; };
+		669C487A19BDA2C100AE6403 /* ConsoleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669C487919BDA2C100AE6403 /* ConsoleScreen.swift */; };
+		669C487C19BDA4FC00AE6403 /* BasicA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669C487B19BDA4FC00AE6403 /* BasicA.swift */; };
+		669C487F19BDB06700AE6403 /* BasicB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669C487D19BDB06700AE6403 /* BasicB.swift */; };
+		669C488019BDB06700AE6403 /* BasicB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 669C487E19BDB06700AE6403 /* BasicB.xib */; };
+		E2F396C61A0B15E500B342D8 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F396C51A0B15E500B342D8 /* MainScreen.swift */; };
+		E2F396C81A0B160100B342D8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F396C71A0B160100B342D8 /* Storyboard.storyboard */; };
+		E2F396CA1A0B161C00B342D8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F396C91A0B161C00B342D8 /* TableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		669C484C19BD5C8200AE6403 /* TechmasterSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechmasterSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		669C485019BD5C8200AE6403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		669C485119BD5C8200AE6403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		669C485B19BD5C8200AE6403 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		669C487519BD635C00AE6403 /* BootLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootLogic.swift; sourceTree = "<group>"; };
+		669C487919BDA2C100AE6403 /* ConsoleScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleScreen.swift; sourceTree = "<group>"; };
+		669C487B19BDA4FC00AE6403 /* BasicA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicA.swift; sourceTree = "<group>"; };
+		669C487D19BDB06700AE6403 /* BasicB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicB.swift; sourceTree = "<group>"; };
+		669C487E19BDB06700AE6403 /* BasicB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicB.xib; sourceTree = "<group>"; };
+		E2F396C51A0B15E500B342D8 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		E2F396C71A0B160100B342D8 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		E2F396C91A0B161C00B342D8 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		669C484919BD5C8200AE6403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		669C484319BD5C8200AE6403 = {
+			isa = PBXGroup;
+			children = (
+				669C484E19BD5C8200AE6403 /* TechmasterSwiftApp */,
+				669C484D19BD5C8200AE6403 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		669C484D19BD5C8200AE6403 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				669C484C19BD5C8200AE6403 /* TechmasterSwiftApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		669C484E19BD5C8200AE6403 /* TechmasterSwiftApp */ = {
+			isa = PBXGroup;
+			children = (
+				669C485119BD5C8200AE6403 /* AppDelegate.swift */,
+				669C487519BD635C00AE6403 /* BootLogic.swift */,
+				E2F396C51A0B15E500B342D8 /* MainScreen.swift */,
+				669C487919BDA2C100AE6403 /* ConsoleScreen.swift */,
+				669C485B19BD5C8200AE6403 /* Images.xcassets */,
+				669C484F19BD5C8200AE6403 /* Supporting Files */,
+				669C487B19BDA4FC00AE6403 /* BasicA.swift */,
+				669C487D19BDB06700AE6403 /* BasicB.swift */,
+				669C487E19BDB06700AE6403 /* BasicB.xib */,
+				E2F396C71A0B160100B342D8 /* Storyboard.storyboard */,
+				E2F396C91A0B161C00B342D8 /* TableViewController.swift */,
+			);
+			path = TechmasterSwiftApp;
+			sourceTree = "<group>";
+		};
+		669C484F19BD5C8200AE6403 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				669C485019BD5C8200AE6403 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		669C484B19BD5C8200AE6403 /* TechmasterSwiftApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 669C486B19BD5C8200AE6403 /* Build configuration list for PBXNativeTarget "TechmasterSwiftApp" */;
+			buildPhases = (
+				669C484819BD5C8200AE6403 /* Sources */,
+				669C484919BD5C8200AE6403 /* Frameworks */,
+				669C484A19BD5C8200AE6403 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TechmasterSwiftApp;
+			productName = TechmasterSwiftApp;
+			productReference = 669C484C19BD5C8200AE6403 /* TechmasterSwiftApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		669C484419BD5C8200AE6403 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Adam;
+				TargetAttributes = {
+					669C484B19BD5C8200AE6403 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = 669C484719BD5C8200AE6403 /* Build configuration list for PBXProject "TechmasterSwiftApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 669C484319BD5C8200AE6403;
+			productRefGroup = 669C484D19BD5C8200AE6403 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				669C484B19BD5C8200AE6403 /* TechmasterSwiftApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		669C484A19BD5C8200AE6403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669C485C19BD5C8200AE6403 /* Images.xcassets in Resources */,
+				669C488019BDB06700AE6403 /* BasicB.xib in Resources */,
+				E2F396C81A0B160100B342D8 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		669C484819BD5C8200AE6403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2F396C61A0B15E500B342D8 /* MainScreen.swift in Sources */,
+				E2F396CA1A0B161C00B342D8 /* TableViewController.swift in Sources */,
+				669C487C19BDA4FC00AE6403 /* BasicA.swift in Sources */,
+				669C487F19BDB06700AE6403 /* BasicB.swift in Sources */,
+				669C485219BD5C8200AE6403 /* AppDelegate.swift in Sources */,
+				669C487A19BDA2C100AE6403 /* ConsoleScreen.swift in Sources */,
+				669C487619BD635C00AE6403 /* BootLogic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		669C486919BD5C8200AE6403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		669C486A19BD5C8200AE6403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		669C486C19BD5C8200AE6403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = TechmasterSwiftApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		669C486D19BD5C8200AE6403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = TechmasterSwiftApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		669C484719BD5C8200AE6403 /* Build configuration list for PBXProject "TechmasterSwiftApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				669C486919BD5C8200AE6403 /* Debug */,
+				669C486A19BD5C8200AE6403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		669C486B19BD5C8200AE6403 /* Build configuration list for PBXNativeTarget "TechmasterSwiftApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				669C486C19BD5C8200AE6403 /* Debug */,
+				669C486D19BD5C8200AE6403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 669C484419BD5C8200AE6403 /* Project object */;
+}
