@@ -34,7 +34,9 @@ class BootLogic: NSObject {
             [TITLE: "Four Squares",CLASS: "FourSquares"],
             [TITLE: "Update constraint on rotation",CLASS: "UpdateConstrainOnRotation"],
             [TITLE: "IntrinsicContentSize",CLASS: "DemoIntrinsicContentSize"],
-            [TITLE: "Modify constraint on fly",CLASS: "ModifyConstraint"]
+            [TITLE: "Modify constraint on fly",CLASS: "ModifyConstraint"],
+            [TITLE: "NewsPaper layout",CLASS: "NewsPaperLayout"]
+            
             ]
         ]
        

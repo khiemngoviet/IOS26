@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E916C9F1A0C5C790040A2AC /* NewsPaperLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E916C9D1A0C5C790040A2AC /* NewsPaperLayout.swift */; };
+		6E916CA21A0C64190040A2AC /* Boua.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E916CA11A0C64190040A2AC /* Boua.jpg */; };
+		6E916CA41A0C644E0040A2AC /* Suarez.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E916CA31A0C644E0040A2AC /* Suarez.jpg */; };
 		E24CD06319EE1D08008A127F /* DemoOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24CD06219EE1D08008A127F /* DemoOptions.swift */; };
 		E25BC64A19ED3B6E00330923 /* FourSquares.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BC64919ED3B6E00330923 /* FourSquares.swift */; };
 		E25BC64C19ED59BD00330923 /* UpdateConstrainOnRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25BC64B19ED59BD00330923 /* UpdateConstrainOnRotation.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E916C9D1A0C5C790040A2AC /* NewsPaperLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsPaperLayout.swift; sourceTree = "<group>"; };
+		6E916CA11A0C64190040A2AC /* Boua.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Boua.jpg; sourceTree = "<group>"; };
+		6E916CA31A0C644E0040A2AC /* Suarez.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Suarez.jpg; sourceTree = "<group>"; };
 		E24CD06219EE1D08008A127F /* DemoOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoOptions.swift; sourceTree = "<group>"; };
 		E25BC64919ED3B6E00330923 /* FourSquares.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourSquares.swift; sourceTree = "<group>"; };
 		E25BC64B19ED59BD00330923 /* UpdateConstrainOnRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateConstrainOnRotation.swift; sourceTree = "<group>"; };
@@ -129,6 +135,8 @@
 		E27AA84619EB7587005705EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E916CA31A0C644E0040A2AC /* Suarez.jpg */,
+				6E916CA11A0C64190040A2AC /* Boua.jpg */,
 				E27AA84719EB7587005705EE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -191,6 +199,7 @@
 				E25BC64D19ED727200330923 /* DemoIntrinsicContentSize.swift */,
 				E25BC64F19ED788900330923 /* ModifyConstraint.swift */,
 				E24CD06219EE1D08008A127F /* DemoOptions.swift */,
+				6E916C9D1A0C5C790040A2AC /* NewsPaperLayout.swift */,
 			);
 			name = AutolayoutByProgramming;
 			sourceTree = "<group>";
@@ -278,8 +287,10 @@
 				E27AA88819EB7C12005705EE /* playboy.jpg in Resources */,
 				E27AA85019EB7587005705EE /* Images.xcassets in Resources */,
 				E27AA88619EB7BD3005705EE /* CenterView.xib in Resources */,
+				6E916CA41A0C644E0040A2AC /* Suarez.jpg in Resources */,
 				E27AA89019EB828A005705EE /* MarginWithOther.xib in Resources */,
 				E2F2AA0619ED31D20001D7DC /* Default-568h@2x.png in Resources */,
+				6E916CA21A0C64190040A2AC /* Boua.jpg in Resources */,
 				E27AA88C19EB7E95005705EE /* CenterMarginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +320,7 @@
 				E27AA88119EB77F0005705EE /* MainScreen.swift in Sources */,
 				E27AA88B19EB7E95005705EE /* CenterMarginView.swift in Sources */,
 				E25BC64C19ED59BD00330923 /* UpdateConstrainOnRotation.swift in Sources */,
+				6E916C9F1A0C5C790040A2AC /* NewsPaperLayout.swift in Sources */,
 				E2F2AA0819ED35590001D7DC /* DemoMetrics.swift in Sources */,
 				E27AA88519EB7BD3005705EE /* CenterView.swift in Sources */,
 				E24CD06319EE1D08008A127F /* DemoOptions.swift in Sources */,
