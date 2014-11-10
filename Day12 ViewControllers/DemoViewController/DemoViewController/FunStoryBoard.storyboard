@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Hello World-->
+        <scene sceneID="QgO-ga-IpI">
+            <objects>
+                <viewController storyboardIdentifier="HelloWorld" id="vRh-fN-UgU" customClass="HelloWorld" customModule="DemoViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5QO-Oc-t69"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Sd-Va-MDT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BHl-Sc-hKT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog.png" translatesAutoresizingMaskIntoConstraints="NO" id="G5c-bq-zw2">
+                                <rect key="frame" x="236" y="236" width="128" height="128"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xCl-z4-7kS" appends="YES" id="gKQ-AM-2h5"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to close !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psi-u8-ZzV">
+                                <rect key="frame" x="189" y="207" width="223" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="GNb-cS-6fJ"/>
+                                    <constraint firstAttribute="width" constant="223" id="JlC-Lh-JR4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="psi-u8-ZzV" secondAttribute="centerX" id="5GV-ah-EMM"/>
+                            <constraint firstAttribute="centerY" secondItem="G5c-bq-zw2" secondAttribute="centerY" id="6xz-Se-nPV"/>
+                            <constraint firstAttribute="centerX" secondItem="G5c-bq-zw2" secondAttribute="centerX" id="ld5-gZ-3Qy"/>
+                            <constraint firstItem="G5c-bq-zw2" firstAttribute="top" secondItem="psi-u8-ZzV" secondAttribute="bottom" constant="8" id="rLQ-HM-m4g"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dDA-fn-58G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="xCl-z4-7kS">
+                    <connections>
+                        <action selector="swipeLeftToClose:" destination="vRh-fN-UgU" id="BWZ-Az-1Ao"/>
+                        <outlet property="delegate" destination="vRh-fN-UgU" id="UEE-sj-Bdc"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="950" y="466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dog.png" width="128" height="128"/>
+    </resources>
+</document>

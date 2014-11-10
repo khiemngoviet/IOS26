@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller Events-->
+        <scene sceneID="uWx-5e-MXP">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerEvents" id="dER-oh-tq2" customClass="ViewControllerEvents" customModule="ViewControllersBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f7T-0U-VXL"/>
+                        <viewControllerLayoutGuide type="bottom" id="NDC-fU-w4L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ihi-p3-vyA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wu7-74-5G5">
+                                <rect key="frame" x="102" y="269" width="117" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0lX-3d-McX"/>
+                                    <constraint firstAttribute="width" constant="117" id="ThJ-1P-8CH"/>
+                                </constraints>
+                                <state key="normal" title="Hello World">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PBJ-7f-w06" kind="showDetail" identifier="FromHelloWorld" id="uER-FL-frv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rw-UX-SJR">
+                                <rect key="frame" x="107" y="319" width="107" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="csD-z0-deY"/>
+                                    <constraint firstAttribute="height" constant="30" id="gEZ-rT-Jgk"/>
+                                </constraints>
+                                <state key="normal" title="Hello Vietnam">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eg5-m5-LsX" kind="show" id="7Hh-hV-xRu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41v-uJ-Moi">
+                                <rect key="frame" x="112" y="366" width="96" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="duV-4V-1Hj"/>
+                                    <constraint firstAttribute="width" constant="96" id="rn3-TJ-Vp7"/>
+                                </constraints>
+                                <state key="normal" title="Hello Saigon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Kib-Nu-qxr" kind="presentation" modalTransitionStyle="partialCurl" id="NAl-YF-Gua"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="wu7-74-5G5" secondAttribute="centerX" id="4WB-10-49Q"/>
+                            <constraint firstAttribute="centerX" secondItem="41v-uJ-Moi" secondAttribute="centerX" id="5n7-h0-3q2"/>
+                            <constraint firstItem="1Rw-UX-SJR" firstAttribute="top" secondItem="wu7-74-5G5" secondAttribute="bottom" constant="20" id="jCb-n4-TTU"/>
+                            <constraint firstItem="41v-uJ-Moi" firstAttribute="top" secondItem="1Rw-UX-SJR" secondAttribute="bottom" constant="17" id="wI6-Cd-hnN"/>
+                            <constraint firstAttribute="centerY" secondItem="wu7-74-5G5" secondAttribute="centerY" id="xyN-fs-UgE"/>
+                            <constraint firstAttribute="centerX" secondItem="1Rw-UX-SJR" secondAttribute="centerX" id="yWg-73-mMn"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="II5-xS-hBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="441"/>
+        </scene>
+        <!--Bikini Screen-->
+        <scene sceneID="yIK-zr-wDe">
+            <objects>
+                <viewController id="Kib-Nu-qxr" customClass="BikiniScreen" customModule="ViewControllersBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="phg-V8-jSV"/>
+                        <viewControllerLayoutGuide type="bottom" id="yKV-n6-Eoj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OyB-ax-oTE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bikini2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="V49-E6-YBf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yKV-n6-Eoj" firstAttribute="top" secondItem="V49-E6-YBf" secondAttribute="bottom" id="94P-bk-bOv"/>
+                            <constraint firstItem="V49-E6-YBf" firstAttribute="top" secondItem="OyB-ax-oTE" secondAttribute="topMargin" id="K5F-8e-hsR"/>
+                            <constraint firstItem="V49-E6-YBf" firstAttribute="leading" secondItem="OyB-ax-oTE" secondAttribute="leadingMargin" constant="-16" id="XeL-bR-g93"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V49-E6-YBf" secondAttribute="trailing" constant="-16" id="bIo-X9-v8h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bikiniPhoto" destination="V49-E6-YBf" id="ScR-je-3T8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WHe-BY-4EH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="451"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="02E-bc-ftD">
+            <objects>
+                <viewController id="eg5-m5-LsX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2AP-8F-T5g"/>
+                        <viewControllerLayoutGuide type="bottom" id="L8n-TJ-f3F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MMA-rP-hqM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bikini.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ze2-g2-jSJ">
+                                <rect key="frame" x="16" y="0.0" width="288" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ze2-g2-jSJ" firstAttribute="leading" secondItem="MMA-rP-hqM" secondAttribute="leadingMargin" id="1CN-UE-7FA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ze2-g2-jSJ" secondAttribute="trailing" id="ecQ-rI-bpj"/>
+                            <constraint firstItem="Ze2-g2-jSJ" firstAttribute="top" secondItem="MMA-rP-hqM" secondAttribute="topMargin" id="jFZ-Ca-bnd"/>
+                            <constraint firstItem="L8n-TJ-f3F" firstAttribute="top" secondItem="Ze2-g2-jSJ" secondAttribute="bottom" id="jfR-F8-F49"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYm-cF-vPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="866"/>
+        </scene>
+        <!--Go Back Screen-->
+        <scene sceneID="Ruv-yq-0gA">
+            <objects>
+                <viewController storyboardIdentifier="GoBackScreen" id="PBJ-7f-w06" customClass="GoBackScreen" customModule="ViewControllersBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BMZ-Ll-HWU"/>
+                        <viewControllerLayoutGuide type="bottom" id="z7Q-9F-HXu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Myc-Pv-NKg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UnS-1r-Ud8">
+                                <rect key="frame" x="27" y="20" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="a0B-90-Tly"/>
+                                    <constraint firstAttribute="height" constant="30" id="uow-3o-hwx"/>
+                                </constraints>
+                                <state key="normal" title="&lt; Go Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onGoback:" destination="PBJ-7f-w06" eventType="touchUpInside" id="ydD-Xj-Gns"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UnS-1r-Ud8" firstAttribute="top" secondItem="BMZ-Ll-HWU" secondAttribute="bottom" id="mQa-Wk-F2e"/>
+                            <constraint firstItem="UnS-1r-Ud8" firstAttribute="leading" secondItem="Myc-Pv-NKg" secondAttribute="leadingMargin" constant="11" id="s2D-RF-kKK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N0l-4U-dGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146" y="345"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bikini.jpg" width="320" height="480"/>
+        <image name="bikini2.jpg" width="320" height="480"/>
+    </resources>
+</document>
