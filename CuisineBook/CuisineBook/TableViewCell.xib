@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="222" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="CuisineBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="222"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Toi-Xv-WiC">
+                        <rect key="frame" x="8" y="178" width="382" height="35"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZrJ-eL-aXv">
+                        <rect key="frame" x="25" y="134" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="6ZE-GJ-dkZ"/>
+                            <constraint firstAttribute="width" constant="70" id="wlt-VH-del"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Food1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Gm4-R0-oIe">
+                        <rect key="frame" x="8" y="8" width="382" height="170"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="170" id="RGY-2w-ghT"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Gm4-R0-oIe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="2ei-ZR-bF6"/>
+                    <constraint firstItem="Toi-Xv-WiC" firstAttribute="top" secondItem="Gm4-R0-oIe" secondAttribute="bottom" id="9HB-Rf-XaK"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Toi-Xv-WiC" secondAttribute="bottom" id="9Ls-j2-1by"/>
+                    <constraint firstItem="Gm4-R0-oIe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Flv-M5-ey0"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Toi-Xv-WiC" secondAttribute="trailing" id="Gmf-l6-lkJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ZrJ-eL-aXv" secondAttribute="bottom" constant="9" id="VRa-nF-SrQ"/>
+                    <constraint firstItem="Toi-Xv-WiC" firstAttribute="top" secondItem="Gm4-R0-oIe" secondAttribute="bottom" id="XJW-y3-NdD"/>
+                    <constraint firstItem="ZrJ-eL-aXv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="17" id="f1t-sF-oVr"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Gm4-R0-oIe" secondAttribute="trailing" id="nWy-ZQ-hsp"/>
+                    <constraint firstItem="Toi-Xv-WiC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="pjG-GL-AU0"/>
+                    <constraint firstItem="Toi-Xv-WiC" firstAttribute="top" secondItem="Gm4-R0-oIe" secondAttribute="bottom" constant="2" id="rau-cD-9Ot"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="rau-cD-9Ot"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="429" y="279"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Food1.jpg" width="650" height="433"/>
+        <image name="Profile1.png" width="503" height="553"/>
+    </resources>
+</document>
