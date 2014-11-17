@@ -10,9 +10,16 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    
+    @IBOutlet var profileImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.width/2
+        profileImageView.layer.borderWidth = 3.0
+        profileImageView.layer.borderColor = UIColor.whiteColor().CGColor
+        profileImageView.clipsToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
