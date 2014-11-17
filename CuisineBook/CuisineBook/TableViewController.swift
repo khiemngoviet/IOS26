@@ -9,43 +9,47 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+    
+    var data = [Item]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-
+        self.navigationController?.navigationBar.barTintColor =  UIColor(red:0.867, green:0.341, blue:0.478 ,alpha:1)
+        
+        let titleNav = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
+        titleNav.text = self.navigationItem.title
+        titleNav.textColor = UIColor.whiteColor()
+        titleNav.font = UIFont.boldSystemFontOfSize(20.0)
+        titleNav.textAlignment = NSTextAlignment.Center
+        self.navigationItem.titleView = titleNav
+        
+        data.append(Item(coverImage: "Food1.jpg", profileImage: "Profile1.png", title: "Slow-Cooker Texas Chili", timeCook: "45 Minutes"))
+        data.append(Item(coverImage: "Food2.jpg", profileImage: "Profile2.png", title: "Curried Sweet Potato Soup", timeCook: "1.30 Hours"))
+        data.append(Item(coverImage: "Food3.jpg", profileImage: "Profile3.png", title: "Spinach and Goat Cheese Tartlets", timeCook: "90 Minutes"))
+        data.append(Item(coverImage: "Food4.jpg", profileImage: "Profile4.png", title: "Vince's Ham-and-Cheese Croquettes", timeCook: "30 Minutes"))
         tableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
     }
-
-
-    // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 2
+        return data.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as TableViewCell
-        //cell.textLabel.text = "sdf"
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as TableViewCell
+        let item = data[indexPath.row] as Item
+        cell.coverImage = item.coverImage
+        cell.profileImage = item.profileImage
+        cell.title = item.title
+        cell.timeCook = item.timeCook
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 222.0
+        return 260.0
     }
-
     
 }
