@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E2E669A1A1C8296000A4796 /* ScrollViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E66991A1C8296000A4796 /* ScrollViewVC.swift */; };
 		6E3093791A19E3CC00478DED /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3093781A19E3CC00478DED /* Item.swift */; };
 		6E30937B1A19E63300478DED /* Food3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E30937A1A19E63300478DED /* Food3.jpg */; };
 		6EDBD9981A18A39400675FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDBD9971A18A39400675FD9 /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E2E66991A1C8296000A4796 /* ScrollViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewVC.swift; sourceTree = "<group>"; };
 		6E3093781A19E3CC00478DED /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		6E30937A1A19E63300478DED /* Food3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Food3.jpg; sourceTree = "<group>"; };
 		6EDBD9921A18A39400675FD9 /* CuisineBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuisineBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 				6EDBD9B71A18A46600675FD9 /* TableViewCell.swift */,
 				6EDBD9B81A18A46600675FD9 /* TableViewCell.xib */,
 				6E3093781A19E3CC00478DED /* Item.swift */,
+				6E2E66991A1C8296000A4796 /* ScrollViewVC.swift */,
 			);
 			path = CuisineBook;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				6E3093791A19E3CC00478DED /* Item.swift in Sources */,
 				6EDBD9B91A18A46600675FD9 /* TableViewCell.swift in Sources */,
 				6EDBD9D31A18AB5200675FD9 /* TableViewController.swift in Sources */,
+				6E2E669A1A1C8296000A4796 /* ScrollViewVC.swift in Sources */,
 				6EDBD9981A18A39400675FD9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
