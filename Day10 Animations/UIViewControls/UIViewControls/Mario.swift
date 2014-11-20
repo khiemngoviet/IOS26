@@ -63,14 +63,14 @@ class Mario: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: "tapOnMario")
         mario!.addGestureRecognizer(tap)
         
-        self._timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "runCity", userInfo: nil, repeats: true)
+        self._timer = NSTimer.scheduledTimerWithTimeInterval(0.15, target: self, selector: "runCity", userInfo: nil, repeats: true)
         self._timer?.fire()
     }
     
     func runCity() {
         city1!.center = CGPoint(x: city1!.center.x - CGFloat(moveX), y: city1!.center.y)
-       /* city2!.center = CGPoint(x: city2!.center.x - CGFloat(moveX), y: city2!.center.y)
-        city3!.center = CGPoint(x: city3!.center.x - CGFloat(moveX), y: city3!.center.y) */
+//        city2!.center = CGPoint(x: city2!.center.x - CGFloat(moveX), y: city2!.center.y)
+//        city3!.center = CGPoint(x: city3!.center.x - CGFloat(moveX), y: city3!.center.y)
         city4!.center = CGPoint(x: city4!.center.x - CGFloat(moveX), y: city4!.center.y)
         
         if city1!.frame.origin.x + CGFloat(cityWidth) < 0 {
@@ -81,6 +81,8 @@ class Mario: UIViewController {
             city4!.frame = CGRect(x: Double(city1!.frame.origin.x) + cityWidth, y: Double(city1!.frame.origin.y), width: cityWidth, height: cityHeight)
             println("move 2")
         }
+        
+        
         
     }
     

@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1C762662-7DA4-4234-8D6C-BAD5A556F3F8</string>
+	<string>7715E515-CE20-4AA9-86C3-08A7899EE8AB</string>
 	<key>IDESourceControlProjectName</key>
-	<string>UIViewControls</string>
+	<string>DemoTable</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A52A0FC024C051D129B66C00DE6F4344A16F5DBD</key>
 		<string>https://github.com/khiemngoviet/IOS26.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Day10 Animations/UIViewControls/UIViewControls.xcodeproj</string>
+	<string>Day15/DemoTable/DemoTable.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A52A0FC024C051D129B66C00DE6F4344A16F5DBD</key>
