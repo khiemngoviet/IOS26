@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,15 +16,53 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wooden-frame-oak_xxl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Dhc-0z-ZQr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FrameInside.png" translatesAutoresizingMaskIntoConstraints="NO" id="SSV-Ed-Pcn">
+                                <rect key="frame" x="50" y="60" width="220" height="420"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="N1b-di-V2u"/>
+                                    <constraint firstAttribute="width" constant="220" id="dRN-5G-OHh"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azu-Fb-LmU">
+                                <rect key="frame" x="60" y="70" width="200" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="V78-ct-AFB"/>
+                                    <constraint firstAttribute="height" constant="400" id="ktj-yN-6y4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Dhc-0z-ZQr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="1Cm-VT-xQ7"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Dhc-0z-ZQr" secondAttribute="bottom" id="OuM-4O-bQl"/>
+                            <constraint firstAttribute="trailing" secondItem="azu-Fb-LmU" secondAttribute="trailing" constant="60" id="SmF-BH-dcf"/>
+                            <constraint firstItem="azu-Fb-LmU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="55" id="ap8-Je-942"/>
+                            <constraint firstItem="Dhc-0z-ZQr" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="cVD-QH-soc"/>
+                            <constraint firstItem="SSV-Ed-Pcn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="h3G-7W-Oux"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SSV-Ed-Pcn" secondAttribute="trailing" constant="34" id="rd8-Mv-9sm"/>
+                            <constraint firstAttribute="trailing" secondItem="Dhc-0z-ZQr" secondAttribute="trailing" id="tdx-Ry-WIA"/>
+                            <constraint firstItem="SSV-Ed-Pcn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="34" id="uKM-Eb-G7q"/>
+                            <constraint firstItem="azu-Fb-LmU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="60" id="wiM-LF-4Cd"/>
+                        </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="container" destination="azu-Fb-LmU" id="dod-jl-Cmr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162.66666666666666" y="366.36000000000001"/>
+            <point key="canvasLocation" x="222" y="365"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FrameInside.png" width="470" height="621"/>
+        <image name="wooden-frame-oak_xxl.jpg" width="761" height="1029"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

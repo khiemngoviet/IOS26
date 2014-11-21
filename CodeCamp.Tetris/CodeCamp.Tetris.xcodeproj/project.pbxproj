@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		6E4036501A1F1AA100F4BBEA /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E40364F1A1F1AA100F4BBEA /* Array2D.swift */; };
 		6E4036521A1F47DA00F4BBEA /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4036511A1F47DA00F4BBEA /* Singleton.swift */; };
+		6E40665A1A1F7B6C00F172B0 /* TShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4066591A1F7B6C00F172B0 /* TShape.swift */; };
+		6E4067461A1F7BDD00F172B0 /* JShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4067421A1F7BDD00F172B0 /* JShape.swift */; };
+		6E4067471A1F7BDD00F172B0 /* LShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4067431A1F7BDD00F172B0 /* LShape.swift */; };
+		6E4067481A1F7BDD00F172B0 /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4067441A1F7BDD00F172B0 /* SShape.swift */; };
+		6E4067491A1F7BDD00F172B0 /* ZShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4067451A1F7BDD00F172B0 /* ZShape.swift */; };
+		6E40674F1A1FBCCE00F172B0 /* wooden-frame-oak_xxl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E40674E1A1FBCCE00F172B0 /* wooden-frame-oak_xxl.jpg */; };
+		6E4067511A1FBD0D00F172B0 /* FrameInside.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E4067501A1FBD0D00F172B0 /* FrameInside.png */; };
 		6E44C8991A1ECE8600ABBDFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44C8981A1ECE8600ABBDFC /* AppDelegate.swift */; };
 		6E44C89B1A1ECE8600ABBDFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44C89A1A1ECE8600ABBDFC /* ViewController.swift */; };
 		6E44C89E1A1ECE8600ABBDFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E44C89C1A1ECE8600ABBDFC /* Main.storyboard */; };
@@ -34,6 +41,13 @@
 /* Begin PBXFileReference section */
 		6E40364F1A1F1AA100F4BBEA /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
 		6E4036511A1F47DA00F4BBEA /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		6E4066591A1F7B6C00F172B0 /* TShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TShape.swift; sourceTree = "<group>"; };
+		6E4067421A1F7BDD00F172B0 /* JShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JShape.swift; sourceTree = "<group>"; };
+		6E4067431A1F7BDD00F172B0 /* LShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LShape.swift; sourceTree = "<group>"; };
+		6E4067441A1F7BDD00F172B0 /* SShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
+		6E4067451A1F7BDD00F172B0 /* ZShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
+		6E40674E1A1FBCCE00F172B0 /* wooden-frame-oak_xxl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wooden-frame-oak_xxl.jpg"; sourceTree = "<group>"; };
+		6E4067501A1FBD0D00F172B0 /* FrameInside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FrameInside.png; sourceTree = "<group>"; };
 		6E44C8931A1ECE8600ABBDFC /* CodeCamp.Tetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeCamp.Tetris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E44C8971A1ECE8600ABBDFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E44C8981A1ECE8600ABBDFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +103,8 @@
 		6E44C8951A1ECE8600ABBDFC /* CodeCamp.Tetris */ = {
 			isa = PBXGroup;
 			children = (
+				6E4067501A1FBD0D00F172B0 /* FrameInside.png */,
+				6E40674E1A1FBCCE00F172B0 /* wooden-frame-oak_xxl.jpg */,
 				6E44C8B81A1ED64C00ABBDFC /* Components */,
 				6E44C8981A1ECE8600ABBDFC /* AppDelegate.swift */,
 				6E44C89A1A1ECE8600ABBDFC /* ViewController.swift */,
@@ -130,10 +146,15 @@
 			children = (
 				6E44C8B91A1ED66F00ABBDFC /* Block.swift */,
 				6E44C8BD1A1EE21F00ABBDFC /* Shape.swift */,
-				6E44C8BF1A1EE60F00ABBDFC /* ShapeSquare.swift */,
-				6E44C8C11A1EE74300ABBDFC /* ShapeLine.swift */,
 				6E40364F1A1F1AA100F4BBEA /* Array2D.swift */,
 				6E4036511A1F47DA00F4BBEA /* Singleton.swift */,
+				6E44C8BF1A1EE60F00ABBDFC /* ShapeSquare.swift */,
+				6E44C8C11A1EE74300ABBDFC /* ShapeLine.swift */,
+				6E4066591A1F7B6C00F172B0 /* TShape.swift */,
+				6E4067421A1F7BDD00F172B0 /* JShape.swift */,
+				6E4067431A1F7BDD00F172B0 /* LShape.swift */,
+				6E4067441A1F7BDD00F172B0 /* SShape.swift */,
+				6E4067451A1F7BDD00F172B0 /* ZShape.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -220,6 +241,8 @@
 			files = (
 				6E44C89E1A1ECE8600ABBDFC /* Main.storyboard in Resources */,
 				6E44C8A31A1ECE8600ABBDFC /* LaunchScreen.xib in Resources */,
+				6E40674F1A1FBCCE00F172B0 /* wooden-frame-oak_xxl.jpg in Resources */,
+				6E4067511A1FBD0D00F172B0 /* FrameInside.png in Resources */,
 				6E44C8A01A1ECE8600ABBDFC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,11 +263,16 @@
 			files = (
 				6E4036501A1F1AA100F4BBEA /* Array2D.swift in Sources */,
 				6E44C8BA1A1ED66F00ABBDFC /* Block.swift in Sources */,
+				6E4067461A1F7BDD00F172B0 /* JShape.swift in Sources */,
 				6E44C89B1A1ECE8600ABBDFC /* ViewController.swift in Sources */,
 				6E44C8C01A1EE60F00ABBDFC /* ShapeSquare.swift in Sources */,
 				6E44C8991A1ECE8600ABBDFC /* AppDelegate.swift in Sources */,
+				6E4067471A1F7BDD00F172B0 /* LShape.swift in Sources */,
+				6E4067481A1F7BDD00F172B0 /* SShape.swift in Sources */,
 				6E4036521A1F47DA00F4BBEA /* Singleton.swift in Sources */,
+				6E40665A1A1F7B6C00F172B0 /* TShape.swift in Sources */,
 				6E44C8BE1A1EE21F00ABBDFC /* Shape.swift in Sources */,
+				6E4067491A1F7BDD00F172B0 /* ZShape.swift in Sources */,
 				6E44C8C21A1EE74300ABBDFC /* ShapeLine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

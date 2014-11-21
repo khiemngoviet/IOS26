@@ -19,13 +19,6 @@ class ShapeSquare: Shape{
         ]
     }
     
-    override var bottomBlocksForOrientations: [Orient: Array<Block>] {
-        return [
-            Orient.top:        [blocks[SecondBlockIdx], blocks[FourthBlockIdx]],
-            Orient.right:      [blocks[SecondBlockIdx], blocks[FourthBlockIdx]],
-            Orient.bottom:     [blocks[SecondBlockIdx], blocks[FourthBlockIdx]],
-            Orient.left:       [blocks[SecondBlockIdx], blocks[FourthBlockIdx]]
-        ]
-    }
+    
     
 }

@@ -29,17 +29,7 @@ class Shape: UIView{
     var blockRowColumnPositions: [Orient: Array<(columnDiff: Int, rowDiff: Int)>] {
         return [:]
     }
-    
-    
-    var bottomBlocksForOrientations: [Orient: Array<Block>] {
-        return [:]
-    }
-    var bottomBlocks:Array<Block> {
-        if let bottomBlocks = bottomBlocksForOrientations[orient] {
-            return bottomBlocks
-        }
-        return []
-    }
+
     
     func drawShape(){ //draw at top position
         //Clear old shape if exist
@@ -47,7 +37,6 @@ class Shape: UIView{
         for block  in self.subviews {
             block.removeFromSuperview()
             Singleton.shared.blockArray[(block as Block).column, (block as Block).row] = nil
-           let count = Singleton.shared.blockArray.array.count
         }
         let coord = coordinateForColnRow(self.column, row: self.row)
         self.frame = CGRect(x: coord.x, y: coord.y, width: ShapeWidth, height: ShapeHeight)
@@ -125,18 +114,29 @@ class Shape: UIView{
     
     class func random(startingColumn:Int, startingRow:Int) -> Shape {
         var shape:Shape!
-        switch Int(arc4random_uniform(2)) {
+        let rand = Int(arc4random_uniform(6))
+        switch  rand {
         case 0:
              shape = ShapeSquare()
         case 1:
              shape = ShapeLine()
+        case 2:
+            shape = TShape()
+        case 3:
+            shape = JShape()
+        case 4:
+            shape = SShape()
+        case 5:
+            shape = ZShape()
+        case 6:
+            shape = LShape()
         default:
              shape = ShapeLine()
         }
         shape.column = startingColumn
         shape.row = startingRow
         shape.orient =  shape.randomOrient()
-        
+        shape.color = rand
         return shape
     }
     

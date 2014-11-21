@@ -15,23 +15,24 @@ let NumRows = 20
 
 class ViewController: UIViewController {
     
+    @IBOutlet var container: UIView!
+    
     var timer:NSTimer!
-    
-    var container: UIView!
-    
+
     var currentShape: Shape!
     
     var tapGesture:UITapGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         Singleton.shared.blockArray = Array2D<Block>(columns: NumColumns, rows: NumRows)
         
-        let outerContainer = UIView(frame: CGRect(x: OffsetX , y: OffsetY, width: 202, height: 402))
-        outerContainer.layer.borderColor = UIColor.grayColor().CGColor
-        outerContainer.layer.borderWidth = 2.0
-        
-        container = UIView(frame: CGRect(x: 2, y: 2, width: 200, height: 400))
+//        let outerContainer = UIView(frame: CGRect(x: OffsetX , y: OffsetY, width: 222, height: 402))
+//        outerContainer.layer.borderColor = UIColor.grayColor().CGColor
+//        outerContainer.layer.borderWidth = 2.0
+//        
+//        container = UIView(frame: CGRect(x: 2, y: 2, width: 220, height: 400))
         tapGesture = UITapGestureRecognizer(target: self, action: "onTapGesture:")
         let swipeLeftGesture = UISwipeGestureRecognizer(target: self, action: "onSwipeLeft:")
         swipeLeftGesture.direction = UISwipeGestureRecognizerDirection.Left
@@ -43,8 +44,8 @@ class ViewController: UIViewController {
         container.addGestureRecognizer(swipeRightGesture)
         container.addGestureRecognizer(swipeDownGesture)
         container.addGestureRecognizer(tapGesture)
-        outerContainer.addSubview(container)
-        self.view.addSubview(outerContainer)
+        //outerContainer.addSubview(container)
+        //self.view.addSubview(outerContainer)
         self.beginGame()
     }
     
@@ -79,10 +80,6 @@ class ViewController: UIViewController {
     
     func createShape(){
         currentShape = Shape.random(4, startingRow: 0)
-        //        currentShape = ShapeLine()
-        //        currentShape.column = 4
-        //        currentShape.row = 0
-        //        currentShape.orient = Orient.top
         currentShape.drawShape()
         container.addSubview(currentShape)
     }
@@ -97,6 +94,7 @@ class ViewController: UIViewController {
             for block in currentShape.blocks{
                 Singleton.shared.blockArray[block.column, block.row] = block
             }
+            self.checkCompletedRow()
             self.createShape()
             timer.invalidate()
             timer = nil
@@ -105,12 +103,83 @@ class ViewController: UIViewController {
     }
     
     func detectImpact() -> Bool{
-        for bottomBlock in currentShape.bottomBlocks {
+        for bottomBlock in currentShape.blocks {
             if bottomBlock.row == NumRows - 1 || Singleton.shared.blockArray[bottomBlock.column, bottomBlock.row + 1] != nil {
                 return true
             }
         }
         return false
+    }
+    
+    func checkCompletedRow(){
+        var completedLine = Array<Array<Block>>()
+        for var row = NumRows - 1; row > 0; row-- {
+            var rowOfBlocks = Array<Block>()
+            for column in 0..<NumColumns {
+                if let block = Singleton.shared.blockArray[column, row] {
+                    rowOfBlocks.append(block)
+                }
+            }
+            let count = rowOfBlocks
+            if rowOfBlocks.count == NumColumns {
+                completedLine.append(rowOfBlocks)
+                for block in rowOfBlocks {
+                    Singleton.shared.blockArray[block.column, block.row] = nil
+                    block.removeFromSuperview()
+                }
+//                for view in self.container.subviews{
+//                    let shape = view as Shape
+//                    var frame = shape.frame
+//                    frame = CGRect(x: frame.origin.x, y: frame.origin.y + CGFloat(BlockSize), width: frame.size.width, height: frame.size.height)
+//                    shape.frame = frame
+//                    shape.row = shape.row + 1
+//                    for block in shape.blocks{
+//                        block.row = block.row + 1
+//                    }
+//                }
+                var fallenBlocks = Array<Array<Block>>()
+                for column in 0..<NumColumns {
+                    var fallenBlocksArray = Array<Block>()
+                    for var row = completedLine[0][0].row - 1; row > 0; row-- {
+                        if let block = Singleton.shared.blockArray[column, row] {
+                            var newRow = row
+                            while (newRow < NumRows - 1 && Singleton.shared.blockArray[column, newRow + 1] == nil) {
+                                newRow++
+                            }
+                            block.row = newRow
+                            Singleton.shared.blockArray[column, row] = nil
+                            Singleton.shared.blockArray[column, newRow] = block
+                            fallenBlocksArray.append(block)
+                        }
+                    }
+                    if fallenBlocksArray.count > 0 {
+                        fallenBlocks.append(fallenBlocksArray)
+                        for block in fallenBlocksArray{
+                            var frame = block.frame
+                            frame = CGRect(x: frame.origin.x, y: frame.origin.y + CGFloat(BlockSize), width: frame.size.width, height: frame.size.height)
+                            block.frame = frame
+                        }
+                    }
+                }
+                
+                checkCompletedRow()
+
+            }
+        }
+        
+        
+        if completedLine.count == 0 {
+            return
+        }
+        
+        
+        
+
+        
+    }
+    
+    func dropShapesAboveCompletedLine(atRow: Int){
+        
     }
     
     func validatePosition(orient: Orient) -> Bool{

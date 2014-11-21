@@ -17,13 +17,6 @@ class ShapeLine: Shape{
         ]
     }
     
-    override var bottomBlocksForOrientations: [Orient: Array<Block>] {
-        return [
-            Orient.top:       [blocks[FourthBlockIdx]],
-            Orient.right:     blocks,
-            Orient.bottom:  [blocks[FourthBlockIdx]],
-            Orient.left: blocks
-        ]
-    }
+    
 
 }
