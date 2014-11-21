@@ -9,7 +9,7 @@
 import UIKit
 
 class DemoRotate: UIViewController {
-    var dial: UIImageView?
+    var dial: UIImageView!
     override func loadView() {
         super.loadView()
         self.edgesForExtendedLayout = UIRectEdge.None
@@ -23,9 +23,22 @@ class DemoRotate: UIViewController {
         dial!.userInteractionEnabled = true
         let rotate = UIRotationGestureRecognizer(target: self, action: "onRotate:")
         dial?.addGestureRecognizer(rotate)
+       
+       
+        
+        UIView.animateWithDuration(0.7, delay: 0, options: UIViewAnimationOptions.OverrideInheritedDuration, animations: {
+           self.dial.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+            }, completion: { finished in
+                UIView.animateWithDuration(0.7, delay: -1, options: UIViewAnimationOptions.OverrideInheritedDuration, animations: {
+                    self.dial.transform = CGAffineTransformMakeRotation(CGFloat(M_PI*2))
+                    }, completion: { finished in
+                        println("Basket doors opened!")
+                })
+        })
     }
     
     func onRotate(rotate: UIRotationGestureRecognizer) {
+        println("\(rotate.rotation)")
         dial?.transform = CGAffineTransformMakeRotation(rotate.rotation)
     }
 }
