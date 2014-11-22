@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         self.playNotificationSound(SoundNotificationType.TouchDown)
         timer.invalidate()
         timer = nil
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.03, target: self, selector: "updateFrame", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.02, target: self, selector: "updateFrame", userInfo: nil, repeats: true)
     }
     
     func onTapGesture(gesture: UITapGestureRecognizer){

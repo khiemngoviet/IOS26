@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E2D4DFC1A20955C00F128FE /* SFX_PieceTouchDown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E2D4DFB1A20955C00F128FE /* SFX_PieceTouchDown.mp3 */; };
 		6E2F7AD71A2022FC00537835 /* FrameInside.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F7AD61A2022FC00537835 /* FrameInside.png */; };
 		6E2F7AD91A20235700537835 /* wooden-frame-oak_xxl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F7AD81A20235700537835 /* wooden-frame-oak_xxl.jpg */; };
 		6E2F7AE11A202CB400537835 /* LowEaWd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F7AE01A202CB400537835 /* LowEaWd.ttf */; };
@@ -14,7 +15,6 @@
 		6E2F7AE61A20317D00537835 /* 042.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F7AE51A20317D00537835 /* 042.png */; };
 		6E2F7AF21A203E2800537835 /* SFX_GameOver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F7AEF1A203E2800537835 /* SFX_GameOver.mp3 */; };
 		6E2F7AF41A203E2800537835 /* SFX_SpecialLineClearDouble.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F7AF11A203E2800537835 /* SFX_SpecialLineClearDouble.mp3 */; };
-		6E2F7AF61A203E6800537835 /* SFX_PieceTouchDown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F7AF51A203E6800537835 /* SFX_PieceTouchDown.mp3 */; };
 		6E2F7AF81A203E8400537835 /* SFX_PieceRotateLR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F7AF71A203E8400537835 /* SFX_PieceRotateLR.mp3 */; };
 		6E2F7AFA1A203F1100537835 /* SFX_GameStart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F7AF91A203F1100537835 /* SFX_GameStart.mp3 */; };
 		6E4036501A1F1AA100F4BBEA /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E40364F1A1F1AA100F4BBEA /* Array2D.swift */; };
@@ -47,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E2D4DFB1A20955C00F128FE /* SFX_PieceTouchDown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SFX_PieceTouchDown.mp3; sourceTree = "<group>"; };
 		6E2F7AD61A2022FC00537835 /* FrameInside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FrameInside.png; sourceTree = "<group>"; };
 		6E2F7AD81A20235700537835 /* wooden-frame-oak_xxl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wooden-frame-oak_xxl.jpg"; sourceTree = "<group>"; };
 		6E2F7AE01A202CB400537835 /* LowEaWd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LowEaWd.ttf; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		6E2F7AE51A20317D00537835 /* 042.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 042.png; sourceTree = "<group>"; };
 		6E2F7AEF1A203E2800537835 /* SFX_GameOver.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SFX_GameOver.mp3; sourceTree = "<group>"; };
 		6E2F7AF11A203E2800537835 /* SFX_SpecialLineClearDouble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SFX_SpecialLineClearDouble.mp3; sourceTree = "<group>"; };
-		6E2F7AF51A203E6800537835 /* SFX_PieceTouchDown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SFX_PieceTouchDown.mp3; sourceTree = "<group>"; };
 		6E2F7AF71A203E8400537835 /* SFX_PieceRotateLR.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SFX_PieceRotateLR.mp3; sourceTree = "<group>"; };
 		6E2F7AF91A203F1100537835 /* SFX_GameStart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SFX_GameStart.mp3; sourceTree = "<group>"; };
 		6E40364F1A1F1AA100F4BBEA /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
@@ -113,6 +113,11 @@
 		6E2F7AE71A20390E00537835 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				6E2D4DFB1A20955C00F128FE /* SFX_PieceTouchDown.mp3 */,
+				6E2F7AF91A203F1100537835 /* SFX_GameStart.mp3 */,
+				6E2F7AF71A203E8400537835 /* SFX_PieceRotateLR.mp3 */,
+				6E2F7AEF1A203E2800537835 /* SFX_GameOver.mp3 */,
+				6E2F7AF11A203E2800537835 /* SFX_SpecialLineClearDouble.mp3 */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -154,11 +159,6 @@
 		6E44C8961A1ECE8600ABBDFC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6E2F7AF91A203F1100537835 /* SFX_GameStart.mp3 */,
-				6E2F7AF71A203E8400537835 /* SFX_PieceRotateLR.mp3 */,
-				6E2F7AF51A203E6800537835 /* SFX_PieceTouchDown.mp3 */,
-				6E2F7AEF1A203E2800537835 /* SFX_GameOver.mp3 */,
-				6E2F7AF11A203E2800537835 /* SFX_SpecialLineClearDouble.mp3 */,
 				6E44C8971A1ECE8600ABBDFC /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -280,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E2F7AF21A203E2800537835 /* SFX_GameOver.mp3 in Resources */,
-				6E2F7AF61A203E6800537835 /* SFX_PieceTouchDown.mp3 in Resources */,
+				6E2D4DFC1A20955C00F128FE /* SFX_PieceTouchDown.mp3 in Resources */,
 				6E2F7AE61A20317D00537835 /* 042.png in Resources */,
 				6E2F7AFA1A203F1100537835 /* SFX_GameStart.mp3 in Resources */,
 				6E44C89E1A1ECE8600ABBDFC /* Main.storyboard in Resources */,
