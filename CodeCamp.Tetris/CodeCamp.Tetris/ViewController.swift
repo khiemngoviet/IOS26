@@ -16,23 +16,25 @@ let NumRows = 20
 class ViewController: UIViewController {
     
     @IBOutlet var container: UIView!
+    @IBOutlet var score: UILabel!
+    @IBOutlet var scoreValue: UILabel!
+    @IBOutlet var resetButton: UIButton!
+    
     
     var timer:NSTimer!
-
+    
     var currentShape: Shape!
     
     var tapGesture:UITapGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        score.font = UIFont(name: "LowEaWd", size: 30)
+        scoreValue.font = UIFont(name: "LowEaWd", size: 30)
+        score.textColor = UIColor.brownColor()
+        scoreValue.textColor = UIColor.brownColor()
         Singleton.shared.blockArray = Array2D<Block>(columns: NumColumns, rows: NumRows)
-        
-//        let outerContainer = UIView(frame: CGRect(x: OffsetX , y: OffsetY, width: 222, height: 402))
-//        outerContainer.layer.borderColor = UIColor.grayColor().CGColor
-//        outerContainer.layer.borderWidth = 2.0
-//        
-//        container = UIView(frame: CGRect(x: 2, y: 2, width: 220, height: 400))
+       
         tapGesture = UITapGestureRecognizer(target: self, action: "onTapGesture:")
         let swipeLeftGesture = UISwipeGestureRecognizer(target: self, action: "onSwipeLeft:")
         swipeLeftGesture.direction = UISwipeGestureRecognizerDirection.Left
@@ -44,9 +46,11 @@ class ViewController: UIViewController {
         container.addGestureRecognizer(swipeRightGesture)
         container.addGestureRecognizer(swipeDownGesture)
         container.addGestureRecognizer(tapGesture)
-        //outerContainer.addSubview(container)
-        //self.view.addSubview(outerContainer)
         self.beginGame()
+    }
+    
+    @IBAction func onResetTouch(sender: UIButton) {
+        self.resetGame()
     }
     
     func onSwipeLeft(swipeGesture: UISwipeGestureRecognizer){
@@ -90,16 +94,48 @@ class ViewController: UIViewController {
             currentShape.moveDown()
         }
         else{ //got Impacted
-            //create new shape
+            
+            //save current blocks to blockArray
             for block in currentShape.blocks{
                 Singleton.shared.blockArray[block.column, block.row] = block
             }
-            self.checkCompletedRow()
-            self.createShape()
-            timer.invalidate()
-            timer = nil
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "updateFrame", userInfo: nil, repeats: true)
+            if !detectFullLine(){
+                self.checkCompletedRow()
+                self.createShape()
+                self.resetTimer()
+            }
+            else{ //Full lines
+                resetGame()
+            }
         }
+    }
+    
+    func resetTimer(){
+        timer.invalidate()
+        timer = nil
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "updateFrame", userInfo: nil, repeats: true)
+    }
+    
+    func resetGame(){
+        //clear data
+        Singleton.shared.blockArray = Array2D<Block>(columns: NumColumns, rows: NumRows)
+        for shape in self.container.subviews{
+            shape.removeFromSuperview()
+        }
+        timer.invalidate()
+        timer = nil
+        //reset score
+        self.scoreValue.text = "0"
+        self.beginGame()
+    }
+    
+    func detectFullLine()-> Bool{
+        for bottomBlock in currentShape.blocks {
+            if bottomBlock.row == 0{
+                return true
+            }
+        }
+        return false
     }
     
     func detectImpact() -> Bool{
@@ -127,16 +163,20 @@ class ViewController: UIViewController {
                     Singleton.shared.blockArray[block.column, block.row] = nil
                     block.removeFromSuperview()
                 }
-//                for view in self.container.subviews{
-//                    let shape = view as Shape
-//                    var frame = shape.frame
-//                    frame = CGRect(x: frame.origin.x, y: frame.origin.y + CGFloat(BlockSize), width: frame.size.width, height: frame.size.height)
-//                    shape.frame = frame
-//                    shape.row = shape.row + 1
-//                    for block in shape.blocks{
-//                        block.row = block.row + 1
-//                    }
-//                }
+                let scoreText = self.scoreValue.text!
+                var newScore = (scoreText as String).toInt()!
+                newScore += 1
+                self.scoreValue.text = "\(newScore)"
+                //                for view in self.container.subviews{
+                //                    let shape = view as Shape
+                //                    var frame = shape.frame
+                //                    frame = CGRect(x: frame.origin.x, y: frame.origin.y + CGFloat(BlockSize), width: frame.size.width, height: frame.size.height)
+                //                    shape.frame = frame
+                //                    shape.row = shape.row + 1
+                //                    for block in shape.blocks{
+                //                        block.row = block.row + 1
+                //                    }
+                //                }
                 var fallenBlocks = Array<Array<Block>>()
                 for column in 0..<NumColumns {
                     var fallenBlocksArray = Array<Block>()
@@ -160,10 +200,11 @@ class ViewController: UIViewController {
                             block.frame = frame
                         }
                     }
+                    
                 }
                 
                 checkCompletedRow()
-
+                
             }
         }
         
@@ -174,7 +215,7 @@ class ViewController: UIViewController {
         
         
         
-
+        
         
     }
     

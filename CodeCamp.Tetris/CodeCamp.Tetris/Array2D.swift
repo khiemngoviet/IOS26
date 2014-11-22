@@ -26,4 +26,13 @@ class Array2D<T> {
             array[(row * columns) + column] = newValue
         }
     }
+    
+    
+    func colCount() -> Int {
+        return self.columns
+    }
+    
+    func rowCount() -> Int {
+        return self.rows
+    }
 }
