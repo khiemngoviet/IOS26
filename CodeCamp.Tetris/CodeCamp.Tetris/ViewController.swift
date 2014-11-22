@@ -5,8 +5,9 @@
 //  Created by Khiem Ngo Viet on 11/21/14.
 //  Copyright (c) 2014 Khiem Ngo Viet. All rights reserved.
 //
-
+import AVFoundation
 import UIKit
+
 let OffsetX: CGFloat = 10
 let OffsetY: CGFloat = 50
 let NumColumns = 10
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
     
     var tapGesture:UITapGestureRecognizer!
     
+    var audioPlayer:AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         score.font = UIFont(name: "LowEaWd", size: 30)
@@ -34,7 +37,7 @@ class ViewController: UIViewController {
         score.textColor = UIColor.brownColor()
         scoreValue.textColor = UIColor.brownColor()
         Singleton.shared.blockArray = Array2D<Block>(columns: NumColumns, rows: NumRows)
-       
+        
         tapGesture = UITapGestureRecognizer(target: self, action: "onTapGesture:")
         let swipeLeftGesture = UISwipeGestureRecognizer(target: self, action: "onSwipeLeft:")
         swipeLeftGesture.direction = UISwipeGestureRecognizerDirection.Left
@@ -47,6 +50,7 @@ class ViewController: UIViewController {
         container.addGestureRecognizer(swipeDownGesture)
         container.addGestureRecognizer(tapGesture)
         self.beginGame()
+        self.playNotificationSound(SoundNotificationType.GameStart)
     }
     
     @IBAction func onResetTouch(sender: UIButton) {
@@ -55,24 +59,29 @@ class ViewController: UIViewController {
     
     func onSwipeLeft(swipeGesture: UISwipeGestureRecognizer){
         if validatePosition(Orient.left){
+            self.playNotificationSound(SoundNotificationType.Rotate)
             currentShape.moveLeft()
+            
         }
     }
     
     func onSwipeRight(swipeGesture: UISwipeGestureRecognizer){
         if validatePosition(Orient.right){
+            self.playNotificationSound(SoundNotificationType.Rotate)
             currentShape.moveRight()
         }
         
     }
     
     func onSwipeDown(gesture:UISwipeGestureRecognizer){
+        self.playNotificationSound(SoundNotificationType.TouchDown)
         timer.invalidate()
         timer = nil
         timer = NSTimer.scheduledTimerWithTimeInterval(0.03, target: self, selector: "updateFrame", userInfo: nil, repeats: true)
     }
     
     func onTapGesture(gesture: UITapGestureRecognizer){
+        self.playNotificationSound(SoundNotificationType.Rotate)
         currentShape.rotate()
         timer.timeInterval
     }
@@ -163,6 +172,8 @@ class ViewController: UIViewController {
                     Singleton.shared.blockArray[block.column, block.row] = nil
                     block.removeFromSuperview()
                 }
+                //play completed line
+                self.playNotificationSound(SoundNotificationType.LineClear)
                 let scoreText = self.scoreValue.text!
                 var newScore = (scoreText as String).toInt()!
                 newScore += 1
@@ -213,10 +224,6 @@ class ViewController: UIViewController {
             return
         }
         
-        
-        
-        
-        
     }
     
     func dropShapesAboveCompletedLine(atRow: Int){
@@ -241,6 +248,28 @@ class ViewController: UIViewController {
             }
         }
         return true
+    }
+    
+    
+    func playNotificationSound(type: SoundNotificationType) {
+        var resourcePath = NSBundle.mainBundle().resourcePath
+        var path:NSString!
+        switch type{
+        case .GameStart:
+            path = NSString(string: "\(resourcePath!)/SFX_GameStart.mp3")
+        case .GaveOver:
+            path = NSString(string: "\(resourcePath!)/SFX_GameOver.mp3")
+        case .Rotate:
+            path = NSString(string: "\(resourcePath!)/SFX_PieceRotateLR.mp3")
+        case .TouchDown:
+            path = NSString(string: "\(resourcePath!)/SFX_PieceTouchDown.mp3")
+        case .LineClear:
+            path = NSString(string: "\(resourcePath!)/SFX_SpecialLineClearDouble.mp3")
+        }
+        var alertSound = NSURL(fileURLWithPath: path)
+        var error:NSError?
+        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
+        audioPlayer!.play()
     }
     
 }

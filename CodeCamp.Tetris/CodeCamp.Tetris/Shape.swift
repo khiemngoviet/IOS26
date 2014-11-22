@@ -162,3 +162,11 @@ class Shape: UIView{
 enum Orient: Int{
     case top, right, bottom, left
 }
+
+enum SoundNotificationType{
+    case LineClear
+    case Rotate
+    case TouchDown
+    case GaveOver
+    case GameStart
+}
