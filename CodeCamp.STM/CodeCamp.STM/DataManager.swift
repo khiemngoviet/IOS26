@@ -15,9 +15,9 @@ class DataManager {
         return Static.instance
     }
     
-    var students : [Student]
+    var students : NSMutableArray
     init() {
-        students = [Student]()
+        students = NSMutableArray(capacity: 20)
     }
     
 }
