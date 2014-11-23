@@ -35,7 +35,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="o3C-8a-52C">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="SortDesc" id="NWT-I0-zOX">
+                        <barButtonItem key="leftBarButtonItem" image="SortAsc" id="NWT-I0-zOX">
                             <connections>
                                 <action selector="onSortTouch:" destination="NVT-Ac-wJ4" id="3wp-hB-cT5"/>
                             </connections>
@@ -169,7 +169,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SortDesc" width="28" height="14"/>
+        <image name="SortAsc" width="28" height="14"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
