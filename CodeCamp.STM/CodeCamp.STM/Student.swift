@@ -19,6 +19,5 @@ class Student: NSObject {
         self.score = score
         self.photo = UIImage(named: photo)!
     }
-    
-    
 }
+

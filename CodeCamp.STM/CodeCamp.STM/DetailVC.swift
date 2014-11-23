@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailVC: UIViewController, ASValueTrackingSliderDataSource {
+class DetailVC: UITableViewController, ASValueTrackingSliderDataSource {
 
     var editMode: EditMode!
     var student: Student!
@@ -46,7 +46,7 @@ class DetailVC: UIViewController, ASValueTrackingSliderDataSource {
     
     
     func slider(slider: ASValueTrackingSlider!, stringForValue value: Float) -> String! {
-       let formatedValue = NSString(format: "Score: %.2f", value)
+       let formatedValue = NSString(format: "%.1f", value)
         return formatedValue
     }
     
@@ -59,6 +59,8 @@ class DetailVC: UIViewController, ASValueTrackingSliderDataSource {
             self.navigationController?.popToRootViewControllerAnimated(true)
         }
         else{ //go back to main view
+            self.student.fullName = self.fullName.text
+            self.student.score = Double(self.scoreSlide.value)
             self.navigationController?.popToRootViewControllerAnimated(true)
         }
     }
@@ -72,4 +74,8 @@ class DetailVC: UIViewController, ASValueTrackingSliderDataSource {
 
 enum EditMode: Int{
     case AddNew, Edit
+}
+
+enum SortState: Int{
+    case Asc, Desc
 }

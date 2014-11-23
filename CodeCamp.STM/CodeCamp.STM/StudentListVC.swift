@@ -8,24 +8,29 @@
 
 import UIKit
 
-class StudentListVC: UITableViewController, UISearchDisplayDelegate {
-    
+class StudentListVC: UITableViewController, UISearchDisplayDelegate, UISearchControllerDelegate {
     
     
     @IBOutlet var searchController: UISearchDisplayController!
     @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var segmentFilter: UISegmentedControl!
+    
     let rowHeight:CGFloat = 72
+    var sortState:SortState = SortState.Asc
+    
+    
     
     var students : NSMutableArray!
     var filteredStudents = [Student]()
     
+    var sortButton: UIBarButtonItem!
     var addButton: UIBarButtonItem!
     var deleteButton : UIBarButtonItem?
     var doneButton : UIBarButtonItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        sortButton = self.navigationItem.leftBarButtonItem
         addButton = self.navigationItem.rightBarButtonItem
         deleteButton = UIBarButtonItem(title: "Delete", style: UIBarButtonItemStyle.Plain, target: self, action: "onDelete")
         deleteButton?.tintColor = UIColor.redColor()
@@ -41,25 +46,52 @@ class StudentListVC: UITableViewController, UISearchDisplayDelegate {
     }
     
     
-    
     override func viewDidAppear(animated: Bool) {
+        self.sortData()
         self.tableView.reloadData()
-        
     }
     
     func initData() {
         students = DataManager.singleton.students
-        students.addObject(Student(name: "James Smith",photo: "Photo01.jpg", score: 8.0))
+        students.addObject(Student(name: "Kim Jong Un",photo: "Photo01.jpg", score: 10))
         students.addObject(Student(name: "Michael Smith",photo: "Photo02.jpg", score: 9.0))
         students.addObject(Student(name: "James Rock",photo: "Photo03.jpg", score: 8.0))
-        students.addObject(Student(name: "Robert Smith",photo: "Photo04.jpg", score: 5.0))
-        students.addObject(Student(name: "Robert Smith",photo: "Photo05.jpg", score: 6.0))
+        students.addObject(Student(name: "Anthony Gianakas",photo: "Photo04.jpg", score: 5.0))
+        students.addObject(Student(name: "Edward Pauley",photo: "Photo05.jpg", score: 6.0))
         students.addObject(Student(name: "Diana Rose",photo: "Photo06.jpg", score: 8.0))
         students.addObject(Student(name: "Maria Hernandez",photo: "Photo07.jpg", score: 5.0))
-        students.addObject(Student(name: "Kim Jong Un",photo: "Photo08.jpg", score: 10))
-        students.addObject(Student(name: "James Rock",photo: "Photo09.jpg", score: 9.0))
+        students.addObject(Student(name: "Nikki Bisel",photo: "Photo08.jpg", score: 10))
+        students.addObject(Student(name: "Andrew Sinclair",photo: "Photo09.jpg", score: 9.0))
         students.addObject(Student(name: "John Smith",photo: "Photo10.jpg", score: 7.0))
+        self.sortData()
     }
+    
+    func sortData(){
+        var key = segmentFilter.selectedSegmentIndex == 0 ? "fullName" : "score"
+        let sorter = NSSortDescriptor(key: key, ascending: sortState == SortState.Asc ? true : false)
+      self.students.sortUsingDescriptors([sorter])
+    }
+    
+    
+    @IBAction func onSortTouch(sender: UIBarButtonItem) {
+        if sortState == SortState.Asc{
+            sender.image = UIImage(named: "SortDesc")
+            self.sortState = SortState.Desc
+            self.sortData()
+        }
+        else{
+            sender.image = UIImage(named: "SortAsc")
+            self.sortState = SortState.Asc
+            self.sortData()
+        }
+        self.tableView.reloadData()
+    }
+    
+    @IBAction func onSegmentValueChanged(sender: UISegmentedControl) {
+        self.sortData()
+        self.tableView.reloadData()
+    }
+    
     
     func filterContentForSearchText(searchText: String) {
         let whitespaceCharacterSet = NSCharacterSet.whitespaceCharacterSet()
@@ -68,13 +100,14 @@ class StudentListVC: UITableViewController, UISearchDisplayDelegate {
         //Hàm này sẽ tìm kiếm các phần tử mảng có chứa strippedString
         let resultPredicate = NSPredicate(format: "fullName contains[c] %@", strippedString)
         self.filteredStudents = self.students.filteredArrayUsingPredicate(resultPredicate!) as [Student]
-        
     }
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
         self.filterContentForSearchText(searchString)
         return true
     }
+    
+    
     
     @IBAction func onAdd(sender: UIBarButtonItem) {
         let detailVC = storyboard?.instantiateViewControllerWithIdentifier("DetailVC") as DetailVC
@@ -110,7 +143,7 @@ class StudentListVC: UITableViewController, UISearchDisplayDelegate {
     
     func onDone(){
         self.tableView.setEditing(!self.tableView.editing, animated: true)
-        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.leftBarButtonItem = sortButton
         self.navigationItem.rightBarButtonItem = addButton
     }
     
@@ -158,7 +191,8 @@ class StudentListVC: UITableViewController, UISearchDisplayDelegate {
         
         cell.photoProfile.image = student.photo
         cell.fullName.text = student.fullName
-        cell.score.text = "\(student.score)"
+        let formatedValue = NSString(format: "%.1f", student.score)
+        cell.score.text = formatedValue
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor(red: 0.976, green:0.976, blue:0.976, alpha:1)
         }
