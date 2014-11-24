@@ -40,9 +40,6 @@ class DetailVC: UITableViewController, ASValueTrackingSliderDataSource {
             fullName.text = student.fullName
             scoreSlide.value = Float(student.score)
         }
-        else{
-            
-        }
     }
     
     
