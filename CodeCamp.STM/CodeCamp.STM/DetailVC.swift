@@ -24,6 +24,7 @@ class DetailVC: UITableViewController, ASValueTrackingSliderDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Detail"
         self.scoreSlide.popUpViewCornerRadius = 12.0
         self.scoreSlide.setMaxFractionDigitsDisplayed(0)
         self.scoreSlide.popUpViewAnimatedColors = [UIColor(hue: 0.55, saturation: 0.8, brightness: 0.9, alpha: 0.7)]
@@ -31,8 +32,8 @@ class DetailVC: UITableViewController, ASValueTrackingSliderDataSource {
         self.scoreSlide.textColor = UIColor(hue: 0.55, saturation: 1.0, brightness: 0.5, alpha: 1)
         self.scoreSlide.dataSource = self
         self.navigationItem.leftBarButtonItem?
-        saveButton = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.Plain, target: self, action: "onSave")
-        cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "onCancel")
+        saveButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "onSave")
+        cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "onCancel")
         self.navigationItem.rightBarButtonItem = saveButton
         self.navigationItem.leftBarButtonItem = cancelButton
         if editMode == EditMode.Edit{
