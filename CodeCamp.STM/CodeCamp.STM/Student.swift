@@ -10,14 +10,30 @@ import Foundation
 import UIKit
 
 class Student: NSObject {
-    var fullName: String
-    var photo:UIImage
+    
+    var firstName: String!
+    var lastName: String!
+    
+    var fullName: String!{
+        get{
+            return self.firstName + " " + self.lastName
+        }
+    }
+    var photo:UIImage!
     var score: Double
+    var birthDate: String!
+    var address:String!
+    var email:String!
+    var phone:String!
+    
 
-    init (name: String,photo:String, score: Double = 0.0) {
-        fullName = name
+    init (firstName: String,lastName:String,photo:String, score: Double = 0.0) {
+        self.firstName = firstName
+        self.lastName = lastName
         self.score = score
         self.photo = UIImage(named: photo)!
     }
+    
+    
 }
 

@@ -53,16 +53,17 @@ class StudentListVC: UITableViewController, UISearchDisplayDelegate, UISearchCon
     
     func initData() {
         students = DataManager.singleton.students
-        students.addObject(Student(name: "Kim Jong Un",photo: "Photo01.jpg", score: 10))
-        students.addObject(Student(name: "Michael Smith",photo: "Photo02.jpg", score: 9.0))
-        students.addObject(Student(name: "James Rock",photo: "Photo03.jpg", score: 8.0))
-        students.addObject(Student(name: "Anthony Gianakas",photo: "Photo04.jpg", score: 5.0))
-        students.addObject(Student(name: "Edward Pauley",photo: "Photo05.jpg", score: 6.0))
-        students.addObject(Student(name: "Diana Rose",photo: "Photo06.jpg", score: 8.0))
-        students.addObject(Student(name: "Maria Hernandez",photo: "Photo07.jpg", score: 5.0))
-        students.addObject(Student(name: "Nikki Bisel",photo: "Photo08.jpg", score: 10))
-        students.addObject(Student(name: "Andrew Sinclair",photo: "Photo09.jpg", score: 9.0))
-        students.addObject(Student(name: "John Smith",photo: "Photo10.jpg", score: 7.0))
+      
+        students.addObject(Student(firstName: "Kim", lastName: "Jong Un" ,photo: "Photo01.jpg", score: 10))
+        students.addObject(Student(firstName: "Michael", lastName:"Smith ",photo: "Photo02.jpg", score: 9.0))
+        students.addObject(Student(firstName: "James", lastName:"Rock",photo: "Photo03.jpg", score: 8.0))
+        students.addObject(Student(firstName: "Anthony", lastName:"Gianakas",photo: "Photo04.jpg", score: 5.0))
+        students.addObject(Student(firstName: "Edward", lastName:"Pauley",photo: "Photo05.jpg", score: 6.0))
+        students.addObject(Student(firstName: "Diana", lastName:"Rose",photo: "Photo06.jpg", score: 8.0))
+        students.addObject(Student(firstName: "Maria", lastName:"Hernandez",photo: "Photo07.jpg", score: 5.0))
+        students.addObject(Student(firstName: "Nikki", lastName:" Bisel",photo: "Photo08.jpg", score: 10))
+        students.addObject(Student(firstName: "Andrew", lastName:"Sinclair",photo: "Photo09.jpg", score: 9.0))
+        students.addObject(Student(firstName: "John", lastName:"Smith",photo: "Photo10.jpg", score: 7.0))
         self.sortData()
     }
     
@@ -112,6 +113,7 @@ class StudentListVC: UITableViewController, UISearchDisplayDelegate, UISearchCon
     @IBAction func onAdd(sender: UIBarButtonItem) {
         let detailVC = storyboard?.instantiateViewControllerWithIdentifier("DetailVC") as DetailVC
         detailVC.editMode = EditMode.AddNew
+        detailVC.student = Student(firstName: "", lastName: "", photo: "noPhoto.gif", score: 0.0)
         self.navigateDetail(detailVC)
     }
     

@@ -78,76 +78,130 @@
             <point key="canvasLocation" x="1057" y="302"/>
         </scene>
         <!--DetailVC-->
-        <scene sceneID="aja-kA-udD">
+        <scene sceneID="Ez6-8C-Mhj">
             <objects>
-                <tableViewController storyboardIdentifier="DetailVC" id="KfS-4R-tCC" customClass="DetailVC" customModule="CodeCamp_STM" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="3eF-Ha-RwD">
+                <viewController storyboardIdentifier="DetailVC" id="XHi-wB-qiw" customClass="DetailVC" customModule="CodeCamp_STM" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pTZ-D4-IrM"/>
+                        <viewControllerLayoutGuide type="bottom" id="guM-Ip-HaS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FsZ-AA-ALl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="Full Name" id="iSd-J4-qe7">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ck8-yB-fky">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ck8-yB-fky" id="R5g-fl-13d">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Pr-eV-mKW">
-                                                    <rect key="frame" x="14" y="7" width="292" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="BTs-nY-s5S"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="0Pr-eV-mKW" secondAttribute="trailing" constant="14" id="Ee9-LV-OAx"/>
-                                                <constraint firstAttribute="centerY" secondItem="0Pr-eV-mKW" secondAttribute="centerY" id="KQv-vM-uIA"/>
-                                                <constraint firstItem="0Pr-eV-mKW" firstAttribute="leading" secondItem="R5g-fl-13d" secondAttribute="leading" constant="14" id="ele-hc-vIG"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Score" id="Iv3-R9-ZYk">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yS4-4P-9Gk">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yS4-4P-9Gk" id="kau-hQ-odu">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="jpS-3w-acw" customClass="ASValueTrackingSlider">
-                                                    <rect key="frame" x="12" y="6" width="296" height="31"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="qIh-b8-cnN"/>
-                                                    </constraints>
-                                                </slider>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="jpS-3w-acw" secondAttribute="centerY" id="CLj-T6-b0E"/>
-                                                <constraint firstItem="jpS-3w-acw" firstAttribute="leading" secondItem="kau-hQ-odu" secondAttribute="leading" constant="14" id="M1e-A3-7Z8"/>
-                                                <constraint firstAttribute="trailing" secondItem="jpS-3w-acw" secondAttribute="trailing" constant="14" id="i79-DU-lTW"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="KfS-4R-tCC" id="rhU-8G-dQo"/>
-                            <outlet property="delegate" destination="KfS-4R-tCC" id="950-Dd-evi"/>
-                        </connections>
-                    </tableView>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YEB-bK-DOC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="onW-PD-57L" customClass="CustomTextField">
+                                        <rect key="frame" x="20" y="40" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0HH-EI-4Yr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9jE-Uw-nfF" customClass="CustomTextField">
+                                        <rect key="frame" x="20" y="92" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="NiJ-ra-kO9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Score" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2W5-pw-bhf" customClass="CustomTextField">
+                                        <rect key="frame" x="20" y="144" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7eX-rz-WgD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birth Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQv-dB-PWK" customClass="CustomTextField">
+                                        <rect key="frame" x="20" y="196" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="x5C-sl-EYS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IZP-7g-Qg5" customClass="CustomTextField">
+                                        <rect key="frame" x="20" y="248" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ovi-C1-HKD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wDt-kE-Wyd" customClass="CustomTextField">
+                                        <rect key="frame" x="20" y="300" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="hpr-Su-dgF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y87-j3-hpB" customClass="CustomTextField">
+                                        <rect key="frame" x="20" y="352" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="nRb-Pt-JQw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="onW-PD-57L" firstAttribute="top" secondItem="YEB-bK-DOC" secondAttribute="top" constant="40" id="0hI-pD-u9R"/>
+                                    <constraint firstAttribute="centerX" secondItem="9jE-Uw-nfF" secondAttribute="centerX" id="1j5-Qf-OIK"/>
+                                    <constraint firstAttribute="trailing" secondItem="onW-PD-57L" secondAttribute="trailing" constant="20" id="5b9-gr-k15"/>
+                                    <constraint firstItem="Y87-j3-hpB" firstAttribute="top" secondItem="wDt-kE-Wyd" secondAttribute="bottom" constant="12" id="8Q4-Pp-om1"/>
+                                    <constraint firstAttribute="centerX" secondItem="Y87-j3-hpB" secondAttribute="centerX" id="AbH-3h-ARI"/>
+                                    <constraint firstItem="NQv-dB-PWK" firstAttribute="leading" secondItem="YEB-bK-DOC" secondAttribute="leading" constant="20" id="Awu-zx-cVf"/>
+                                    <constraint firstItem="Y87-j3-hpB" firstAttribute="leading" secondItem="YEB-bK-DOC" secondAttribute="leading" constant="20" id="B9G-xg-bsd"/>
+                                    <constraint firstItem="IZP-7g-Qg5" firstAttribute="top" secondItem="NQv-dB-PWK" secondAttribute="bottom" constant="12" id="Chr-Gg-30F"/>
+                                    <constraint firstItem="2W5-pw-bhf" firstAttribute="top" secondItem="9jE-Uw-nfF" secondAttribute="bottom" constant="12" id="GO7-hr-x43"/>
+                                    <constraint firstAttribute="centerX" secondItem="2W5-pw-bhf" secondAttribute="centerX" id="J1v-cy-edo"/>
+                                    <constraint firstAttribute="trailing" secondItem="wDt-kE-Wyd" secondAttribute="trailing" constant="20" id="MyC-Ai-0mZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="NQv-dB-PWK" secondAttribute="trailing" constant="20" id="Q9B-xV-fri"/>
+                                    <constraint firstItem="IZP-7g-Qg5" firstAttribute="leading" secondItem="YEB-bK-DOC" secondAttribute="leading" constant="20" id="QKW-bZ-gfG"/>
+                                    <constraint firstAttribute="centerX" secondItem="NQv-dB-PWK" secondAttribute="centerX" id="SRu-80-AeL"/>
+                                    <constraint firstAttribute="trailing" secondItem="2W5-pw-bhf" secondAttribute="trailing" constant="20" id="V8W-HL-Wz8"/>
+                                    <constraint firstItem="9jE-Uw-nfF" firstAttribute="leading" secondItem="YEB-bK-DOC" secondAttribute="leading" constant="20" id="XjR-Gd-UaO"/>
+                                    <constraint firstItem="onW-PD-57L" firstAttribute="leading" secondItem="YEB-bK-DOC" secondAttribute="leading" constant="20" id="bCY-b8-1S3"/>
+                                    <constraint firstItem="wDt-kE-Wyd" firstAttribute="leading" secondItem="YEB-bK-DOC" secondAttribute="leading" constant="20" id="erP-H6-Ecx"/>
+                                    <constraint firstItem="wDt-kE-Wyd" firstAttribute="top" secondItem="IZP-7g-Qg5" secondAttribute="bottom" constant="12" id="fwx-xE-aQm"/>
+                                    <constraint firstAttribute="trailing" secondItem="IZP-7g-Qg5" secondAttribute="trailing" constant="20" id="gq6-uB-jOb"/>
+                                    <constraint firstAttribute="centerX" secondItem="onW-PD-57L" secondAttribute="centerX" id="hRr-4g-3Ap"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y87-j3-hpB" secondAttribute="trailing" constant="20" id="lI5-qa-hbk"/>
+                                    <constraint firstAttribute="trailing" secondItem="9jE-Uw-nfF" secondAttribute="trailing" constant="20" id="qOq-Dd-tqs"/>
+                                    <constraint firstItem="9jE-Uw-nfF" firstAttribute="top" secondItem="onW-PD-57L" secondAttribute="bottom" constant="12" id="qye-bi-nDw"/>
+                                    <constraint firstItem="2W5-pw-bhf" firstAttribute="leading" secondItem="YEB-bK-DOC" secondAttribute="leading" constant="20" id="sjf-od-Rwd"/>
+                                    <constraint firstItem="NQv-dB-PWK" firstAttribute="top" secondItem="2W5-pw-bhf" secondAttribute="bottom" constant="12" id="v2i-7l-kWB"/>
+                                    <constraint firstAttribute="centerX" secondItem="wDt-kE-Wyd" secondAttribute="centerX" id="xlO-Nv-djm"/>
+                                    <constraint firstAttribute="centerX" secondItem="IZP-7g-Qg5" secondAttribute="centerX" id="zF9-J2-Utf"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94728535349999998" green="0.94728535349999998" blue="0.94728535349999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="guM-Ip-HaS" firstAttribute="top" secondItem="YEB-bK-DOC" secondAttribute="bottom" id="LHe-Dp-tJc"/>
+                            <constraint firstItem="YEB-bK-DOC" firstAttribute="leading" secondItem="FsZ-AA-ALl" secondAttribute="leading" id="PS9-EI-t4i"/>
+                            <constraint firstItem="YEB-bK-DOC" firstAttribute="top" secondItem="FsZ-AA-ALl" secondAttribute="top" id="PbU-xD-Uqg"/>
+                            <constraint firstAttribute="trailing" secondItem="YEB-bK-DOC" secondAttribute="trailing" id="fxU-gO-JLT"/>
+                        </constraints>
+                    </view>
                     <connections>
-                        <outlet property="fullName" destination="0Pr-eV-mKW" id="V9r-qn-d5b"/>
-                        <outlet property="scoreSlide" destination="jpS-3w-acw" id="9D0-D1-3ql"/>
+                        <outlet property="address" destination="IZP-7g-Qg5" id="cei-a8-tU5"/>
+                        <outlet property="birthDate" destination="NQv-dB-PWK" id="RNV-pJ-L2U"/>
+                        <outlet property="email" destination="wDt-kE-Wyd" id="8bv-LI-rlL"/>
+                        <outlet property="firstName" destination="onW-PD-57L" id="u6t-Uk-3HF"/>
+                        <outlet property="lastName" destination="9jE-Uw-nfF" id="iLQ-og-ZP7"/>
+                        <outlet property="phone" destination="Y87-j3-hpB" id="yxW-hO-PUJ"/>
+                        <outlet property="score" destination="2W5-pw-bhf" id="qKF-AA-fxf"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ab0-EA-0Iv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M5l-F7-H6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1660" y="-20"/>
+            <point key="canvasLocation" x="1582" y="302"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Uh-wF-gXE">

@@ -8,58 +8,57 @@
 
 import UIKit
 
-class DetailVC: UITableViewController, ASValueTrackingSliderDataSource {
-
+class DetailVC: UIViewController {
+    
+    
+    @IBOutlet var firstName: CustomTextField!
+    @IBOutlet var lastName: CustomTextField!
+    @IBOutlet var score: CustomTextField!
+    @IBOutlet var birthDate: CustomTextField!
+    @IBOutlet var address: CustomTextField!
+    @IBOutlet var email: CustomTextField!
+    @IBOutlet var phone: CustomTextField!
+    
+    
     var editMode: EditMode!
     var student: Student!
     var backButton: UIBarButtonItem?
     var saveButton : UIBarButtonItem?
     var cancelButton: UIBarButtonItem?
     
-    @IBOutlet var fullName: UITextField!
-    @IBOutlet var scoreSlide: ASValueTrackingSlider!
- 
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Detail"
-        self.scoreSlide.popUpViewCornerRadius = 12.0
-        self.scoreSlide.setMaxFractionDigitsDisplayed(0)
-        self.scoreSlide.popUpViewAnimatedColors = [UIColor(hue: 0.55, saturation: 0.8, brightness: 0.9, alpha: 0.7)]
-        self.scoreSlide.font = UIFont(name: "GillSans-Bold", size: 22)
-        self.scoreSlide.textColor = UIColor(hue: 0.55, saturation: 1.0, brightness: 0.5, alpha: 1)
-        self.scoreSlide.dataSource = self
+        self.firstName.required = true
+        self.lastName.required = true
+        self.score.required = true
+        self.birthDate.isDateField = true
         self.navigationItem.leftBarButtonItem?
         saveButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "onSave")
         cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "onCancel")
         self.navigationItem.rightBarButtonItem = saveButton
         self.navigationItem.leftBarButtonItem = cancelButton
         if editMode == EditMode.Edit{
-            fullName.text = student.fullName
-            scoreSlide.value = Float(student.score)
+            self.fillForm()
         }
     }
     
     
-    func slider(slider: ASValueTrackingSlider!, stringForValue value: Float) -> String! {
-       let formatedValue = NSString(format: "%.1f", value)
-        return formatedValue
-    }
+
     
     
     func onSave(){
-        if editMode == EditMode.AddNew{
-            //add new item
-            let newStudent = Student(name: fullName.text, photo: "noPhoto.gif", score: Double(scoreSlide.value))
-            DataManager.singleton.students.addObject(newStudent)
-            self.navigationController?.popToRootViewControllerAnimated(true)
-        }
-        else{ //go back to main view
-            self.student.fullName = self.fullName.text
-            self.student.score = Double(self.scoreSlide.value)
-            self.navigationController?.popToRootViewControllerAnimated(true)
+        if validateInput(self.view){
+            if editMode == EditMode.AddNew{
+                self.collectData()
+                DataManager.singleton.students.addObject(student)
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            }
+            else{ //go back to main view
+                self.collectData()
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            }
         }
     }
     
@@ -67,7 +66,41 @@ class DetailVC: UITableViewController, ASValueTrackingSliderDataSource {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
-
+    
+    func fillForm(){
+        firstName.text = student.firstName
+        lastName.text = student.lastName
+        score.text = "\(student.score)"
+        birthDate.text = student.birthDate
+        address.text = student.address
+        email.text = student.email
+        phone.text = student.phone
+    }
+    
+    func collectData(){
+        student.firstName = firstName.text
+        student.lastName = lastName.text
+        student.score = (score.text as NSString).doubleValue
+        student.birthDate = birthDate.text
+        student.address = address.text
+        student.email = email.text
+        student.phone = phone.text
+    }
+    
+    func validateInput(view: UIView) -> Bool {
+        for subView in view.subviews{
+            if subView.isKindOfClass(UIScrollView){
+                return self.validateInput(subView as UIView)
+            }
+            if subView.isKindOfClass(CustomTextField){
+                if !(subView as CustomTextField).validate(){
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    
 }
 
 enum EditMode: Int{

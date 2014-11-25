@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E30D3A61A21E3D4008F5168 /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E30D3A31A21E3D4008F5168 /* ASValuePopUpView.m */; };
-		3E30D3A71A21E3D4008F5168 /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E30D3A51A21E3D4008F5168 /* ASValueTrackingSlider.m */; };
 		3E71ABF81A21DB9B00D2F97A /* Photo08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E71ABED1A21DB9B00D2F97A /* Photo08.jpg */; };
 		3E71ABF91A21DB9B00D2F97A /* Photo02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E71ABEE1A21DB9B00D2F97A /* Photo02.jpg */; };
 		3E71ABFA1A21DB9B00D2F97A /* Photo03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E71ABEF1A21DB9B00D2F97A /* Photo03.jpg */; };
@@ -38,6 +36,8 @@
 		3E805D651A2186CA008852E2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E805D641A2186CA008852E2 /* DataManager.swift */; };
 		3E805D671A21A173008852E2 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E805D661A21A173008852E2 /* DetailVC.swift */; };
 		3E805D691A21A8F4008852E2 /* noPhoto.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3E805D681A21A8F4008852E2 /* noPhoto.gif */; };
+		6E2DBACA1A245841009F38A9 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2DBAC91A245841009F38A9 /* CustomTextField.m */; };
+		6E51E03F1A243FB00084248D /* MHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E51E03E1A243FB00084248D /* MHTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +52,6 @@
 
 /* Begin PBXFileReference section */
 		3E30D3A11A21E3D3008F5168 /* CodeCamp.STM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeCamp.STM-Bridging-Header.h"; sourceTree = "<group>"; };
-		3E30D3A21A21E3D4008F5168 /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
-		3E30D3A31A21E3D4008F5168 /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValuePopUpView.m; sourceTree = "<group>"; };
-		3E30D3A41A21E3D4008F5168 /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValueTrackingSlider.h; sourceTree = "<group>"; };
-		3E30D3A51A21E3D4008F5168 /* ASValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValueTrackingSlider.m; sourceTree = "<group>"; };
 		3E71ABED1A21DB9B00D2F97A /* Photo08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Photo08.jpg; sourceTree = "<group>"; };
 		3E71ABEE1A21DB9B00D2F97A /* Photo02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Photo02.jpg; sourceTree = "<group>"; };
 		3E71ABEF1A21DB9B00D2F97A /* Photo03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Photo03.jpg; sourceTree = "<group>"; };
@@ -89,6 +85,10 @@
 		3E805D641A2186CA008852E2 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3E805D661A21A173008852E2 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		3E805D681A21A8F4008852E2 /* noPhoto.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = noPhoto.gif; sourceTree = "<group>"; };
+		6E2DBAC81A245841009F38A9 /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		6E2DBAC91A245841009F38A9 /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
+		6E51E03D1A243FB00084248D /* MHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTextField.h; sourceTree = "<group>"; };
+		6E51E03E1A243FB00084248D /* MHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,21 +112,9 @@
 		3E30D39F1A21E3B2008F5168 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				3E30D3A01A21E3C7008F5168 /* ASValueTrackingSlider */,
-				3E30D3A11A21E3D3008F5168 /* CodeCamp.STM-Bridging-Header.h */,
+				6E51E03C1A243FA20084248D /* MHTextField */,
 			);
 			name = Lib;
-			sourceTree = "<group>";
-		};
-		3E30D3A01A21E3C7008F5168 /* ASValueTrackingSlider */ = {
-			isa = PBXGroup;
-			children = (
-				3E30D3A21A21E3D4008F5168 /* ASValuePopUpView.h */,
-				3E30D3A31A21E3D4008F5168 /* ASValuePopUpView.m */,
-				3E30D3A41A21E3D4008F5168 /* ASValueTrackingSlider.h */,
-				3E30D3A51A21E3D4008F5168 /* ASValueTrackingSlider.m */,
-			);
-			name = ASValueTrackingSlider;
 			sourceTree = "<group>";
 		};
 		3E805D171A217CC7008852E2 = {
@@ -209,6 +197,7 @@
 		3E805D491A217DFF008852E2 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3E30D3A11A21E3D3008F5168 /* CodeCamp.STM-Bridging-Header.h */,
 				3E805D251A217CC7008852E2 /* AppDelegate.swift */,
 			);
 			name = Application;
@@ -247,6 +236,17 @@
 				3E805D591A218209008852E2 /* dog.jpg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		6E51E03C1A243FA20084248D /* MHTextField */ = {
+			isa = PBXGroup;
+			children = (
+				6E2DBAC81A245841009F38A9 /* CustomTextField.h */,
+				6E2DBAC91A245841009F38A9 /* CustomTextField.m */,
+				6E51E03D1A243FB00084248D /* MHTextField.h */,
+				6E51E03E1A243FB00084248D /* MHTextField.m */,
+			);
+			name = MHTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,11 +369,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E805D471A217D6F008852E2 /* Student.swift in Sources */,
-				3E30D3A71A21E3D4008F5168 /* ASValueTrackingSlider.m in Sources */,
+				6E51E03F1A243FB00084248D /* MHTextField.m in Sources */,
 				3E805D651A2186CA008852E2 /* DataManager.swift in Sources */,
+				6E2DBACA1A245841009F38A9 /* CustomTextField.m in Sources */,
 				3E805D511A217FC9008852E2 /* TableViewCell.swift in Sources */,
 				3E805D261A217CC7008852E2 /* AppDelegate.swift in Sources */,
-				3E30D3A61A21E3D4008F5168 /* ASValuePopUpView.m in Sources */,
 				3E805D4E1A217ED6008852E2 /* StudentListVC.swift in Sources */,
 				3E805D671A21A173008852E2 /* DetailVC.swift in Sources */,
 			);
