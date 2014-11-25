@@ -9,10 +9,6 @@
 import Foundation
 import UIKit
 
-let FirstBlockIdx: Int = 0
-let SecondBlockIdx: Int = 1
-let ThirdBlockIdx: Int = 2
-let FourthBlockIdx: Int = 3
 
 let ShapeWidth: CGFloat = 80.0
 let ShapeHeight: CGFloat = 80.0
