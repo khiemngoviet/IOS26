@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Cat" syncable="YES">
+        <attribute name="dob" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="nick" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="catType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CatType" inverseName="cats" inverseEntity="CatType" syncable="YES"/>
+        <relationship name="owners" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="newRelationship" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="CatType" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cat" inverseName="catType" inverseEntity="Cat" syncable="YES"/>
+    </entity>
+    <entity name="Person" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cat" inverseName="owners" inverseEntity="Cat" syncable="YES"/>
+    </entity>
+    <entity name="Student" parentEntity="Person" syncable="YES"/>
+    <entity name="Teacher" parentEntity="Person" syncable="YES"/>
+    <fetchRequest name="findCat" entity="Cat" predicateString="gender == 0"/>
+    <elements>
+        <element name="Cat" positionX="-4871" positionY="-4221" width="128" height="133"/>
+        <element name="CatType" positionX="-5069" positionY="-4176" width="128" height="73"/>
+        <element name="Person" positionX="-4680" positionY="-4081" width="128" height="73"/>
+        <element name="Student" positionX="-4806" positionY="-3904" width="128" height="43"/>
+        <element name="Teacher" positionX="-4556" positionY="-3924" width="128" height="43"/>
+    </elements>
+</model>

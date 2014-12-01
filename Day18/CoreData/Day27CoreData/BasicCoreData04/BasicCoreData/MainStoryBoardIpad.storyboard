@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="ZYh-Mm-qE1">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="NgT-Cv-aA4">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ni-o3-jIW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="fWh-sq-p6y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G4M-r9-fpj">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="A2n-Hd-DnC"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="675" y="-252"/>
+        </scene>
+        <scene sceneID="E6k-gI-pUp">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6x-3W-kak" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="ZYh-Mm-qE1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="cic-GQ-xCB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fWh-sq-p6y" kind="relationship" relationship="rootViewController" id="7Km-uJ-l0w"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-307" y="-252"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

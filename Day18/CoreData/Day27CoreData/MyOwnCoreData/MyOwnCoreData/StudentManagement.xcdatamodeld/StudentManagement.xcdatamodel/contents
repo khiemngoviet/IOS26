@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Course" representedClassName="Course" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="dob" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="firstName" attributeType="String" syncable="YES"/>
+        <attribute name="fullName" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" parentEntity="Person" syncable="YES">
+        <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="University" inverseName="student" inverseEntity="University" syncable="YES"/>
+    </entity>
+    <entity name="University" representedClassName="University" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="student" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="university" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <fetchRequest name="ListOnlyFemale" entity="Person" predicateString="gender == 0"/>
+    <fetchRequest name="ListOnlyMale" entity="Person" predicateString="gender == 1"/>
+    <fetchRequest name="ListUndefinedGender" entity="Person" predicateString="gender == 2"/>
+    <elements>
+        <element name="Course" positionX="-81" positionY="144" width="128" height="75"/>
+        <element name="Person" positionX="-432" positionY="-153" width="128" height="133"/>
+        <element name="Student" positionX="-144" positionY="-16" width="128" height="58"/>
+        <element name="University" positionX="-351" positionY="107" width="128" height="73"/>
+    </elements>
+</model>
