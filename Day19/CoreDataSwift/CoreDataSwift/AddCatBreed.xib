@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddCatBreed" customModule="CoreDataSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="originCountry" destination="4MB-in-gIj" id="6hR-FD-QE5"/>
+                <outlet property="txtBreed" destination="pls-Tx-Ua2" id="VKV-7t-T2K"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter breed name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pls-Tx-Ua2">
+                    <rect key="frame" x="8" y="89" width="304" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCf-Kp-Lez">
+                    <rect key="frame" x="13" y="137" width="299" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="5Kd-rW-1Xs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4MB-in-gIj">
+                    <rect key="frame" x="0.0" y="173" width="320" height="162"/>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4MB-in-gIj" secondAttribute="trailing" id="DO8-SN-nYi"/>
+                <constraint firstAttribute="trailing" secondItem="pls-Tx-Ua2" secondAttribute="trailing" constant="8" id="Fcd-HD-iZx"/>
+                <constraint firstItem="pls-Tx-Ua2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="KV6-p0-doo"/>
+                <constraint firstItem="zCf-Kp-Lez" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="13" id="Q3Q-Zp-k3b"/>
+                <constraint firstAttribute="trailing" secondItem="zCf-Kp-Lez" secondAttribute="trailing" constant="8" id="StQ-IV-k3k"/>
+                <constraint firstItem="4MB-in-gIj" firstAttribute="top" secondItem="zCf-Kp-Lez" secondAttribute="bottom" constant="15" id="Z66-xs-p7j"/>
+                <constraint firstItem="zCf-Kp-Lez" firstAttribute="top" secondItem="pls-Tx-Ua2" secondAttribute="bottom" constant="18" id="brn-mn-VVE"/>
+                <constraint firstItem="pls-Tx-Ua2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="89" id="cyH-oV-SpF"/>
+                <constraint firstItem="4MB-in-gIj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vhP-eM-W3H"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="518" y="448"/>
+        </view>
+    </objects>
+</document>
