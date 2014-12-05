@@ -65,7 +65,7 @@ class MainScreen: UITableViewController {
         var menuSection = self.menu[indexPath.section] as NSDictionary
         var menuItems = menuSection[MENU] as NSArray
         var item = menuItems[indexPath.row] as NSDictionary
-        cell.textLabel.text = item[TITLE] as NSString
+        cell.textLabel?.text = item[TITLE] as NSString
         return cell
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

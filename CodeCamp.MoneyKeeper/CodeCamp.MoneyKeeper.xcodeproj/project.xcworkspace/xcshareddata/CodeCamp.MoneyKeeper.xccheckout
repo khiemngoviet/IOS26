@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C34F7B50-01C8-4662-A410-77C1B088F93E</string>
+	<string>70664EEC-6C9F-460E-86CB-E23C67B06689</string>
 	<key>IDESourceControlProjectName</key>
-	<string>CoreDataSwift</string>
+	<string>CodeCamp.MoneyKeeper</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A52A0FC024C051D129B66C00DE6F4344A16F5DBD</key>
 		<string>https://github.com/khiemngoviet/IOS26.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Day19/CoreDataSwift/CoreDataSwift.xcodeproj</string>
+	<string>CodeCamp.MoneyKeeper/CodeCamp.MoneyKeeper.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A52A0FC024C051D129B66C00DE6F4344A16F5DBD</key>
-		<string>../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/khiemngoviet/IOS26.git</string>
