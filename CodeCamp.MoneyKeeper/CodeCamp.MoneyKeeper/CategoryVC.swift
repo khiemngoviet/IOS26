@@ -13,6 +13,7 @@ class CategoryVC: UITableViewController, NSFetchedResultsControllerDelegate {
     var fetchResultController: NSFetchedResultsController!
     var category: Category?
     var categoryType: CategoryType!
+    var delegate: CategorySelectionDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +21,8 @@ class CategoryVC: UITableViewController, NSFetchedResultsControllerDelegate {
         self.navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "Sửa", style: UIBarButtonItemStyle.Plain, target: self, action: "onEdit"), UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "onAdd")]
         self.title = self.categoryType == CategoryType.Income ? "Mục Thu" : "Mục Chi"
         
-        let sortParentAZ = NSSortDescriptor(key: "parent", ascending: true)
-        let sortNameAZ = NSSortDescriptor(key: "name", ascending: true)
+        let sortParentAZ = NSSortDescriptor(key: "parent", ascending: false)
+        let sortNameAZ = NSSortDescriptor(key: "name", ascending: false)
         
         var query = self.categoryType == CategoryType.Income ? "parent == ''" : "parent != ''"
         
@@ -43,8 +44,10 @@ class CategoryVC: UITableViewController, NSFetchedResultsControllerDelegate {
     }
     
     func onAdd() {
-        
-        
+        let categoryDetailVC = self.storyboard?.instantiateViewControllerWithIdentifier("CategoryDetail") as CategoryDetailVC
+        categoryDetailVC.editMode = EditMode.AddNew
+        categoryDetailVC.categoryType = self.categoryType
+        self.navigationController?.pushViewController(categoryDetailVC, animated: true)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -79,7 +82,12 @@ class CategoryVC: UITableViewController, NSFetchedResultsControllerDelegate {
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30.0
+        if self.categoryType == CategoryType.Expense{
+            return 30.0
+        }
+        else{
+            return 0.0
+        }
     }
     
     
@@ -98,6 +106,22 @@ class CategoryVC: UITableViewController, NSFetchedResultsControllerDelegate {
             DataManager.singleton.saveContext()
         } else if editingStyle == .Insert {
             
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell:UITableViewCell = self.tableView.cellForRowAtIndexPath(indexPath)!
+        cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    override func didMoveToParentViewController(parent: UIViewController?) {
+        if parent == nil{ //Back to root view
+            let indexPath: NSIndexPath? = self.tableView.indexPathForSelectedRow()
+            if indexPath != nil{
+                var category = self.fetchResultController.objectAtIndexPath(indexPath!) as Category
+                self.delegate.onSelectedCategory(category)
+            }
         }
     }
     

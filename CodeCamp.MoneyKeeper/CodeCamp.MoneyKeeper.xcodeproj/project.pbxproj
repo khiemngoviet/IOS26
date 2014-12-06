@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E496B801A328C4600764C81 /* CategorySelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E496B7F1A328C4600764C81 /* CategorySelectionDelegate.swift */; };
+		6E496B841A32920300764C81 /* AccountListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E496B831A32920300764C81 /* AccountListVC.swift */; };
+		6E496B861A32949500764C81 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E496B851A32949500764C81 /* AccountCell.swift */; };
+		6E496B881A329ECB00764C81 /* AccountDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E496B871A329ECB00764C81 /* AccountDetailVC.swift */; };
+		6E496B8A1A32B05300764C81 /* CategoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E496B891A32B05300764C81 /* CategoryDetailVC.swift */; };
 		6E92FA041A31459600EE8D23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92FA031A31459600EE8D23 /* AppDelegate.swift */; };
 		6E92FA071A31459600EE8D23 /* CodeCamp_MoneyKeeper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E92FA051A31459600EE8D23 /* CodeCamp_MoneyKeeper.xcdatamodeld */; };
 		6E92FA0C1A31459600EE8D23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E92FA0A1A31459600EE8D23 /* Main.storyboard */; };
@@ -41,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E496B7F1A328C4600764C81 /* CategorySelectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectionDelegate.swift; sourceTree = "<group>"; };
+		6E496B831A32920300764C81 /* AccountListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountListVC.swift; sourceTree = "<group>"; };
+		6E496B851A32949500764C81 /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		6E496B871A329ECB00764C81 /* AccountDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailVC.swift; sourceTree = "<group>"; };
+		6E496B891A32B05300764C81 /* CategoryDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailVC.swift; sourceTree = "<group>"; };
 		6E92F9FE1A31459600EE8D23 /* CodeCamp.MoneyKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeCamp.MoneyKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E92FA021A31459600EE8D23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E92FA031A31459600EE8D23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +187,7 @@
 				6E92FA0A1A31459600EE8D23 /* Main.storyboard */,
 				6E92FA4A1A31630F00EE8D23 /* ItemCell.swift */,
 				6E92FA4B1A31630F00EE8D23 /* ItemCell.xib */,
+				6E496B851A32949500764C81 /* AccountCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -187,6 +198,9 @@
 				6E92FA401A31534500EE8D23 /* ItemsListVC.swift */,
 				6E92FA4E1A31673900EE8D23 /* ItemDetailVC.swift */,
 				6EB376591A31BDE8004B2186 /* CategoryVC.swift */,
+				6E496B831A32920300764C81 /* AccountListVC.swift */,
+				6E496B871A329ECB00764C81 /* AccountDetailVC.swift */,
+				6E496B891A32B05300764C81 /* CategoryDetailVC.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -224,6 +238,7 @@
 				6EB3765F1A31C3F2004B2186 /* SLExpandableTableView.m */,
 				6EB376521A31A584004B2186 /* TSCurrencyTextField */,
 				6EBC43FE1A319C30001B0B16 /* MHTextField */,
+				6E496B7F1A328C4600764C81 /* CategorySelectionDelegate.swift */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -340,9 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E496B801A328C4600764C81 /* CategorySelectionDelegate.swift in Sources */,
 				6EB3765A1A31BDE8004B2186 /* CategoryVC.swift in Sources */,
 				6E92FA3D1A3150EC00EE8D23 /* DateExtend.swift in Sources */,
 				6E92FA3C1A3150EC00EE8D23 /* ExtendManagedObject.swift in Sources */,
+				6E496B841A32920300764C81 /* AccountListVC.swift in Sources */,
 				6EBC44051A319C3F001B0B16 /* MHTextField.m in Sources */,
 				6E92FA321A31506300EE8D23 /* Item.swift in Sources */,
 				6E92FA411A31534500EE8D23 /* ItemsListVC.swift in Sources */,
@@ -350,10 +367,13 @@
 				6E92FA4C1A31630F00EE8D23 /* ItemCell.swift in Sources */,
 				6EB376551A31A58F004B2186 /* TSCurrencyTextField.m in Sources */,
 				6E92FA3B1A3150EC00EE8D23 /* DataManager.swift in Sources */,
+				6E496B861A32949500764C81 /* AccountCell.swift in Sources */,
 				6E92FA471A315B4300EE8D23 /* Category.swift in Sources */,
 				6E92FA071A31459600EE8D23 /* CodeCamp_MoneyKeeper.xcdatamodeld in Sources */,
 				6E92FA041A31459600EE8D23 /* AppDelegate.swift in Sources */,
 				6EB376601A31C3F2004B2186 /* SLExpandableTableView.m in Sources */,
+				6E496B8A1A32B05300764C81 /* CategoryDetailVC.swift in Sources */,
+				6E496B881A329ECB00764C81 /* AccountDetailVC.swift in Sources */,
 				6E92FA4F1A31673900EE8D23 /* ItemDetailVC.swift in Sources */,
 				6E92FA361A31506400EE8D23 /* Account.swift in Sources */,
 			);

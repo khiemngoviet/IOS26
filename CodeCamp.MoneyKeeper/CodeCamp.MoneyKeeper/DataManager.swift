@@ -151,8 +151,8 @@ class DataManager  {
         Category.add("Lương", parent: "", description: "", isIncome: true)
         Category.add("Thưởng", parent: "", description: "", isIncome: true)
         //Account
-        Account.add("Ví", originAmount: 2000000.0, currentAmount: 2000000.0)
-        Account.add("ATM", originAmount: 50000000.0, currentAmount: 50000000.0)
+        Account.add("Ví", originAmount: 0, currentAmount: 0)
+        Account.add("ATM", originAmount: 0, currentAmount: 0)
         
         var saveError: NSError?
         if !managedContext.save(&saveError) {

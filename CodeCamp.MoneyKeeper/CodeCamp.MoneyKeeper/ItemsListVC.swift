@@ -17,20 +17,9 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        let managedContext = DataManager.singleton.managedObjectContext!
-        //
-        ////        let results = Category.all()
-        ////        for cate in results as [Category]{
-        ////            println(cate.name)
-        ////        }
-        //        let items = Item.all()
-        //        for cate in items as [Item]{
-        //            println(cate.descriptions)
-        //        }
-        
         self.tableView.rowHeight = rowHeight
         self.tableView.registerNib(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "Cell")
-        let sortdatedesc = NSSortDescriptor(key: "date", ascending: false)
+        let sortdatedesc = NSSortDescriptor(key: "date", ascending: true)
         fetchResultController = Item.createFetchResultsController([sortdatedesc],sectionKey: nil, queryString: nil)
         fetchResultController.delegate = self
     }
@@ -50,29 +39,16 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
     }
     
     @IBAction func onAdd(sender: UIBarButtonItem) {
-        //        let date = NSDate()
-        //                let categories = Category.all() as [Category]
-        //                let accounts = Account.all() as [Account]
-        //       Item.add(2111, description: "", date: date, category: categories[5], account: accounts[1])
-//        let itemDetail = self.storyboard?.instantiateViewControllerWithIdentifier("ItemDetail") as ItemDetailVC
-//        self.navigationController?.pushViewController(itemDetail, animated: true)
+        let itemDetail = self.storyboard?.instantiateViewControllerWithIdentifier("ItemDetail") as ItemDetailVC
+        itemDetail.editMode = EditMode.AddNew
+        self.navigationController?.pushViewController(itemDetail, animated: true)
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "InsertItem"{
-            let itemDetail = segue.destinationViewController as ItemDetailVC
-            itemDetail.editMode = EditMode.AddNew
-        }
-    }
-
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionInfo = fetchResultController.sections![section] as NSFetchedResultsSectionInfo
-        let idf = sectionInfo.numberOfObjects
         let count = fetchResultController.fetchedObjects?.count
         return count!
     }
@@ -90,11 +66,12 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
         }
         else{
             cell.item.textColor = UIColor.blackColor()
-
+            
         }
         cell.item.text = item.category.isIncome.boolValue ? "Thu: \(item.category.name)" : "Chi: \(item.category.name)"
         cell.amount.text = "\(item.amount)"
-        //cell.date.text = item.date
+        cell.date.text = NSDate.convertToString(item.date)
+        cell.account.text = item.account.name
         return cell
     }
     
@@ -115,8 +92,11 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
             let detailVC = storyboard?.instantiateViewControllerWithIdentifier("ItemDetail") as ItemDetailVC
             detailVC.item = item
             detailVC.editMode = EditMode.Edit
-            self.navigationController?.pushViewController(detailVC, animated: true)
-        }
+            self.navigationController?.pushViewController(detailVC, animated: true)        }
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.1
     }
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
@@ -130,7 +110,18 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
         case .Delete:
             tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
         case .Update:
-            tableView.cellForRowAtIndexPath(indexPath!)
+            let cell = tableView.cellForRowAtIndexPath(indexPath!) as ItemCell
+            let item = fetchResultController.objectAtIndexPath(indexPath!) as Item
+            cell.item.text = item.category.isIncome.boolValue ? "Thu: \(item.category.name)" : "Chi: \(item.category.name)"
+            cell.amount.text = "\(item.amount)"
+            cell.date.text = NSDate.convertToString(item.date)
+            cell.account.text = item.account.name
+            if item.category.isIncome.boolValue{
+                cell.item.textColor = UIColor.blueColor()
+            }
+            else{
+                cell.item.textColor = UIColor.blackColor()
+            }
         case .Move:
             tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
             tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
