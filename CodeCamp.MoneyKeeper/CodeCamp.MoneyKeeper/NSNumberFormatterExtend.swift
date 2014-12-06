@@ -16,4 +16,11 @@ extension NSNumberFormatter{
         return (nsnumf.stringFromNumber(number)!)
     }
     
+    class func stringFromCurrency(number: NSNumber) -> String{
+        let nsnumf = NSNumberFormatter()
+        nsnumf.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        nsnumf.locale = NSLocale(localeIdentifier: "vi-VN")
+        return (nsnumf.stringFromNumber(number)!)
+    }
+    
 }

@@ -9,7 +9,10 @@
 import UIKit
 import CoreData
 
-class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
+class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate, UISearchDisplayDelegate {
+    
+    @IBOutlet var searchBar: UISearchBar!
+    
     
     var fetchResultController: NSFetchedResultsController!
     let rowHeight:CGFloat = 51
@@ -54,7 +57,16 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
         self.navigationItem.title = "Còn: \(NSNumberFormatter.stringFromCurrency(sum))"
     }
     
-    
+
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        NSFetchedResultsController.deleteCacheWithName("root")
+        let sortdatedesc = NSSortDescriptor(key: "date", ascending: false)
+        var queryString:String? = countElements(searchString) > 0 ? "category.name contains[cd] '\(searchString)'" : nil
+        fetchResultController = Item.createFetchResultsController([sortdatedesc],sectionKey: nil, queryString: queryString )
+        fetchResultController.performFetch(nil)
+        //self.tableView.reloadData()
+        return true
+    }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -74,7 +86,8 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as ItemCell
         let item = fetchResultController.objectAtIndexPath(indexPath) as Item
         if item.category.isIncome.boolValue{
-            cell.item.textColor = UIColor.blueColor()
+            cell.item.textColor = UIColor(red: 0, green:0.478, blue:1, alpha:1)
+            cell.amount.textColor = UIColor(red: 0, green:0.478, blue:1, alpha:1)
         }
         else{
             cell.item.textColor = UIColor.blackColor()
@@ -101,7 +114,12 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
     
     func compute(item:Item){
         let account = Account.query("name == '\(item.account.name)'", sortDescriptors: nil).0?.first as Account
-        account.currentAmount = account.currentAmount.decimalNumberBySubtracting(item.amount)
+        if item.category.isIncome.boolValue { //Thu
+            account.currentAmount = account.currentAmount.decimalNumberBySubtracting(item.amount)
+        }
+        else{ //Chi
+            account.currentAmount = account.currentAmount.decimalNumberByAdding(item.amount)
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -115,10 +133,12 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
     }
     
     
-    
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.1
     }
+    
+    
+    
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
         tableView.beginUpdates()
@@ -139,10 +159,12 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
             cell.date.text = NSDate.convertToString(item.date)
             cell.account.text = item.account.name
             if item.category.isIncome.boolValue{
-                cell.item.textColor = UIColor.blueColor()
+                cell.item.textColor = UIColor(red: 0, green:0.478, blue:1, alpha:1)
+                cell.amount.textColor = UIColor(red: 0, green:0.478, blue:1, alpha:1)
             }
             else{
                 cell.item.textColor = UIColor.blackColor()
+                cell.amount.textColor = UIColor.blackColor()
             }
         case .Move:
             tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)

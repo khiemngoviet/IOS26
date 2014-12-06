@@ -13,6 +13,7 @@
 		6E496B861A32949500764C81 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E496B851A32949500764C81 /* AccountCell.swift */; };
 		6E496B881A329ECB00764C81 /* AccountDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E496B871A329ECB00764C81 /* AccountDetailVC.swift */; };
 		6E496B8A1A32B05300764C81 /* CategoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E496B891A32B05300764C81 /* CategoryDetailVC.swift */; };
+		6E62368A1A333F9A0033E7D9 /* SumbyCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6236891A333F9A0033E7D9 /* SumbyCategoryVC.swift */; };
 		6E92FA041A31459600EE8D23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92FA031A31459600EE8D23 /* AppDelegate.swift */; };
 		6E92FA071A31459600EE8D23 /* CodeCamp_MoneyKeeper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E92FA051A31459600EE8D23 /* CodeCamp_MoneyKeeper.xcdatamodeld */; };
 		6E92FA0C1A31459600EE8D23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E92FA0A1A31459600EE8D23 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		6E496B851A32949500764C81 /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		6E496B871A329ECB00764C81 /* AccountDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailVC.swift; sourceTree = "<group>"; };
 		6E496B891A32B05300764C81 /* CategoryDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailVC.swift; sourceTree = "<group>"; };
+		6E6236891A333F9A0033E7D9 /* SumbyCategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumbyCategoryVC.swift; sourceTree = "<group>"; };
 		6E92F9FE1A31459600EE8D23 /* CodeCamp.MoneyKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeCamp.MoneyKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E92FA021A31459600EE8D23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E92FA031A31459600EE8D23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				6E496B831A32920300764C81 /* AccountListVC.swift */,
 				6E496B871A329ECB00764C81 /* AccountDetailVC.swift */,
 				6E496B891A32B05300764C81 /* CategoryDetailVC.swift */,
+				6E6236891A333F9A0033E7D9 /* SumbyCategoryVC.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				6E92FA321A31506300EE8D23 /* Item.swift in Sources */,
 				6E92FA411A31534500EE8D23 /* ItemsListVC.swift in Sources */,
 				6EBC44041A319C3F001B0B16 /* CustomTextField.m in Sources */,
+				6E62368A1A333F9A0033E7D9 /* SumbyCategoryVC.swift in Sources */,
 				6E2E11731A32E3FE006994B6 /* NSNumberFormatterExtend.swift in Sources */,
 				6E92FA4C1A31630F00EE8D23 /* ItemCell.swift in Sources */,
 				6EB376551A31A58F004B2186 /* TSCurrencyTextField.m in Sources */,

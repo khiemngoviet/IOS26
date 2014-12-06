@@ -81,4 +81,22 @@ extension NSManagedObject {
         return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedContext, sectionNameKeyPath: sectionKey, cacheName: "root")
         
     }
+    
+    
+    
+    class func createFetchResultsController(sortDescriptors: [NSSortDescriptor]?, sectionKey: String?, predicate:NSPredicate?) -> NSFetchedResultsController {
+        
+        let managedContext = DataManager.singleton.managedObjectContext!
+        let fetchRequest = NSFetchRequest()
+        let entityDes = NSEntityDescription.entityForName(self.description(), inManagedObjectContext: managedContext)
+        fetchRequest.entity = entityDes
+        fetchRequest.fetchBatchSize = 20
+        if predicate != nil{
+            fetchRequest.predicate = predicate
+        }
+        fetchRequest.sortDescriptors = sortDescriptors
+        
+        return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedContext, sectionNameKeyPath: sectionKey, cacheName: "root")
+        
+    }
 }

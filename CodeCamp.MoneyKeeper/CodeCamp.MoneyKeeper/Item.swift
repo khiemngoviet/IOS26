@@ -27,4 +27,75 @@ class Item: NSManagedObject {
         item.account = account
         return item
     }
+    
+    class func sumAmountByExpenseCategory() -> [AnyObject]? {
+        let managedContext = DataManager.singleton.managedObjectContext!
+        let entity = NSEntityDescription.entityForName(self.description(), inManagedObjectContext: managedContext)
+        let keyPath = NSExpression(forKeyPath: "amount")
+        let expression = NSExpression(forFunction: "sum:", arguments: [keyPath])
+        let calc = NSExpressionDescription()
+        calc.name = "total"
+        calc.expression = expression
+        
+        
+        let request = NSFetchRequest()
+        request.entity = entity!
+        request.predicate = NSPredicate(format: "category.isIncome == %@", NSNumber(bool: false))
+        request.propertiesToGroupBy = ["category.name"]
+        request.propertiesToFetch = ["category.name", calc]
+        request.resultType = NSFetchRequestResultType.DictionaryResultType
+        return managedContext.executeFetchRequest(request, error: nil)
+    }
+    
+    class func sumAmountByIncomeCategory() -> [AnyObject]? {
+        let managedContext = DataManager.singleton.managedObjectContext!
+        let entity = NSEntityDescription.entityForName(self.description(), inManagedObjectContext: managedContext)
+        let keyPath = NSExpression(forKeyPath: "amount")
+        let expression = NSExpression(forFunction: "sum:", arguments: [keyPath])
+        let calc = NSExpressionDescription()
+        calc.name = "total"
+        calc.expression = expression
+        
+        let request = NSFetchRequest()
+        request.entity = entity!
+        request.predicate = NSPredicate(format: "category.isIncome == %@", NSNumber(bool: true))
+        request.propertiesToGroupBy = ["category.name"]
+        request.propertiesToFetch = ["category.name", calc]
+        request.resultType = NSFetchRequestResultType.DictionaryResultType
+        return managedContext.executeFetchRequest(request, error: nil)
+    }
+    
+    class func SumOfExpense() -> [AnyObject]?{
+        let managedContext = DataManager.singleton.managedObjectContext!
+        let entity = NSEntityDescription.entityForName(self.description(), inManagedObjectContext: managedContext)
+        let keyPath = NSExpression(forKeyPath: "amount")
+        let expression = NSExpression(forFunction: "sum:", arguments: [keyPath])
+        let calc = NSExpressionDescription()
+        calc.name = "total"
+        calc.expression = expression
+        
+        let request = NSFetchRequest()
+        request.entity = entity!
+        request.propertiesToFetch = [calc]
+        request.predicate = NSPredicate(format: "category.isIncome == %@", NSNumber(bool: false))
+        request.resultType = NSFetchRequestResultType.DictionaryResultType
+        return managedContext.executeFetchRequest(request, error: nil)
+    }
+    
+    class func SumOfIncome() -> [AnyObject]?{
+        let managedContext = DataManager.singleton.managedObjectContext!
+        let entity = NSEntityDescription.entityForName(self.description(), inManagedObjectContext: managedContext)
+        let keyPath = NSExpression(forKeyPath: "amount")
+        let expression = NSExpression(forFunction: "sum:", arguments: [keyPath])
+        let calc = NSExpressionDescription()
+        calc.name = "total"
+        calc.expression = expression
+        
+        let request = NSFetchRequest()
+        request.entity = entity!
+        request.propertiesToFetch = [calc]
+        request.predicate = NSPredicate(format: "category.isIncome == %@", NSNumber(bool: true))
+        request.resultType = NSFetchRequestResultType.DictionaryResultType
+        return managedContext.executeFetchRequest(request, error: nil)
+    }
 }
