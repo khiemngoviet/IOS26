@@ -19,21 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         //DataManager.singleton.hardReset()
-        //if !DataManager.singleton.hasDataBaseFile(){
-            //Init data
-            //DataManager.singleton.initData()
-        //}
-//        let managedContext = DataManager.singleton.managedObjectContext!
-//        
-//        let date = NSDate()
-//        let categories = Category.all() as [Category]
-//        let accounts = Account.all() as [Account]
-//        
-//        Item.add(2000000, description: "Iphone 6", date: date, category: categories[3], account: accounts[1])
-//        var saveError: NSError?
-//        if !managedContext.save(&saveError) {
-//            
-//        }
+       
+        //DataManager.singleton.initData()
+        
         return true
     }
 

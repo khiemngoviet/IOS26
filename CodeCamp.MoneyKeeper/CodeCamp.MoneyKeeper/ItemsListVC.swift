@@ -9,17 +9,19 @@
 import UIKit
 import CoreData
 
-class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate, UISearchDisplayDelegate {
+class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate, UISearchDisplayDelegate, UISearchBarDelegate {
     
     @IBOutlet var searchBar: UISearchBar!
-    
+    var editBarItem: UIBarButtonItem!
+    var doneBarItem: UIBarButtonItem!
     
     var fetchResultController: NSFetchedResultsController!
     let rowHeight:CGFloat = 51
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.editBarItem = self.navigationItem.leftBarButtonItem
+        self.doneBarItem = UIBarButtonItem(title: "Xong", style: UIBarButtonItemStyle.Plain, target: self, action: "onDone")
         self.tableView.rowHeight = rowHeight
         self.tableView.registerNib(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "Cell")
         let sortdatedesc = NSSortDescriptor(key: "date", ascending: false)
@@ -40,6 +42,12 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate, UI
     
     @IBAction func onEdit(sender:UIBarButtonItem) {
         tableView.setEditing(!tableView.editing, animated: true)
+        self.navigationItem.leftBarButtonItem = doneBarItem
+    }
+    
+    func onDone(){
+        self.navigationItem.leftBarButtonItem = editBarItem
+        tableView.setEditing(!tableView.editing, animated: true)
     }
     
     @IBAction func onAdd(sender: UIBarButtonItem) {
@@ -57,15 +65,23 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate, UI
         self.navigationItem.title = "Còn: \(NSNumberFormatter.stringFromCurrency(sum))"
     }
     
-
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+    func doFilter(searchString: String){
         NSFetchedResultsController.deleteCacheWithName("root")
         let sortdatedesc = NSSortDescriptor(key: "date", ascending: false)
         var queryString:String? = countElements(searchString) > 0 ? "category.name contains[cd] '\(searchString)'" : nil
         fetchResultController = Item.createFetchResultsController([sortdatedesc],sectionKey: nil, queryString: queryString )
+        fetchResultController.delegate = self
         fetchResultController.performFetch(nil)
-        //self.tableView.reloadData()
+    }
+    
+    
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        self.doFilter(searchString)
         return true
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        self.doFilter("")
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

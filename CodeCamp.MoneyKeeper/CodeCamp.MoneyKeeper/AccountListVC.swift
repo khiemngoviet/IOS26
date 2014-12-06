@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-class AccountListVC: UITableViewController {
+class AccountListVC: UITableViewController, NSFetchedResultsControllerDelegate {
     
     var fetchResultController: NSFetchedResultsController!
     
@@ -18,6 +18,7 @@ class AccountListVC: UITableViewController {
         self.tableView.rowHeight = 60.0
         let sortNameAZ = NSSortDescriptor(key: "name", ascending: true)
         fetchResultController = Account.createFetchResultsController([sortNameAZ], sectionKey: nil, queryString: nil)
+        fetchResultController.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -57,5 +58,32 @@ class AccountListVC: UITableViewController {
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1
     }
+    
+    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        tableView.beginUpdates()
+    }
+    
+    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+        switch (type) {
+        case .Insert:
+            tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
+        case .Delete:
+            
+            tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
+        case .Update:
+            let cell = tableView.cellForRowAtIndexPath(indexPath!) as AccountCell
+            let account = fetchResultController.objectAtIndexPath(indexPath!) as Account
+            cell.accountNameLable.text = account.name
+            cell.remainAmountLabel.text = NSNumberFormatter.stringFromCurrency(account.currentAmount)
+            cell.originAmountLabel.text = NSNumberFormatter.stringFromCurrency(account.originAmount)
+        case .Move:
+            tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
+            tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
+        }
+    }
+    
+    
+    
+ 
     
 }
