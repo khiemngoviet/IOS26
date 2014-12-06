@@ -43,8 +43,8 @@ class AccountListVC: UITableViewController {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("AccountCell") as AccountCell
         let account = fetchResultController.objectAtIndexPath(indexPath) as Account
         cell.accountNameLable.text = account.name
-        cell.remainAmountLabel.text = "\(account.currentAmount)"
-        cell.originAmountLabel.text = "\(account.originAmount)"
+        cell.remainAmountLabel.text = NSNumberFormatter.stringFromCurrency(account.currentAmount)
+        cell.originAmountLabel.text = NSNumberFormatter.stringFromCurrency(account.originAmount)
         return cell
     }
     

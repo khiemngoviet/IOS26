@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E2E11731A32E3FE006994B6 /* NSNumberFormatterExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E11721A32E3FE006994B6 /* NSNumberFormatterExtend.swift */; };
 		6E496B801A328C4600764C81 /* CategorySelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E496B7F1A328C4600764C81 /* CategorySelectionDelegate.swift */; };
 		6E496B841A32920300764C81 /* AccountListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E496B831A32920300764C81 /* AccountListVC.swift */; };
 		6E496B861A32949500764C81 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E496B851A32949500764C81 /* AccountCell.swift */; };
@@ -30,7 +31,6 @@
 		6E92FA4F1A31673900EE8D23 /* ItemDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92FA4E1A31673900EE8D23 /* ItemDetailVC.swift */; };
 		6EB376551A31A58F004B2186 /* TSCurrencyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB376541A31A58F004B2186 /* TSCurrencyTextField.m */; };
 		6EB3765A1A31BDE8004B2186 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB376591A31BDE8004B2186 /* CategoryVC.swift */; };
-		6EB376601A31C3F2004B2186 /* SLExpandableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3765F1A31C3F2004B2186 /* SLExpandableTableView.m */; };
 		6EBC44041A319C3F001B0B16 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC44011A319C3F001B0B16 /* CustomTextField.m */; };
 		6EBC44051A319C3F001B0B16 /* MHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC44031A319C3F001B0B16 /* MHTextField.m */; };
 /* End PBXBuildFile section */
@@ -46,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E2E11721A32E3FE006994B6 /* NSNumberFormatterExtend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberFormatterExtend.swift; sourceTree = "<group>"; };
 		6E496B7F1A328C4600764C81 /* CategorySelectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectionDelegate.swift; sourceTree = "<group>"; };
 		6E496B831A32920300764C81 /* AccountListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountListVC.swift; sourceTree = "<group>"; };
 		6E496B851A32949500764C81 /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
@@ -74,8 +75,6 @@
 		6EB376531A31A58F004B2186 /* TSCurrencyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCurrencyTextField.h; sourceTree = "<group>"; };
 		6EB376541A31A58F004B2186 /* TSCurrencyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCurrencyTextField.m; sourceTree = "<group>"; };
 		6EB376591A31BDE8004B2186 /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
-		6EB3765E1A31C3F2004B2186 /* SLExpandableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLExpandableTableView.h; sourceTree = "<group>"; };
-		6EB3765F1A31C3F2004B2186 /* SLExpandableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLExpandableTableView.m; sourceTree = "<group>"; };
 		6EBC43FF1A319C3E001B0B16 /* CodeCamp.MoneyKeeper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeCamp.MoneyKeeper-Bridging-Header.h"; sourceTree = "<group>"; };
 		6EBC44001A319C3F001B0B16 /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
 		6EBC44011A319C3F001B0B16 /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
@@ -218,6 +217,7 @@
 				6E92FA381A3150EC00EE8D23 /* DataManager.swift */,
 				6E92FA391A3150EC00EE8D23 /* ExtendManagedObject.swift */,
 				6E92FA3A1A3150EC00EE8D23 /* DateExtend.swift */,
+				6E2E11721A32E3FE006994B6 /* NSNumberFormatterExtend.swift */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -234,8 +234,6 @@
 		6EBC43FD1A319C2A001B0B16 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				6EB3765E1A31C3F2004B2186 /* SLExpandableTableView.h */,
-				6EB3765F1A31C3F2004B2186 /* SLExpandableTableView.m */,
 				6EB376521A31A584004B2186 /* TSCurrencyTextField */,
 				6EBC43FE1A319C30001B0B16 /* MHTextField */,
 				6E496B7F1A328C4600764C81 /* CategorySelectionDelegate.swift */,
@@ -364,6 +362,7 @@
 				6E92FA321A31506300EE8D23 /* Item.swift in Sources */,
 				6E92FA411A31534500EE8D23 /* ItemsListVC.swift in Sources */,
 				6EBC44041A319C3F001B0B16 /* CustomTextField.m in Sources */,
+				6E2E11731A32E3FE006994B6 /* NSNumberFormatterExtend.swift in Sources */,
 				6E92FA4C1A31630F00EE8D23 /* ItemCell.swift in Sources */,
 				6EB376551A31A58F004B2186 /* TSCurrencyTextField.m in Sources */,
 				6E92FA3B1A3150EC00EE8D23 /* DataManager.swift in Sources */,
@@ -371,7 +370,6 @@
 				6E92FA471A315B4300EE8D23 /* Category.swift in Sources */,
 				6E92FA071A31459600EE8D23 /* CodeCamp_MoneyKeeper.xcdatamodeld in Sources */,
 				6E92FA041A31459600EE8D23 /* AppDelegate.swift in Sources */,
-				6EB376601A31C3F2004B2186 /* SLExpandableTableView.m in Sources */,
 				6E496B8A1A32B05300764C81 /* CategoryDetailVC.swift in Sources */,
 				6E496B881A329ECB00764C81 /* AccountDetailVC.swift in Sources */,
 				6E92FA4F1A31673900EE8D23 /* ItemDetailVC.swift in Sources */,

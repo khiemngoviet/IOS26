@@ -5,4 +5,3 @@
 #import "MHTextField.h"
 #import "CustomTextField.h"
 #import "TSCurrencyTextField.h"
-#import "SLExpandableTableView.h"

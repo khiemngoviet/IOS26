@@ -19,7 +19,7 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
         
         self.tableView.rowHeight = rowHeight
         self.tableView.registerNib(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "Cell")
-        let sortdatedesc = NSSortDescriptor(key: "date", ascending: true)
+        let sortdatedesc = NSSortDescriptor(key: "date", ascending: false)
         fetchResultController = Item.createFetchResultsController([sortdatedesc],sectionKey: nil, queryString: nil)
         fetchResultController.delegate = self
     }
@@ -31,6 +31,7 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
         if error != nil {
             println("\(error?.description)  - \(error?.debugDescription)")
         }
+        self.computeSum()
     }
     
     
@@ -43,6 +44,17 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
         itemDetail.editMode = EditMode.AddNew
         self.navigationController?.pushViewController(itemDetail, animated: true)
     }
+    
+    func computeSum(){
+        var sum:NSDecimalNumber = 0
+        let accounts = Account.all() as [Account]
+        for account in accounts{
+            sum = sum.decimalNumberByAdding(account.currentAmount)
+        }
+        self.navigationItem.title = "Còn: \(NSNumberFormatter.stringFromCurrency(sum))"
+    }
+    
+    
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -69,7 +81,7 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
             
         }
         cell.item.text = item.category.isIncome.boolValue ? "Thu: \(item.category.name)" : "Chi: \(item.category.name)"
-        cell.amount.text = "\(item.amount)"
+        cell.amount.text = NSNumberFormatter.stringFromCurrency(item.amount)
         cell.date.text = NSDate.convertToString(item.date)
         cell.account.text = item.account.name
         return cell
@@ -79,11 +91,17 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let item = fetchResultController.objectAtIndexPath(indexPath) as Item
+            self.compute(item)
             DataManager.singleton.managedObjectContext?.deleteObject(item)
             DataManager.singleton.saveContext()
         } else if editingStyle == .Insert {
             
         }
+    }
+    
+    func compute(item:Item){
+        let account = Account.query("name == '\(item.account.name)'", sortDescriptors: nil).0?.first as Account
+        account.currentAmount = account.currentAmount.decimalNumberBySubtracting(item.amount)
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -92,8 +110,11 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
             let detailVC = storyboard?.instantiateViewControllerWithIdentifier("ItemDetail") as ItemDetailVC
             detailVC.item = item
             detailVC.editMode = EditMode.Edit
-            self.navigationController?.pushViewController(detailVC, animated: true)        }
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
+    
+    
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.1
@@ -108,6 +129,7 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
         case .Insert:
             tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
         case .Delete:
+            
             tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
         case .Update:
             let cell = tableView.cellForRowAtIndexPath(indexPath!) as ItemCell
@@ -126,7 +148,11 @@ class ItemsListVC: UITableViewController, NSFetchedResultsControllerDelegate {
             tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
             tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
         }
+        
+        self.computeSum()
     }
+    
+    
     
     func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
         switch type {

@@ -30,7 +30,7 @@ class ItemDetailVC: UITableViewController, UIActionSheetDelegate, CategorySelect
         date.isDateField = true
         date.dateFormat = "dd/MM/yyyy"
         if editMode == EditMode.AddNew{
-            item = Item.insert() as Item
+            
         }
         else{
             segment.selectedSegmentIndex = item.category.isIncome.boolValue ? 1 : 0
@@ -56,6 +56,9 @@ class ItemDetailVC: UITableViewController, UIActionSheetDelegate, CategorySelect
     }
     
     func collectData(){
+        if self.editMode == EditMode.AddNew{
+            item = Item.insert() as Item
+        }
         item.amount = NSDecimalNumber(double: amountTextField.amount.doubleValue)
         item.descriptions = descriptions.text
         item.date = NSDate.convertFromString(date.text)
