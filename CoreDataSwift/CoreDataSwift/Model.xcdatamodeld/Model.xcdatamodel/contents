@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14B25" minimumToolsVersion="Xcode 4.5" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Cat" representedClassName="Cat" syncable="YES">
+        <attribute name="dob" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="nick" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="breed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CatBreed" inverseName="cats" inverseEntity="CatBreed" syncable="YES"/>
+        <relationship name="owners" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="cats" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="CatBreed" representedClassName="CatBreed" syncable="YES">
+        <attribute name="breed" attributeType="String" syncable="YES"/>
+        <attribute name="originCountry" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cat" inverseName="breed" inverseEntity="Cat" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" attributeType="String" minValueString="3" syncable="YES"/>
+        <attribute name="fullName" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" minValueString="3" syncable="YES"/>
+        <relationship name="cats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cat" inverseName="owners" inverseEntity="Cat" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" parentEntity="Person" syncable="YES">
+        <attribute name="course" attributeType="String" minValueString="5" syncable="YES"/>
+    </entity>
+    <entity name="Teacher" representedClassName="Teacher" parentEntity="Person" syncable="YES">
+        <attribute name="salary" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <fetchRequest name="getUSCatBreeds" entity="CatBreed" predicateString="originCountry CONTAINS &quot;United States&quot;"/>
+    <elements>
+        <element name="Cat" positionX="-4871" positionY="-4221" width="128" height="133"/>
+        <element name="CatBreed" positionX="-5069" positionY="-4176" width="128" height="88"/>
+        <element name="Person" positionX="-4673" positionY="-4149" width="128" height="118"/>
+        <element name="Student" positionX="-4781" positionY="-3969" width="128" height="58"/>
+        <element name="Teacher" positionX="-4556" positionY="-3978" width="128" height="58"/>
+    </elements>
+</model>

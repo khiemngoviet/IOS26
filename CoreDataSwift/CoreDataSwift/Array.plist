@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Michael Jordan</string>
+		<key>job</key>
+		<string>Basket ball player</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>John Lenon</string>
+		<key>job</key>
+		<string>Singer and quitarist</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Paul Mc Cartney</string>
+		<key>job</key>
+		<string>Singer, song writer, pianist</string>
+	</dict>
+</array>
+</plist>

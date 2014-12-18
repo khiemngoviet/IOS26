@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         //DataManager.singleton.initData()
         
+        DataManager.singleton.copyFromBundleToDocument()
+        
         return true
     }
 

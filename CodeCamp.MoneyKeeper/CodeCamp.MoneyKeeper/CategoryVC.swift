@@ -68,7 +68,7 @@ class CategoryVC: UITableViewController, NSFetchedResultsControllerDelegate {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "#")
         }
         let category = fetchResultController.objectAtIndexPath(indexPath) as Category
-        cell.textLabel?.text = category.name
+        cell.textLabel.text = category.name
         return cell
     }
     

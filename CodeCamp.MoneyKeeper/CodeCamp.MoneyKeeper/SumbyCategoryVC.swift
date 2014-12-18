@@ -95,7 +95,7 @@ class SumbyCategoryVC: UITableViewController {
         let name: AnyObject = item.objectForKey("category.name")!
         var value: AnyObject =  item.objectForKey("total")!
         value = NSNumberFormatter.stringFromCurrency((value as NSString).doubleValue)
-        cell.textLabel?.text = "\(name)"
+        cell.textLabel.text = "\(name)"
         cell.detailTextLabel?.text = "\(value)"
         return cell
     }

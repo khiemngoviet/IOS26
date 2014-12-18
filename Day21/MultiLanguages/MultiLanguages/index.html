@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World</title>
+        <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#cat').click(function () {
+                    $('#cat').hide( "slow" );
+                    $('#title').css({'color': '#FF0000','font-size': '500%'});
+                    $('body').css({'background-color': '#000000'});
+                                              
+                    var aMessage = {'command':'hello', data:[5,6,7,8,9]}
+                    window.webkit.messageHandlers.interOp.postMessage(aMessage)
+                });
+            });
+            
+            function changeSomething() {
+                $('body').css({'background-color': '#FFFF00'});
+            }
+            </script>
+    </head>
+    <body>
+        <h1 id="title">Welcome to Techmaster Vietnam</h1>
+        <img src="cat.png" width="256" height="256" id="cat">
+    </body>
+    
+</html>

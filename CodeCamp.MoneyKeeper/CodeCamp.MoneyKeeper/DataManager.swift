@@ -102,7 +102,7 @@ class DataManager  {
         let documentsPath : AnyObject = NSSearchPathForDirectoriesInDomains(.DocumentDirectory,.UserDomainMask,true)[0]
         
         let destinationPath:NSString = documentsPath.stringByAppendingString("/CodeCamp_MoneyKeeper.sqlite")
-        
+        println(destinationPath)
         if !filemanager.fileExistsAtPath(destinationPath){
             //Copy from mainBundle to Document folder
             let fileForCopy = NSBundle.mainBundle().pathForResource("CodeCamp_MoneyKeeper",ofType:"sqlite")

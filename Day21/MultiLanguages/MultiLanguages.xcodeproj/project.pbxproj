@@ -1,0 +1,707 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E214D9DB1A37DEFD00A135E4 /* Fed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E214D9D91A37DEFD00A135E4 /* Fed.cpp */; };
+		E22C3C421A3ADAC2009D7F63 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E22C3C411A3ADAC2009D7F63 /* index.html */; };
+		E22C3C441A3AE502009D7F63 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = E22C3C431A3AE502009D7F63 /* cat.png */; };
+		E22C3C461A3AFB29009D7F63 /* jquery-2.1.1.min.js in Resources */ = {isa = PBXBuildFile; fileRef = E22C3C451A3AFB29009D7F63 /* jquery-2.1.1.min.js */; };
+		E23A93C21A3FF82C00B4B03E /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = E23A93C11A3FF82C00B4B03E /* Car.m */; };
+		E23A93C41A40207600B4B03E /* SwiftCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A93C31A40207600B4B03E /* SwiftCar.swift */; };
+		E23A93C61A40214300B4B03E /* JumpProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A93C51A40214300B4B03E /* JumpProtocol.swift */; };
+		E23A93C91A4021D800B4B03E /* ObjCar.m in Sources */ = {isa = PBXBuildFile; fileRef = E23A93C81A4021D800B4B03E /* ObjCar.m */; };
+		E23A93CB1A40289800B4B03E /* MixObjSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A93CA1A40289800B4B03E /* MixObjSwift.swift */; };
+		E23A93CD1A4046D800B4B03E /* Airplane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A93CC1A4046D800B4B03E /* Airplane.swift */; };
+		E24F704B1A37E4EB00784B96 /* CallCPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F704A1A37E4EB00784B96 /* CallCPP.swift */; };
+		E24F704E1A37F15E00784B96 /* FedWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = E24F704D1A37F15E00784B96 /* FedWrapper.mm */; };
+		E24F70531A38088C00784B96 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24F70521A38088C00784B96 /* JavaScriptCore.framework */; };
+		E24F70551A38093700784B96 /* CallJavaScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F70541A38093700784B96 /* CallJavaScript.swift */; };
+		E24F70571A380BD000784B96 /* factorial.js in Resources */ = {isa = PBXBuildFile; fileRef = E24F70561A380BD000784B96 /* factorial.js */; };
+		E24F707E1A384AD500784B96 /* HTMLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F705A1A384AD500784B96 /* HTMLComment.m */; };
+		E24F707F1A384AD500784B96 /* HTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F705C1A384AD500784B96 /* HTMLDocument.m */; };
+		E24F70801A384AD500784B96 /* HTMLDocumentType.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F705E1A384AD500784B96 /* HTMLDocumentType.m */; };
+		E24F70811A384AD500784B96 /* HTMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F70601A384AD500784B96 /* HTMLElement.m */; };
+		E24F70821A384AD500784B96 /* HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F70621A384AD500784B96 /* HTMLEntities.m */; };
+		E24F70831A384AD500784B96 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F70651A384AD500784B96 /* HTMLNode.m */; };
+		E24F70841A384AD500784B96 /* HTMLOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F70671A384AD500784B96 /* HTMLOrderedDictionary.m */; };
+		E24F70851A384AD500784B96 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F70691A384AD500784B96 /* HTMLParser.m */; };
+		E24F70861A384AD500784B96 /* HTMLPreprocessedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F706B1A384AD500784B96 /* HTMLPreprocessedInputStream.m */; };
+		E24F70871A384AD500784B96 /* HTMLSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F706F1A384AD500784B96 /* HTMLSelector.m */; };
+		E24F70881A384AD500784B96 /* HTMLSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F70711A384AD500784B96 /* HTMLSerialization.m */; };
+		E24F70891A384AD500784B96 /* HTMLString.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F70731A384AD500784B96 /* HTMLString.m */; };
+		E24F708A1A384AD500784B96 /* HTMLTextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F70761A384AD500784B96 /* HTMLTextNode.m */; };
+		E24F708B1A384AD500784B96 /* HTMLTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F70781A384AD500784B96 /* HTMLTokenizer.m */; };
+		E24F708C1A384AD500784B96 /* HTMLTreeEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F707B1A384AD500784B96 /* HTMLTreeEnumerator.m */; };
+		E24F708D1A384AD500784B96 /* NSString+HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F707D1A384AD500784B96 /* NSString+HTMLEntities.m */; };
+		E24F708F1A384DD500784B96 /* UseObjcLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F708E1A384DD500784B96 /* UseObjcLib.swift */; };
+		E24F70951A389B8C00784B96 /* BooFar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F70911A389B8C00784B96 /* BooFar.swift */; };
+		E24F70961A389B8C00784B96 /* FooBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24F70921A389B8C00784B96 /* FooBar.swift */; };
+		E24F70971A389B8C00784B96 /* NSObject+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = E24F70941A389B8C00784B96 /* NSObject+Swift.m */; };
+		E2B54F871A374F5500150548 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B54F861A374F5500150548 /* Images.xcassets */; };
+		E2B54F8A1A374F5500150548 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B54F881A374F5500150548 /* LaunchScreen.xib */; };
+		E2B54F961A374F5500150548 /* MultiLanguagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B54F951A374F5500150548 /* MultiLanguagesTests.swift */; };
+		E2B54FA51A37505C00150548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B54FA11A37505C00150548 /* AppDelegate.swift */; };
+		E2B54FA61A37505C00150548 /* BootLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B54FA21A37505C00150548 /* BootLogic.swift */; };
+		E2B54FA71A37505C00150548 /* ConsoleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B54FA31A37505C00150548 /* ConsoleScreen.swift */; };
+		E2B54FA81A37505C00150548 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B54FA41A37505C00150548 /* MainScreen.swift */; };
+		E2B54FAF1A3751FE00150548 /* Bob.c in Sources */ = {isa = PBXBuildFile; fileRef = E2B54FAD1A3751FE00150548 /* Bob.c */; };
+		E2B54FB11A37533000150548 /* CallC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B54FB01A37533000150548 /* CallC.swift */; };
+		E2EE44001A3A05FC000A0712 /* DemoWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EE43FF1A3A05FC000A0712 /* DemoWKWebView.swift */; };
+		E2EE44021A3A0746000A0712 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2EE44011A3A0746000A0712 /* WebKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2B54F901A374F5500150548 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2B54F721A374F5500150548 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2B54F791A374F5500150548;
+			remoteInfo = MultiLanguages;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E214D9D91A37DEFD00A135E4 /* Fed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fed.cpp; sourceTree = "<group>"; };
+		E214D9DA1A37DEFD00A135E4 /* Fed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fed.h; sourceTree = "<group>"; };
+		E22C3C411A3ADAC2009D7F63 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		E22C3C431A3AE502009D7F63 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
+		E22C3C451A3AFB29009D7F63 /* jquery-2.1.1.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.1.min.js"; sourceTree = "<group>"; };
+		E23A93C01A3FF82C00B4B03E /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		E23A93C11A3FF82C00B4B03E /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		E23A93C31A40207600B4B03E /* SwiftCar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftCar.swift; sourceTree = "<group>"; };
+		E23A93C51A40214300B4B03E /* JumpProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpProtocol.swift; sourceTree = "<group>"; };
+		E23A93C71A4021D800B4B03E /* ObjCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCar.h; sourceTree = "<group>"; };
+		E23A93C81A4021D800B4B03E /* ObjCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCar.m; sourceTree = "<group>"; };
+		E23A93CA1A40289800B4B03E /* MixObjSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixObjSwift.swift; sourceTree = "<group>"; };
+		E23A93CC1A4046D800B4B03E /* Airplane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airplane.swift; sourceTree = "<group>"; };
+		E24F704A1A37E4EB00784B96 /* CallCPP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallCPP.swift; sourceTree = "<group>"; };
+		E24F704C1A37F15E00784B96 /* FedWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FedWrapper.h; sourceTree = "<group>"; };
+		E24F704D1A37F15E00784B96 /* FedWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FedWrapper.mm; sourceTree = "<group>"; };
+		E24F70521A38088C00784B96 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		E24F70541A38093700784B96 /* CallJavaScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallJavaScript.swift; sourceTree = "<group>"; };
+		E24F70561A380BD000784B96 /* factorial.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = factorial.js; sourceTree = "<group>"; };
+		E24F70591A384AD500784B96 /* HTMLComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLComment.h; sourceTree = "<group>"; };
+		E24F705A1A384AD500784B96 /* HTMLComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLComment.m; sourceTree = "<group>"; };
+		E24F705B1A384AD500784B96 /* HTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLDocument.h; sourceTree = "<group>"; };
+		E24F705C1A384AD500784B96 /* HTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLDocument.m; sourceTree = "<group>"; };
+		E24F705D1A384AD500784B96 /* HTMLDocumentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLDocumentType.h; sourceTree = "<group>"; };
+		E24F705E1A384AD500784B96 /* HTMLDocumentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLDocumentType.m; sourceTree = "<group>"; };
+		E24F705F1A384AD500784B96 /* HTMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLElement.h; sourceTree = "<group>"; };
+		E24F70601A384AD500784B96 /* HTMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLElement.m; sourceTree = "<group>"; };
+		E24F70611A384AD500784B96 /* HTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLEntities.h; sourceTree = "<group>"; };
+		E24F70621A384AD500784B96 /* HTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLEntities.m; sourceTree = "<group>"; };
+		E24F70631A384AD500784B96 /* HTMLNamespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNamespace.h; sourceTree = "<group>"; };
+		E24F70641A384AD500784B96 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		E24F70651A384AD500784B96 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		E24F70661A384AD500784B96 /* HTMLOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLOrderedDictionary.h; sourceTree = "<group>"; };
+		E24F70671A384AD500784B96 /* HTMLOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLOrderedDictionary.m; sourceTree = "<group>"; };
+		E24F70681A384AD500784B96 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		E24F70691A384AD500784B96 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		E24F706A1A384AD500784B96 /* HTMLPreprocessedInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLPreprocessedInputStream.h; sourceTree = "<group>"; };
+		E24F706B1A384AD500784B96 /* HTMLPreprocessedInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLPreprocessedInputStream.m; sourceTree = "<group>"; };
+		E24F706C1A384AD500784B96 /* HTMLQuirksMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLQuirksMode.h; sourceTree = "<group>"; };
+		E24F706D1A384AD500784B96 /* HTMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLReader.h; sourceTree = "<group>"; };
+		E24F706E1A384AD500784B96 /* HTMLSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLSelector.h; sourceTree = "<group>"; };
+		E24F706F1A384AD500784B96 /* HTMLSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLSelector.m; sourceTree = "<group>"; };
+		E24F70701A384AD500784B96 /* HTMLSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLSerialization.h; sourceTree = "<group>"; };
+		E24F70711A384AD500784B96 /* HTMLSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLSerialization.m; sourceTree = "<group>"; };
+		E24F70721A384AD500784B96 /* HTMLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLString.h; sourceTree = "<group>"; };
+		E24F70731A384AD500784B96 /* HTMLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLString.m; sourceTree = "<group>"; };
+		E24F70741A384AD500784B96 /* HTMLSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLSupport.h; sourceTree = "<group>"; };
+		E24F70751A384AD500784B96 /* HTMLTextNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTextNode.h; sourceTree = "<group>"; };
+		E24F70761A384AD500784B96 /* HTMLTextNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLTextNode.m; sourceTree = "<group>"; };
+		E24F70771A384AD500784B96 /* HTMLTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTokenizer.h; sourceTree = "<group>"; };
+		E24F70781A384AD500784B96 /* HTMLTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLTokenizer.m; sourceTree = "<group>"; };
+		E24F70791A384AD500784B96 /* HTMLTokenizerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTokenizerState.h; sourceTree = "<group>"; };
+		E24F707A1A384AD500784B96 /* HTMLTreeEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLTreeEnumerator.h; sourceTree = "<group>"; };
+		E24F707B1A384AD500784B96 /* HTMLTreeEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLTreeEnumerator.m; sourceTree = "<group>"; };
+		E24F707C1A384AD500784B96 /* NSString+HTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTMLEntities.h"; sourceTree = "<group>"; };
+		E24F707D1A384AD500784B96 /* NSString+HTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTMLEntities.m"; sourceTree = "<group>"; };
+		E24F708E1A384DD500784B96 /* UseObjcLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseObjcLib.swift; sourceTree = "<group>"; };
+		E24F70911A389B8C00784B96 /* BooFar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooFar.swift; sourceTree = "<group>"; };
+		E24F70921A389B8C00784B96 /* FooBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooBar.swift; sourceTree = "<group>"; };
+		E24F70931A389B8C00784B96 /* NSObject+Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swift.h"; sourceTree = "<group>"; };
+		E24F70941A389B8C00784B96 /* NSObject+Swift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swift.m"; sourceTree = "<group>"; };
+		E2B54F7A1A374F5500150548 /* MultiLanguages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiLanguages.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2B54F7E1A374F5500150548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2B54F861A374F5500150548 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E2B54F891A374F5500150548 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E2B54F8F1A374F5500150548 /* MultiLanguagesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiLanguagesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2B54F941A374F5500150548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2B54F951A374F5500150548 /* MultiLanguagesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLanguagesTests.swift; sourceTree = "<group>"; };
+		E2B54FA01A37505B00150548 /* MultiLanguages-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultiLanguages-Bridging-Header.h"; sourceTree = "<group>"; };
+		E2B54FA11A37505C00150548 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2B54FA21A37505C00150548 /* BootLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootLogic.swift; sourceTree = "<group>"; };
+		E2B54FA31A37505C00150548 /* ConsoleScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleScreen.swift; sourceTree = "<group>"; };
+		E2B54FA41A37505C00150548 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		E2B54FAD1A3751FE00150548 /* Bob.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Bob.c; sourceTree = "<group>"; };
+		E2B54FAE1A3751FE00150548 /* Bob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bob.h; sourceTree = "<group>"; };
+		E2B54FB01A37533000150548 /* CallC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallC.swift; sourceTree = "<group>"; };
+		E2EE43FF1A3A05FC000A0712 /* DemoWKWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoWKWebView.swift; sourceTree = "<group>"; };
+		E2EE44011A3A0746000A0712 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2B54F771A374F5500150548 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2EE44021A3A0746000A0712 /* WebKit.framework in Frameworks */,
+				E24F70531A38088C00784B96 /* JavaScriptCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2B54F8C1A374F5500150548 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E23A93BF1A3FF75D00B4B03E /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				E23A93C01A3FF82C00B4B03E /* Car.h */,
+				E23A93C11A3FF82C00B4B03E /* Car.m */,
+				E23A93C31A40207600B4B03E /* SwiftCar.swift */,
+				E23A93C51A40214300B4B03E /* JumpProtocol.swift */,
+				E23A93C71A4021D800B4B03E /* ObjCar.h */,
+				E23A93C81A4021D800B4B03E /* ObjCar.m */,
+				E23A93CA1A40289800B4B03E /* MixObjSwift.swift */,
+				E23A93CC1A4046D800B4B03E /* Airplane.swift */,
+			);
+			name = Simple;
+			sourceTree = "<group>";
+		};
+		E24F70581A384AC400784B96 /* HTMLReader */ = {
+			isa = PBXGroup;
+			children = (
+				E24F70591A384AD500784B96 /* HTMLComment.h */,
+				E24F705A1A384AD500784B96 /* HTMLComment.m */,
+				E24F705B1A384AD500784B96 /* HTMLDocument.h */,
+				E24F705C1A384AD500784B96 /* HTMLDocument.m */,
+				E24F705D1A384AD500784B96 /* HTMLDocumentType.h */,
+				E24F705E1A384AD500784B96 /* HTMLDocumentType.m */,
+				E24F705F1A384AD500784B96 /* HTMLElement.h */,
+				E24F70601A384AD500784B96 /* HTMLElement.m */,
+				E24F70611A384AD500784B96 /* HTMLEntities.h */,
+				E24F70621A384AD500784B96 /* HTMLEntities.m */,
+				E24F70631A384AD500784B96 /* HTMLNamespace.h */,
+				E24F70641A384AD500784B96 /* HTMLNode.h */,
+				E24F70651A384AD500784B96 /* HTMLNode.m */,
+				E24F70661A384AD500784B96 /* HTMLOrderedDictionary.h */,
+				E24F70671A384AD500784B96 /* HTMLOrderedDictionary.m */,
+				E24F70681A384AD500784B96 /* HTMLParser.h */,
+				E24F70691A384AD500784B96 /* HTMLParser.m */,
+				E24F706A1A384AD500784B96 /* HTMLPreprocessedInputStream.h */,
+				E24F706B1A384AD500784B96 /* HTMLPreprocessedInputStream.m */,
+				E24F706C1A384AD500784B96 /* HTMLQuirksMode.h */,
+				E24F706D1A384AD500784B96 /* HTMLReader.h */,
+				E24F706E1A384AD500784B96 /* HTMLSelector.h */,
+				E24F706F1A384AD500784B96 /* HTMLSelector.m */,
+				E24F70701A384AD500784B96 /* HTMLSerialization.h */,
+				E24F70711A384AD500784B96 /* HTMLSerialization.m */,
+				E24F70721A384AD500784B96 /* HTMLString.h */,
+				E24F70731A384AD500784B96 /* HTMLString.m */,
+				E24F70741A384AD500784B96 /* HTMLSupport.h */,
+				E24F70751A384AD500784B96 /* HTMLTextNode.h */,
+				E24F70761A384AD500784B96 /* HTMLTextNode.m */,
+				E24F70771A384AD500784B96 /* HTMLTokenizer.h */,
+				E24F70781A384AD500784B96 /* HTMLTokenizer.m */,
+				E24F70791A384AD500784B96 /* HTMLTokenizerState.h */,
+				E24F707A1A384AD500784B96 /* HTMLTreeEnumerator.h */,
+				E24F707B1A384AD500784B96 /* HTMLTreeEnumerator.m */,
+				E24F707C1A384AD500784B96 /* NSString+HTMLEntities.h */,
+				E24F707D1A384AD500784B96 /* NSString+HTMLEntities.m */,
+			);
+			name = HTMLReader;
+			sourceTree = "<group>";
+		};
+		E24F70901A389B4900784B96 /* LoadDynamicObject */ = {
+			isa = PBXGroup;
+			children = (
+				E24F70911A389B8C00784B96 /* BooFar.swift */,
+				E24F70921A389B8C00784B96 /* FooBar.swift */,
+				E24F70931A389B8C00784B96 /* NSObject+Swift.h */,
+				E24F70941A389B8C00784B96 /* NSObject+Swift.m */,
+			);
+			name = LoadDynamicObject;
+			sourceTree = "<group>";
+		};
+		E2B54F711A374F5500150548 = {
+			isa = PBXGroup;
+			children = (
+				E2EE44011A3A0746000A0712 /* WebKit.framework */,
+				E24F70521A38088C00784B96 /* JavaScriptCore.framework */,
+				E2B54F7C1A374F5500150548 /* MultiLanguages */,
+				E2B54F921A374F5500150548 /* MultiLanguagesTests */,
+				E2B54F7B1A374F5500150548 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2B54F7B1A374F5500150548 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2B54F7A1A374F5500150548 /* MultiLanguages.app */,
+				E2B54F8F1A374F5500150548 /* MultiLanguagesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2B54F7C1A374F5500150548 /* MultiLanguages */ = {
+			isa = PBXGroup;
+			children = (
+				E2B54F9F1A37503E00150548 /* Core */,
+				E2B54FA91A37508B00150548 /* Objective_C */,
+				E2B54FAA1A37509800150548 /* C */,
+				E2B54FAB1A3751A500150548 /* C++ */,
+				E2B54FAC1A3751AE00150548 /* JavaScript */,
+				E2EE43FE1A3A05B7000A0712 /* WKWebView */,
+				E2B54F861A374F5500150548 /* Images.xcassets */,
+				E2B54F881A374F5500150548 /* LaunchScreen.xib */,
+				E2B54F7D1A374F5500150548 /* Supporting Files */,
+			);
+			path = MultiLanguages;
+			sourceTree = "<group>";
+		};
+		E2B54F7D1A374F5500150548 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2B54F7E1A374F5500150548 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2B54F921A374F5500150548 /* MultiLanguagesTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2B54F951A374F5500150548 /* MultiLanguagesTests.swift */,
+				E2B54F931A374F5500150548 /* Supporting Files */,
+			);
+			path = MultiLanguagesTests;
+			sourceTree = "<group>";
+		};
+		E2B54F931A374F5500150548 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2B54F941A374F5500150548 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2B54F9F1A37503E00150548 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E2B54FA11A37505C00150548 /* AppDelegate.swift */,
+				E2B54FA21A37505C00150548 /* BootLogic.swift */,
+				E2B54FA31A37505C00150548 /* ConsoleScreen.swift */,
+				E2B54FA41A37505C00150548 /* MainScreen.swift */,
+				E2B54FA01A37505B00150548 /* MultiLanguages-Bridging-Header.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		E2B54FA91A37508B00150548 /* Objective_C */ = {
+			isa = PBXGroup;
+			children = (
+				E23A93BF1A3FF75D00B4B03E /* Simple */,
+				E24F70901A389B4900784B96 /* LoadDynamicObject */,
+				E24F70581A384AC400784B96 /* HTMLReader */,
+				E24F708E1A384DD500784B96 /* UseObjcLib.swift */,
+			);
+			name = Objective_C;
+			sourceTree = "<group>";
+		};
+		E2B54FAA1A37509800150548 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				E2B54FB01A37533000150548 /* CallC.swift */,
+				E2B54FAD1A3751FE00150548 /* Bob.c */,
+				E2B54FAE1A3751FE00150548 /* Bob.h */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
+		E2B54FAB1A3751A500150548 /* C++ */ = {
+			isa = PBXGroup;
+			children = (
+				E214D9D91A37DEFD00A135E4 /* Fed.cpp */,
+				E214D9DA1A37DEFD00A135E4 /* Fed.h */,
+				E24F704C1A37F15E00784B96 /* FedWrapper.h */,
+				E24F704D1A37F15E00784B96 /* FedWrapper.mm */,
+				E24F704A1A37E4EB00784B96 /* CallCPP.swift */,
+			);
+			name = "C++";
+			sourceTree = "<group>";
+		};
+		E2B54FAC1A3751AE00150548 /* JavaScript */ = {
+			isa = PBXGroup;
+			children = (
+				E24F70541A38093700784B96 /* CallJavaScript.swift */,
+				E24F70561A380BD000784B96 /* factorial.js */,
+			);
+			name = JavaScript;
+			sourceTree = "<group>";
+		};
+		E2EE43FE1A3A05B7000A0712 /* WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				E2EE43FF1A3A05FC000A0712 /* DemoWKWebView.swift */,
+				E22C3C431A3AE502009D7F63 /* cat.png */,
+				E22C3C451A3AFB29009D7F63 /* jquery-2.1.1.min.js */,
+				E22C3C411A3ADAC2009D7F63 /* index.html */,
+			);
+			name = WKWebView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2B54F791A374F5500150548 /* MultiLanguages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2B54F991A374F5500150548 /* Build configuration list for PBXNativeTarget "MultiLanguages" */;
+			buildPhases = (
+				E2B54F761A374F5500150548 /* Sources */,
+				E2B54F771A374F5500150548 /* Frameworks */,
+				E2B54F781A374F5500150548 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiLanguages;
+			productName = MultiLanguages;
+			productReference = E2B54F7A1A374F5500150548 /* MultiLanguages.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2B54F8E1A374F5500150548 /* MultiLanguagesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2B54F9C1A374F5500150548 /* Build configuration list for PBXNativeTarget "MultiLanguagesTests" */;
+			buildPhases = (
+				E2B54F8B1A374F5500150548 /* Sources */,
+				E2B54F8C1A374F5500150548 /* Frameworks */,
+				E2B54F8D1A374F5500150548 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2B54F911A374F5500150548 /* PBXTargetDependency */,
+			);
+			name = MultiLanguagesTests;
+			productName = MultiLanguagesTests;
+			productReference = E2B54F8F1A374F5500150548 /* MultiLanguagesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2B54F721A374F5500150548 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Techmaster;
+				TargetAttributes = {
+					E2B54F791A374F5500150548 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					E2B54F8E1A374F5500150548 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = E2B54F791A374F5500150548;
+					};
+				};
+			};
+			buildConfigurationList = E2B54F751A374F5500150548 /* Build configuration list for PBXProject "MultiLanguages" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2B54F711A374F5500150548;
+			productRefGroup = E2B54F7B1A374F5500150548 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2B54F791A374F5500150548 /* MultiLanguages */,
+				E2B54F8E1A374F5500150548 /* MultiLanguagesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2B54F781A374F5500150548 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E22C3C441A3AE502009D7F63 /* cat.png in Resources */,
+				E24F70571A380BD000784B96 /* factorial.js in Resources */,
+				E22C3C421A3ADAC2009D7F63 /* index.html in Resources */,
+				E2B54F8A1A374F5500150548 /* LaunchScreen.xib in Resources */,
+				E2B54F871A374F5500150548 /* Images.xcassets in Resources */,
+				E22C3C461A3AFB29009D7F63 /* jquery-2.1.1.min.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2B54F8D1A374F5500150548 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2B54F761A374F5500150548 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E23A93C91A4021D800B4B03E /* ObjCar.m in Sources */,
+				E23A93C21A3FF82C00B4B03E /* Car.m in Sources */,
+				E24F70831A384AD500784B96 /* HTMLNode.m in Sources */,
+				E24F70801A384AD500784B96 /* HTMLDocumentType.m in Sources */,
+				E23A93C61A40214300B4B03E /* JumpProtocol.swift in Sources */,
+				E2B54FA81A37505C00150548 /* MainScreen.swift in Sources */,
+				E24F704E1A37F15E00784B96 /* FedWrapper.mm in Sources */,
+				E24F70811A384AD500784B96 /* HTMLElement.m in Sources */,
+				E2B54FB11A37533000150548 /* CallC.swift in Sources */,
+				E2B54FAF1A3751FE00150548 /* Bob.c in Sources */,
+				E23A93C41A40207600B4B03E /* SwiftCar.swift in Sources */,
+				E24F70871A384AD500784B96 /* HTMLSelector.m in Sources */,
+				E24F70881A384AD500784B96 /* HTMLSerialization.m in Sources */,
+				E24F70861A384AD500784B96 /* HTMLPreprocessedInputStream.m in Sources */,
+				E24F708B1A384AD500784B96 /* HTMLTokenizer.m in Sources */,
+				E2B54FA71A37505C00150548 /* ConsoleScreen.swift in Sources */,
+				E24F70891A384AD500784B96 /* HTMLString.m in Sources */,
+				E2EE44001A3A05FC000A0712 /* DemoWKWebView.swift in Sources */,
+				E24F70961A389B8C00784B96 /* FooBar.swift in Sources */,
+				E24F708A1A384AD500784B96 /* HTMLTextNode.m in Sources */,
+				E24F707F1A384AD500784B96 /* HTMLDocument.m in Sources */,
+				E24F70841A384AD500784B96 /* HTMLOrderedDictionary.m in Sources */,
+				E24F70821A384AD500784B96 /* HTMLEntities.m in Sources */,
+				E24F708F1A384DD500784B96 /* UseObjcLib.swift in Sources */,
+				E24F707E1A384AD500784B96 /* HTMLComment.m in Sources */,
+				E23A93CB1A40289800B4B03E /* MixObjSwift.swift in Sources */,
+				E214D9DB1A37DEFD00A135E4 /* Fed.cpp in Sources */,
+				E24F70851A384AD500784B96 /* HTMLParser.m in Sources */,
+				E2B54FA61A37505C00150548 /* BootLogic.swift in Sources */,
+				E24F708D1A384AD500784B96 /* NSString+HTMLEntities.m in Sources */,
+				E2B54FA51A37505C00150548 /* AppDelegate.swift in Sources */,
+				E24F70951A389B8C00784B96 /* BooFar.swift in Sources */,
+				E23A93CD1A4046D800B4B03E /* Airplane.swift in Sources */,
+				E24F708C1A384AD500784B96 /* HTMLTreeEnumerator.m in Sources */,
+				E24F70551A38093700784B96 /* CallJavaScript.swift in Sources */,
+				E24F704B1A37E4EB00784B96 /* CallCPP.swift in Sources */,
+				E24F70971A389B8C00784B96 /* NSObject+Swift.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2B54F8B1A374F5500150548 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2B54F961A374F5500150548 /* MultiLanguagesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2B54F911A374F5500150548 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2B54F791A374F5500150548 /* MultiLanguages */;
+			targetProxy = E2B54F901A374F5500150548 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2B54F881A374F5500150548 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2B54F891A374F5500150548 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2B54F971A374F5500150548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E2B54F981A374F5500150548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2B54F9A1A374F5500150548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = MultiLanguages/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MultiLanguages/MultiLanguages-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E2B54F9B1A374F5500150548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = MultiLanguages/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MultiLanguages/MultiLanguages-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		E2B54F9D1A374F5500150548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MultiLanguagesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MultiLanguages.app/MultiLanguages";
+			};
+			name = Debug;
+		};
+		E2B54F9E1A374F5500150548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MultiLanguagesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MultiLanguages.app/MultiLanguages";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2B54F751A374F5500150548 /* Build configuration list for PBXProject "MultiLanguages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2B54F971A374F5500150548 /* Debug */,
+				E2B54F981A374F5500150548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2B54F991A374F5500150548 /* Build configuration list for PBXNativeTarget "MultiLanguages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2B54F9A1A374F5500150548 /* Debug */,
+				E2B54F9B1A374F5500150548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2B54F9C1A374F5500150548 /* Build configuration list for PBXNativeTarget "MultiLanguagesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2B54F9D1A374F5500150548 /* Debug */,
+				E2B54F9E1A374F5500150548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2B54F721A374F5500150548 /* Project object */;
+}
